@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Roadbook Südfrankreich 2026 – PDF-Druckversion Hochformat</title>
+  <style>
+    :root {
+      --ink:#1f2933; --muted:#607080; --sand:#f4efe6; --paper:#fffaf2;
+      --terracotta:#b85c38; --blue:#1f6f8b; --olive:#697d42; --line:#e5d6c2;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:var(--sand); color:var(--ink); line-height:1.55;
+    }
+    a { color:var(--blue); text-decoration:none; overflow-wrap:anywhere; }
+    a:hover { text-decoration:underline; }
+    .cover {
+      min-height:68vh; padding:48px; display:flex; flex-direction:column; justify-content:flex-end;
+      color:white; background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.72)), linear-gradient(135deg,#1f6f8b,#b85c38);
+    }
+    .cover h1 { font-size:52px; max-width:980px; margin:0 0 14px; letter-spacing:-1px; }
+    .cover .sub { font-size:21px; max-width:900px; }
+    main { max-width:1180px; margin:0 auto; padding:28px; }
+    .card {
+      background:var(--paper); border-radius:22px; padding:26px; margin:24px 0;
+      box-shadow:0 10px 30px rgba(0,0,0,.08); border:1px solid rgba(0,0,0,.05);
+    }
+    h2 { font-size:30px; margin:0 0 10px; color:#203040; }
+    h3 { margin:18px 0 10px; }
+    h4 { margin:0 0 6px; font-size:18px; }
+    .label {
+      display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+      color:white; background:var(--terracotta); padding:4px 8px; border-radius:8px; margin-bottom:8px;
+    }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; }
+    .meta span { background:#f0e2d0; padding:6px 10px; border-radius:999px; font-size:14px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .note { color:var(--muted); font-size:14px; }
+    .variant-switch {
+      position:sticky; top:0; z-index:20; background:rgba(244,239,230,.96);
+      border-bottom:1px solid var(--line); padding:12px 20px; backdrop-filter:blur(8px);
+    }
+    .variant-switch-inner { max-width:1180px; margin:0 auto; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    button {
+      border:0; border-radius:999px; padding:10px 16px; cursor:pointer; font-weight:700;
+      background:#e7d7c4; color:#27384a;
+    }
+    button.active { background:var(--terracotta); color:white; }
+    .variant { display:none; }
+    .variant.active { display:block; }
+    .highlight-grid {
+      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px;
+    }
+    .highlight-card {
+      border:1px solid var(--line); border-radius:18px; overflow:hidden; background:#fffaf5;
+      display:flex; flex-direction:column; min-height:100%;
+    }
+    .photo-box {
+      width:100%; aspect-ratio:16/9; background:#e8ded0; position:relative; overflow:hidden;
+    }
+    .photo-box img {
+      width:100%; height:100%; object-fit:cover; display:block;
+    }
+    .photo-box img[src*="example.com"] {
+      opacity:.18;
+    }
+    .photo-overlay {
+      position:absolute; inset:auto 10px 10px 10px; background:rgba(31,41,51,.82); color:white;
+      font-size:12px; padding:5px 8px; border-radius:999px; text-align:center;
+    }
+    .highlight-content { padding:13px 14px 15px; }
+    .photo-link { font-size:12px; color:var(--muted); }
+    .table { width:100%; border-collapse:collapse; margin-top:12px; }
+    .table th,.table td { border-bottom:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
+    .codebox {
+      background:#17202a; color:#e8f1f2; border-radius:14px; padding:14px; overflow:auto; font-size:13px;
+    }
+
+    @media print {
+      @page { size: A4 portrait; margin: 7mm; }
+
+      html, body {
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff !important;
+        color: #111 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        margin: 0 !important;
+        font-size: 8.2px;
+        line-height: 1.08;
+      }
+
+      .cover,
+      .variant-switch,
+      .variant > .card:not(.day) {
+        display: none !important;
+      }
+
+      /* Im PDF wird nur die aktuell ausgewählte Variante gedruckt. */
+      .variant { display: none !important; }
+      .variant.active { display: block !important; }
+
+      main {
+        max-width: none !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      /* Zwei Reisetage pro A4-Hochformat-Seite. */
+      .day {
+        display: block !important;
+        height: 141.5mm;
+        max-height: 141.5mm;
+        overflow: hidden;
+        margin: 0 !important;
+        padding: 3mm !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background: #fffaf2 !important;
+        break-before: auto;
+        page-break-before: auto;
+        break-after: auto;
+        page-break-after: auto;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+  /* Nach jedem zweiten Tag wird eine neue PDF-Seite begonnen.
+     Da vor den Tages-Sektionen noch eine Intro-Section steht, entspricht Tag 2 nth-of-type(3). */
+     .variant.active .day:nth-of-type(2n+3) {
+      break-after: page;
+      page-break-after: always;
+    }
+
+    .label {
+      font-size: 7.4px !important;
+      padding: 1.5px 5px !important;
+      margin-bottom: 2px !important;
+      border-radius: 4px !important;
+    }
+
+    h2 {
+      font-size: 12.3px !important;
+      line-height: 1.02 !important;
+      margin: 0 0 3px !important;
+    }
+
+    h3 {
+      font-size: 9.2px !important;
+      line-height: 1.02 !important;
+      margin: 3px 0 2px !important;
+    }
+
+    h4 {
+      font-size: 8.2px !important;
+      line-height: 1.02 !important;
+      margin: 0 0 1px !important;
+    }
+
+    p, .meta span, .note, .photo-link {
+      font-size: 7.2px !important;
+      line-height: 1.06 !important;
+      margin: 1px 0 !important;
+    }
+
+    .meta {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 2.5px !important;
+      margin: 2px 0 3px !important;
+    }
+
+    .meta span {
+      padding: 1.5px 5px !important;
+      border-radius: 999px !important;
+    }
+
+    .highlight-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2mm !important;
+      margin-bottom: 1.5mm !important;
+    }
+
+    .highlight-card {
+      border-radius: 5px !important;
+      border: 1px solid #e5d6c2 !important;
+      overflow: hidden !important;
+      background: #fffaf5 !important;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .photo-box {
+      aspect-ratio: auto !important;
+      height: 18mm !important;
+      background: #e8ded0 !important;
+    }
+
+    /* Tage mit 4 oder mehr Highlights brauchen zwei Reihen: etwas kleinere Bilder. */
+    .highlight-grid:has(.highlight-card:nth-child(4)) .photo-box {
+      height: 15mm !important;
+    }
+
+    .photo-box img,
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: none !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    .highlight-content {
+      padding: 1.3mm !important;
+    }
+
+    .photo-link {
+      display: none !important;
+    }
+
+    .grid {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 2mm !important;
+      margin-top: 1.5mm !important;
+    }
+
+    .grid > div {
+      border-top: 1px solid #e5d6c2;
+      padding-top: 1.2mm;
+    }
+
+    a::after { content: "" !important; }
+  }
+
+  @media(max-width:900px) {
+    .highlight-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .grid { grid-template-columns:1fr; }
+  }
+  @media(max-width:620px) {
+    .cover { padding:28px; }
+    .cover h1 { font-size:36px; }
+    .highlight-grid { grid-template-columns:1fr; }
+  }
+</style>
+<script>
+  function showVariant(id) {
+    document.querySelectorAll('.variant').forEach(v => v.classList.remove('active'));
+    document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelector('[data-target="'+id+'"]').classList.add('active');
+    localStorage.setItem('roadbookVariant', id);
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('roadbookVariant') || 'meine-variante';
+    showVariant(saved);
+  });
+</script>
+</head>
+<body>
+  <section class="cover">
+    <h1>Roadbook Südfrankreich 2026</h1>
+  </section>
+  <div class="variant-switch">
+    <div class="variant-switch-inner">
+      <strong>Variante wählen:</strong>
+      <button class="variant-btn" data-target="meine-variante" onclick="showVariant('meine-variante')">Meine Variante</button>
+      <button class="variant-btn" data-target="hybrid-variante" onclick="showVariant('hybrid-variante')">Hybrid-Variante</button>
+    </div>
+  </div>
+  <main>
+    <section class="variant" id="meine-variante">
+      <section class="card">
+        <span class="label">Variante 1</span>
+        <h2>Mehr Südfrankreich-Fokus: Provence, Verdon, Cassis/Marseille, Antibes + Gardasee 1 Nacht</h2>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 1 · Mo, 10.08.2026</span>
+        <h2>Graz → München</h2>
+        <div class="meta">
+          <span>Übernachtung: München</span>
+          <span>Fahrzeit/Kilometer: ca. 390 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Marienplatz &amp; Neues Rathaus" id="meine-variante-tag01-highlight01" src="https://www.muenchen.de/sites/default/files/styles/3_2_w1216/public/2022-07/marienplatz-750.jpg.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Marienplatz &amp; Neues Rathaus</h4>
+              <p>Klassischer Startpunkt in München.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Englischer Garten" id="meine-variante-tag01-highlight02" src="https://www.marienplatz-muenchen.de/wp-content/uploads/2019/06/muenchen-englischer-garten-2863483_pix.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Englischer Garten</h4>
+              <p>Abendspaziergang nach der Fahrt.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Biergarten / Hofbräuhaus" id="meine-variante-tag01-highlight03" src="https://pogs.b-cdn.net/wp-content/uploads/2023/04/Muenchen-Hofbraeuhaus.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Biergarten / Hofbräuhaus</h4>
+              <p>Typischer bayerischer Abend.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Augustiner Keller / Biergarten</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Hotel mit Parkplatz oder Parkhaus am Rand der Altstadt.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 2 · Di, 11.08.2026</span>
+        <h2>München → Straßburg</h2>
+        <div class="meta">
+          <span>Übernachtung: Straßburg</span>
+          <span>Fahrzeit/Kilometer: ca. 360 km / 3,5–4 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Petite France" id="meine-variante-tag02-highlight01" src="https://blogs-images.forbes.com/geoffreymorrison/files/2018/10/Exploring-Petite-France-Strasbourg-by-Geoffrey-Morrison-3-of-10.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Petite France</h4>
+              <p>Kanäle, Fachwerkhäuser, Brücken.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Straßburger Münster" id="meine-variante-tag02-highlight02" src="https://frankreich.city-tourist.de/assets/images/strassburg-muenster.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Straßburger Münster</h4>
+              <p>Gotische Kathedrale.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Ill-Ufer / Altstadt" id="meine-variante-tag02-highlight03" src="https://frankreich-webazine.de/app/uploads/2022/11/strassburg-elsass-pexels-dusan-cvetanovic-12541481-scaled-1-de-991x0-c-default.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Ill-Ufer / Altstadt</h4>
+              <p>Schöner Abendspaziergang.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Flammkuchen in der Altstadt</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Parkhaus am Rand der Altstadt.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 3 · Mi, 12.08.2026</span>
+        <h2>Straßburg → Annecy</h2>
+        <div class="meta">
+          <span>Übernachtung: Annecy</span>
+          <span>Fahrzeit/Kilometer: ca. 470 km / 4,5–5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Lac d’Annecy" id="meine-variante-tag03-highlight01" src="https://gites-production-wr-wp.s3.eu-central-1.amazonaws.com/uploads/sites/3/2023/05/Annecy-Lake-L-1024x683-1-586x452.jpg.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Lac d’Annecy</h4>
+              <p>Seeufer im Abendlicht.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Palais de l’Île" id="meine-variante-tag03-highlight02" src="https://www.annecy-ville.fr/wp-content/uploads/2021/03/Festival-Annecy-Paysages-devant-les-Vieilles-Prisons-dAnnecy.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Palais de l’Île</h4>
+              <p>Postkartenmotiv von Annecy.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadtkanäle" id="meine-variante-tag03-highlight03" src="https://www.campingsannecy.com/wp-content/uploads/2025/05/vieille-ville-annecy-2-edited.jpg.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadtkanäle</h4>
+              <p>Kurzer Rundgang nach der Fahrt.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Le Freti / Seeufer-Restaurant</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Parkhaus nahe Altstadt/See.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 4 · Do, 13.08.2026</span>
+        <h2>Annecy → Provence</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="L’Isle-sur-la-Sorgue" id="meine-variante-tag04-highlight01" src="https://www.provence-info.de/wp-content/uploads/l-Isle-sur-la-sorgue-1536x1024.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>L’Isle-sur-la-Sorgue</h4>
+              <p>Kanäle und Wasserräder.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Gordes Aussichtspunkt" id="meine-variante-tag04-highlight02" src="https://www.provence-info.de/wp-content/uploads/gordes-provence-scaled.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Gordes Aussichtspunkt</h4>
+              <p>Sonnenuntergang über der Provence. Dorfbesichtigung erst für den nächsten Tag geplant</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Provence-Dinner" id="meine-variante-tag04-highlight03" src="https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2018/05/isle-sur-la-sorgue-lake.jpg?ssl=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Provence-Dinner</h4>
+              <p>Ankommen in der Provence.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>La Balade des Saveurs / Café de France</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Unterkunft mit Parkplatz wählen.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 5 · Fr, 14.08.2026</span>
+        <h2>Luberon-Dörfer</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Roussillon &amp; Ockerfelsen" id="meine-variante-tag05-highlight01" src="https://www.provence-info.de/wp-content/uploads/ockerfelsen-roussillon-1536x1025.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Roussillon &amp; Ockerfelsen</h4>
+              <p>Farbstarker Provence-Ort.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Gordes Dorfzentrum" id="meine-variante-tag05-highlight02" src="https://image.geo.de/31480030/t/ER/v3/w1440/r1.5/-/eguisheim---adobestock-201870695.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Gordes Dorfzentrum</h4>
+              <p>Klassisches Provence-Dorf.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Abbaye de Sénanque" id="meine-variante-tag05-highlight03" src="https://www.provence-info.de/wp-content/uploads/abtei-senanque-provence-1536x940.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Abbaye de Sénanque</h4>
+              <p>Abtei als Fotomotiv.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Picknick / Bistro im Luberon</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Früh oder spät besuchen; mittags sehr voll.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 6 · Sa, 15.08.2026</span>
+        <h2>Avignon + Saint-Rémy</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 90–120 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Palais des Papes" id="meine-variante-tag06-highlight01" src="https://applications-media.feverup.com/image/upload/f_auto/fever2/plan/photo/5a700b44-158e-11f0-bf1a-92ee3feeb854.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Palais des Papes</h4>
+              <p>Top-Highlight Avignons.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Pont d’Avignon" id="meine-variante-tag06-highlight02" src="https://images.musement.com/cover/0125/72/thumb_12471307_cover_header.jpeg?lossless=false&amp;auto=format&amp;fit=clip&amp;h=864.5&amp;w=1792"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Pont d’Avignon</h4>
+              <p>Klassiker am Rhône-Ufer.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Saint-Rémy-de-Provence" id="meine-variante-tag06-highlight03" src="https://www.provence-info.de/wp-content/uploads/saint-remy-de-provence-2.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Saint-Rémy-de-Provence</h4>
+              <p>Charmante Gassen und Abendstimmung.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>L’Agape / Bistro in Saint-Rémy</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>15.08. Feiertag: früh starten und reservieren.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 7 · So, 16.08.2026</span>
+        <h2>Verdon-Schlucht</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 230–280 km</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Route des Crêtes" id="meine-variante-tag07-highlight01" src="https://photos.smugmug.com/Provence-Lovers/n-rGbRdb/Route-des-Cr%C3%A8tes-de-Gorges-du-Verdon/i-tdQfjHH/0/Mw3kqdsMqQcJfWbWBXSn5Wh4SNJjPHRDnPzLNWDdw/L/route%20des%20cretes%20gorges%20du%20verdon-098-L.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Route des Crêtes</h4>
+              <p>Spektakuläre Aussichtspunkte.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Lac de Sainte-Croix" id="meine-variante-tag07-highlight02" src="https://www.provence-info.de/wp-content/uploads/lac-de-sainte-croix-1.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Lac de Sainte-Croix</h4>
+              <p>Türkisblauer See.</p>
+              <p class="photo-link"><strong>Video-Link:</strong> <a href="https://www.youtube.com/watch?v=W6WVeOfT6aM&amp;t=110s" target="_blank">Video über Lac de Sainte &amp; Route des Crêtes </a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Boot/Kajak" id="meine-variante-tag07-highlight03" src="https://familie-fernweh.de/wp-content/uploads/2023/08/gorges-du-verdon-768x1024.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Boot/Kajak</h4>
+              <p>In die Schlucht hineinfahren.</p>
+              <p>Sehr beliebt. Es gibt eine zweistündige Bootstour (rechtzeitig reservieren)</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch am Lac de Sainte-Croix</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Sehr früh losfahren; Boote im August stark gefragt.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 8 · Mo, 17.08.2026</span>
+        <h2>Cassis + Marseille</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 220–260 km</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cassis Hafen" id="meine-variante-tag08-highlight01" src="https://www.provence-info.de/wp-content/uploads/cassis-provence-1536x767.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Cassis Hafen</h4>
+              <p>Einer der schönsten Küstenorte.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Calanques-Bootstour" id="meine-variante-tag08-highlight02" src="https://checkyeti.imgix.net/images/prod/products/25242/Atlantide-Promenades-en-mer-Bandol-gallery-7-3?auto=format,compress&amp;fit=crop&amp;w=1024&amp;q=45&amp;dpr=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Calanques-Bootstour</h4>
+              <p>Ausflugsschiff ab Cassis empfohlen.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cap Canaille" id="meine-variante-tag08-highlight03" src="https://www.provence-info.de/wp-content/uploads/falaises-cassis.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Cap Canaille</h4>
+              <p>Top-Aussichtspunkt.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Notre-Dame de la Garde" id="meine-variante-tag08-highlight04" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0a/d4/5c.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Notre-Dame de la Garde</h4>
+              <p>Marien-Wallfahrtskirche. Das neuromanisch-byzantinische Gotteshaus ist ein Wahrzeichen von Marseille. Marseille-Sonnenuntergang.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Vieux-Port Marseille" id="meine-variante-tag08-highlight05" src="https://media.20min.ch/6/image/2025/09/03/79763f75-6e16-40ea-89c7-12c083407264.jpg?auto=format%2Ccompress%2Cenhance&amp;fit=max&amp;w=2001&amp;h=2000&amp;rect=0%2C0%2C3999%2C2333&amp;s=472c082578a551a5ce0247f7e91e85b5"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Vieux-Port Marseille</h4>
+              <p>Hafenstimmung und Abendessen.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch in Cassis / Dinner Vieux-Port</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Cassis früh anfahren; Marseille-Parkhaus nutzen.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 9 · Di, 18.08.2026</span>
+        <h2>Provence → Antibes</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 260 km / 3–3,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt Antibes" id="meine-variante-tag09-highlight01" src="https://provencelovers.fr/wp-content/uploads/2023/12/besuchen-antibes-1-tage-reiseroute.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt Antibes</h4>
+              <p>Riviera-Atmosphäre ohne Nizza-Stress.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Port Vauban" id="meine-variante-tag09-highlight02" src="https://leportvauban.com/wp-content/uploads/2025/01/Design-sans-titre-8.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Port Vauban</h4>
+              <p>Yachten und Hafen.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Stadtmauer am Meer" id="meine-variante-tag09-highlight03" src="https://www.provence-info.de/wp-content/uploads/antibes-altstadt.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Stadtmauer am Meer</h4>
+              <p>Sunset-Spaziergang.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Le Vauban / Altstadt-Bistro</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Unterkunft mit Parkplatz; Altstadt zu Fuß.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 10 · Mi, 19.08.2026</span>
+        <h2>Nizza + Èze</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 60–90 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Promenade des Anglais" id="meine-variante-tag10-highlight01" src="https://img.static-kl.com/transform/e3ca9f67-ba76-4512-bf96-16e5e4c684bb/?io=transform:fill,width:2880,height:1440&amp;consumerid=bwp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Promenade des Anglais</h4>
+              <p>Klassischer Riviera-Blick.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt Nizza" id="meine-variante-tag10-highlight02" src="https://berlinerininfrankreich.de/wp-content/uploads/2023/06/Nizza-Altstadt-5-682x1024.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt Nizza</h4>
+              <p>Farben, Märkte, Cafés.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Èze + Jardin Exotique" id="meine-variante-tag10-highlight03" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/32/d5/da/caption.jpg?w=1000&amp;h=-1&amp;s=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Èze + Jardin Exotique</h4>
+              <p>Top-Aussicht der Riviera.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch Nizza / Dinner Antibes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Èze früh oder spät; Parkplätze knapp.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 11 · Do, 20.08.2026</span>
+        <h2>Cannes + Cap d’Antibes</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 50–80 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="La Croisette" id="meine-variante-tag11-highlight01" src="https://cdm0lfbn.cloudimg.io/v7/_images_base_/image_uploader/photos/0d/original/promenade-de-la-croisette-cannes-cannes.jpg?ua=1767168725&amp;p=large"/>
+            </div>
+            <div class="highlight-content">
+              <h4>La Croisette</h4>
+              <p>Palmen, Strand und Luxus-Hotels.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Le Suquet" id="meine-variante-tag11-highlight02" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/194847525.jpg?k=f48b2315edfe6beab5d55d1a9ce1a9fc9e0553764a29f4516f6b92c7deba00dd&amp;o="/>
+            </div>
+            <div class="highlight-content">
+              <h4>Le Suquet</h4>
+              <p>Charmante Altstadtseite von Cannes.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cap d’Antibes Küstenweg" id="meine-variante-tag11-highlight03" src="https://hikingthealps.com/wp-content/uploads/2023/02/Sentier-du-Littoral-am-Cap-d-Antibes3-1024x771.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Cap d’Antibes Küstenweg</h4>
+              <p>Einer der schönsten Spaziergänge.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch Cannes / Dinner Antibes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Cannes Parkhaus; Cap am Nachmittag.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 12 · Fr, 21.08.2026</span>
+        <h2>Menton / Relax-Tag</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 90–120 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Menton Altstadt" id="meine-variante-tag12-highlight01" src="https://www.provence-info.de/wp-content/uploads/menton-suedfrankreich.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Menton Altstadt</h4>
+              <p>Pastellfarbenes Riviera-Highlight.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Promenade &amp; Hafen" id="meine-variante-tag12-highlight02" src="https://woody.cloudly.space/app/uploads/menton-riviera-merveilles/2021/04/thumbs/menton-vieux-port-vieille-ville-pango-visual-1920x1280.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Promenade &amp; Hafen</h4>
+              <p>Entspannt und fotogen.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Seafood-Abend" id="meine-variante-tag12-highlight03" src="https://woody.cloudly.space/app/uploads/menton-riviera-merveilles/2022/03/thumbs/pepitesculinaires-restaurant-sainte-agnes-pango-visual-640x640.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Seafood-Abend</h4>
+              <p>Guter Abschluss der Riviera-Zeit.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Seafood in Menton / Dinner Antibes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Menton früh oder spätnachmittags.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 13 · Sa, 22.08.2026</span>
+        <h2>Antibes → Turin</h2>
+        <div class="meta">
+          <span>Übernachtung: Turin</span>
+          <span>Fahrzeit/Kilometer: ca. 290 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Piazza San Carlo" id="meine-variante-tag13-highlight01" src="https://tourismmedia.italia.it/is/image/mitur/20220223132855-piazza-san-carlo-torino-piemonte-shutterstock-2102981095-rid?wid=1240&amp;hei=500&amp;fit=constrain,1&amp;fmt=webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Piazza San Carlo</h4>
+              <p>Schönster Platz Turins.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Piazza Castello" id="meine-variante-tag13-highlight02" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Turin_piazza_costello.JPG"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Piazza Castello</h4>
+              <p>Historisches Zentrum.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Aperitivo" id="meine-variante-tag13-highlight03" src="https://dynamic-media.tacdn.com/media/photo-o/2f/0e/cd/35/caption.jpg?w=1400&amp;h=1000&amp;s=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Aperitivo</h4>
+              <p>Perfekter Italien-Abend.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Porto di Savona / Aperitivo-Bar</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Parkgarage im Centro Storico.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 14 · So, 23.08.2026</span>
+        <h2>Turin → Malcesine</h2>
+        <div class="meta">
+          <span>Übernachtung: Malcesine</span>
+          <span>Fahrzeit/Kilometer: ca. 250 km / 3–3,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Castello Scaligero" id="meine-variante-tag14-highlight01" src="https://www.lust-auf-italien.com/wp-content/uploads/2025/03/Castello-Malcesine_Beitragsbild.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Castello Scaligero</h4>
+              <p>Burg mit Aussicht.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt Malcesine" id="meine-variante-tag14-highlight02" src="https://cdn.urlaubsguru.at/wp-content/uploads/2016/06/lake-garda-town-of-malcesine-veneto-italy-shutterstock_379405306-2-1-707x468.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt Malcesine</h4>
+              <p>Gassen und Hafen.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Seepromenade" id="meine-variante-tag14-highlight03" src="https://www.domusrental.com/blog/wp-content/uploads/elementor/thumbs/malcesine-lake-garda-qjhzxja9f9k76vfyl862x6562fy351s03eevimzcds.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Seepromenade</h4>
+              <p>Dolce-Vita-Abschluss.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>La Pace / Restaurant am See</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Hotel mit Parkplatz.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 15 · Mo, 24.08.2026</span>
+        <h2>Gardasee → Graz</h2>
+        <div class="meta">
+          <span>Übernachtung: Heimfahrt</span>
+          <span>Fahrzeit/Kilometer: ca. 450 km / 6–7 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Limone sul Garda" id="meine-variante-tag15-highlight01" src="https://images.trvl-media.com/place/602201/85794316-41cc-4ed3-8397-42a453933e28.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Limone sul Garda</h4>
+              <p>Optionaler Kaffee-Stopp.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Heimfahrt" id="meine-variante-tag15-highlight02" src="https://www.sifa-sibe.de/wp-content/uploads/a/u/auto_AdobeStock_60027303.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Heimfahrt</h4>
+              <p>Früh starten.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Pausen unterwegs" id="meine-variante-tag15-highlight03" src="https://images.t-online.de/2022/04/51918718v1004/63x0:515x290/fit-in/646x0/rasten-sie-bei-langen-autofahrten-regelmaessig.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Pausen unterwegs</h4>
+              <p>1–2 längere Pausen einplanen.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Frühstück/Kaffee in Limone oder direkte Abfahrt</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Kurzstopp nur früh morgens sinnvoll.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="variant" id="hybrid-variante">
+      <section class="card">
+        <span class="label">Hybrid-Variante</span>
+        <h2>Mehr Balance: 2 Nächte Straßburg, 2 Nächte Annecy, kein Lyon, trotzdem Provence/Cassis/Verdon/Antibes</h2>
+        <p class="note">Jedes Highlight enthält einen festen Foto-Slot im Verhältnis 16:9. Ersetze im HTML beim jeweiligen <code>img src="..."</code> einfach den Platzhalter-Link durch deine eigene Bild-URL.</p>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 1 · Mo, 10.08.2026</span>
+        <h2>Graz → München</h2>
+        <div class="meta">
+          <span>Übernachtung: München</span>
+          <span>Fahrzeit/Kilometer: ca. 390 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Marienplatz &amp; Neues Rathaus" id="hybrid-variante-tag01-highlight01" src="https://www.muenchen.de/sites/default/files/styles/3_2_w1216/public/2022-07/marienplatz-750.jpg.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Marienplatz &amp; Neues Rathaus</h4>
+              <p>Klassischer Startpunkt in München.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.muenchen.de/sites/default/files/styles/3_2_w1216/public/2022-07/marienplatz-750.jpg.webp" target="_blank">https://www.muenchen.de/sites/default/files/styles/3_2_w1216/public/2022-07/marienplatz-750.jpg.webp</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Englischer Garten" id="hybrid-variante-tag01-highlight02" src="https://www.marienplatz-muenchen.de/wp-content/uploads/2019/06/muenchen-englischer-garten-2863483_pix.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Englischer Garten</h4>
+              <p>Abendspaziergang nach der Fahrt.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.marienplatz-muenchen.de/wp-content/uploads/2019/06/muenchen-englischer-garten-2863483_pix.jpg" target="_blank">https://www.marienplatz-muenchen.de/wp-content/uploads/2019/06/muenchen-englischer-garten-2863483_pix.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Biergarten / Hofbräuhaus" id="hybrid-variante-tag01-highlight03" src="https://pogs.b-cdn.net/wp-content/uploads/2023/04/Muenchen-Hofbraeuhaus.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Biergarten / Hofbräuhaus</h4>
+              <p>Typischer bayerischer Abend.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://pogs.b-cdn.net/wp-content/uploads/2023/04/Muenchen-Hofbraeuhaus.webp" target="_blank">https://pogs.b-cdn.net/wp-content/uploads/2023/04/Muenchen-Hofbraeuhaus.webp</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Augustiner Keller / Biergarten</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Hotel mit Parkplatz oder Parkhaus am Rand der Altstadt.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 2 · Di, 11.08.2026</span>
+        <h2>München → Straßburg</h2>
+        <div class="meta">
+          <span>Übernachtung: Straßburg</span>
+          <span>Fahrzeit/Kilometer: ca. 360 km / 3,5–4 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Petite France" id="hybrid-variante-tag02-highlight01" src="https://blogs-images.forbes.com/geoffreymorrison/files/2018/10/Exploring-Petite-France-Strasbourg-by-Geoffrey-Morrison-3-of-10.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Petite France</h4>
+              <p>Kanäle, Fachwerkhäuser, Brücken.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://blogs-images.forbes.com/geoffreymorrison/files/2018/10/Exploring-Petite-France-Strasbourg-by-Geoffrey-Morrison-3-of-10.jpg" target="_blank">https://blogs-images.forbes.com/geoffreymorrison/files/2018/10/Exploring-Petite-France-Strasbourg-by-Geoffrey-Morrison-3-of-10.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Straßburger Münster" id="hybrid-variante-tag02-highlight02" src="https://frankreich.city-tourist.de/assets/images/strassburg-muenster.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Straßburger Münster</h4>
+              <p>Gotische Kathedrale.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://frankreich.city-tourist.de/assets/images/strassburg-muenster.webp" target="_blank">https://frankreich.city-tourist.de/assets/images/strassburg-muenster.webp</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Ill-Ufer / Altstadt" id="hybrid-variante-tag02-highlight03" src="https://frankreich-webazine.de/app/uploads/2022/11/strassburg-elsass-pexels-dusan-cvetanovic-12541481-scaled-1-de-991x0-c-default.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Ill-Ufer / Altstadt</h4>
+              <p>Schöner Abendspaziergang.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://frankreich-webazine.de/app/uploads/2022/11/strassburg-elsass-pexels-dusan-cvetanovic-12541481-scaled-1-de-991x0-c-default.webp" target="_blank">https://frankreich-webazine.de/app/uploads/2022/11/strassburg-elsass-pexels-dusan-cvetanovic-12541481-scaled-1-de-991x0-c-default.webp</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Flammkuchen in der Altstadt</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Parkhaus am Rand der Altstadt.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 3 · Mi, 12.08.2026</span>
+        <h2>Elsass-Tag ab Straßburg</h2>
+        <div class="meta">
+          <span>Übernachtung: Straßburg</span>
+          <span>Fahrzeit/Kilometer: ca. 120–180 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Colmar" id="hybrid-variante-tag03-highlight01" src="https://www.urlaubsguru.at/_next/image/?url=https%3A%2F%2Fthumb.holidayguru.de%2Fimage-service%2F5a558595-0193-4806-bd0d-6eea83a3fe74%3Fwidth%3D1920%26mimetype%3Dwebp&w=3840&q=75"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Colmar</h4>
+              <p>Petite Venise und Altstadt.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Riquewihr oder Eguisheim" id="hybrid-variante-tag03-highlight02" src="https://www.reisereporter.de/resizer/v2/MQZQ76MOZFHSHDYOMP2HAUITHY.jpg?auth=274058eed59699343953b831525ea4d8847ce5d8f87dbed7d782bbd9fb89ef39&quality=70&focal=1023%2C332&width=596&height=335"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Riquewihr oder Eguisheim</h4>
+              <p>Klassisches Elsass-Dorf.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Abend zurück in Straßburg" id="hybrid-variante-tag03-highlight03" src="https://cdn.urlaubsguru.at/wp-content/uploads/2019/07/istock-518594733-707x471.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Abend zurück in Straßburg</h4>
+              <p>Ohne Hotelwechsel.</p>
+              </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Elsässer Weinstube / Flammkuchen</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Colmar früh anfahren; Dorfparkplätze am Ortseingang.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 4 · Do, 13.08.2026</span>
+        <h2>Straßburg → Annecy</h2>
+        <div class="meta">
+          <span>Übernachtung: Annecy</span>
+          <span>Fahrzeit/Kilometer: ca. 470 km / 4,5–5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Lac d’Annecy" id="hybrid-variante-tag04-highlight01" src="https://gites-production-wr-wp.s3.eu-central-1.amazonaws.com/uploads/sites/3/2023/05/Annecy-Lake-L-1024x683-1-586x452.jpg.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Lac d’Annecy</h4>
+              <p>Seeufer im Abendlicht.</p>
+          
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Palais de l’Île" id="hybrid-variante-tag04-highlight02" src="https://www.annecy-ville.fr/wp-content/uploads/2021/03/Festival-Annecy-Paysages-devant-les-Vieilles-Prisons-dAnnecy.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Palais de l’Île</h4>
+              <p>Postkartenmotiv von Annecy.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.annecy-ville.fr/wp-content/uploads/2021/03/Festival-Annecy-Paysages-devant-les-Vieilles-Prisons-dAnnecy.jpg" target="_blank">https://www.annecy-ville.fr/wp-content/uploads/2021/03/Festival-Annecy-Paysages-devant-les-Vieilles-Prisons-dAnnecy.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadtkanäle" id="hybrid-variante-tag04-highlight03" src="https://www.campingsannecy.com/wp-content/uploads/2025/05/vieille-ville-annecy-2-edited.jpg.webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadtkanäle</h4>
+              <p>Kurzer Rundgang nach der Fahrt.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.campingsannecy.com/wp-content/uploads/2025/05/vieille-ville-annecy-2-edited.jpg.webp" target="_blank">https://www.campingsannecy.com/wp-content/uploads/2025/05/vieille-ville-annecy-2-edited.jpg.webp</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Le Freti / Restaurant am See</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Parkhaus nahe Altstadt/See.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 5 · Fr, 14.08.2026</span>
+        <h2>Annecy-Tag</h2>
+        <div class="meta">
+          <span>Übernachtung: Annecy</span>
+          <span>Fahrzeit/Kilometer: ca. 30–80 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt &amp; Markt / Cafés" id="hybrid-variante-tag05-highlight01" src="https://www.ab-in-den-urlaub.de/magazin/wp-content/uploads/2023/05/1684509323_Annecy-Altstadt.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt &amp; Markt / Cafés</h4>
+              <p>Ruhig in den Tag starten.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Seeufer / Boot oder Badepause" id="hybrid-variante-tag05-highlight02" src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=1210,dpr=1/tour_img/164ead69fd62e1be1bd34db2e01efbeaf324d57070100d7d1bd4c7fb6b9ee9a9.jpeg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Seeufer / Boot oder Badepause</h4>
+              <p>Entspannter Seetag.</p>
+              </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Col de la Forclaz oder Talloires" id="hybrid-variante-tag05-highlight03" src="https://de.lac-annecy.com/content/uploads/2021/03/Le_village_de_Talloires-Montmin-Gilles_Piel-10626.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Col de la Forclaz oder Talloires</h4>
+              <p>Aussicht über den See.</p>
+             </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Dinner in Annecy oder Talloires</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Seeparkplätze im August früh voll.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 6 · Sa, 15.08.2026</span>
+        <h2>Annecy → Provence</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="L’Isle-sur-la-Sorgue" id="hybrid-variante-tag06-highlight01" src="https://www.provence-info.de/wp-content/uploads/l-Isle-sur-la-sorgue-1536x1024.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>L’Isle-sur-la-Sorgue</h4>
+              <p>Kanäle und Wasserräder.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/l-Isle-sur-la-sorgue-1536x1024.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/l-Isle-sur-la-sorgue-1536x1024.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Gordes Aussichtspunkt" id="hybrid-variante-tag06-highlight02" src="https://www.provence-info.de/wp-content/uploads/gordes-provence-scaled.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Gordes Aussichtspunkt</h4>
+              <p>Sonnenuntergang über der Provence.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/gordes-provence-scaled.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/gordes-provence-scaled.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Provence-Dinner" id="hybrid-variante-tag06-highlight03" src="https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2018/05/isle-sur-la-sorgue-lake.jpg?ssl=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Provence-Dinner</h4>
+              <p>Ankommen in der Provence.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2018/05/isle-sur-la-sorgue-lake.jpg?ssl=1" target="_blank">https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2018/05/isle-sur-la-sorgue-lake.jpg?ssl=1</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Restaurant in L’Isle-sur-la-Sorgue / Gordes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>15.08. Feiertag: nicht überplanen.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 7 · So, 16.08.2026</span>
+        <h2>Luberon-Dörfer</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Roussillon &amp; Ockerfelsen" id="hybrid-variante-tag07-highlight01" src="https://www.provence-info.de/wp-content/uploads/ockerfelsen-roussillon-1536x1025.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Roussillon &amp; Ockerfelsen</h4>
+              <p>Farbstarker Provence-Ort.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/ockerfelsen-roussillon-1536x1025.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/ockerfelsen-roussillon-1536x1025.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Gordes Dorfzentrum" id="hybrid-variante-tag07-highlight02" src="https://image.geo.de/31480030/t/ER/v3/w1440/r1.5/-/eguisheim---adobestock-201870695.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Gordes Dorfzentrum</h4>
+              <p>Klassisches Provence-Dorf.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://image.geo.de/31480030/t/ER/v3/w1440/r1.5/-/eguisheim---adobestock-201870695.jpg" target="_blank">https://image.geo.de/31480030/t/ER/v3/w1440/r1.5/-/eguisheim---adobestock-201870695.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Abbaye de Sénanque" id="hybrid-variante-tag07-highlight03" src="https://www.provence-info.de/wp-content/uploads/abtei-senanque-provence-1536x940.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Abbaye de Sénanque</h4>
+              <p>Abtei als Fotomotiv.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/abtei-senanque-provence-1536x940.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/abtei-senanque-provence-1536x940.jpg</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Bistro im Luberon / Picknick</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Mittagshitze in Gordes/Roussillon vermeiden.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 8 · Mo, 17.08.2026</span>
+        <h2>Verdon-Schlucht</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 230–280 km</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Route des Crêtes" id="hybrid-variante-tag08-highlight01" src="https://photos.smugmug.com/Provence-Lovers/n-rGbRdb/Route-des-Cr%C3%A8tes-de-Gorges-du-Verdon/i-tdQfjHH/0/Mw3kqdsMqQcJfWbWBXSn5Wh4SNJjPHRDnPzLNWDdw/L/route%20des%20cretes%20gorges%20du%20verdon-098-L.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Route des Crêtes</h4>
+              <p>Spektakuläre Aussichtspunkte.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://photos.smugmug.com/Provence-Lovers/n-rGbRdb/Route-des-Cr%C3%A8tes-de-Gorges-du-Verdon/i-tdQfjHH/0/Mw3kqdsMqQcJfWbWBXSn5Wh4SNJjPHRDnPzLNWDdw/L/route%20des%20cretes%20gorges%20du%20verdon-098-L.jpg" target="_blank">https://photos.smugmug.com/Provence-Lovers/n-rGbRdb/Route-des-Cr%C3%A8tes-de-Gorges-du-Verdon/i-tdQfjHH/0/Mw3kqdsMqQcJfWbWBXSn5Wh4SNJjPHRDnPzLNWDdw/L/route%20des%20cretes%20gorges%20du%20verdon-098-L.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Lac de Sainte-Croix" id="hybrid-variante-tag08-highlight02" src="https://www.provence-info.de/wp-content/uploads/lac-de-sainte-croix-1.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Lac de Sainte-Croix</h4>
+              <p>Türkisblauer See.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/lac-de-sainte-croix-1.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/lac-de-sainte-croix-1.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Boot/Kajak" id="hybrid-variante-tag08-highlight03" src="https://familie-fernweh.de/wp-content/uploads/2023/08/gorges-du-verdon-768x1024.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Boot/Kajak</h4>
+              <p>In die Schlucht hineinfahren.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://familie-fernweh.de/wp-content/uploads/2023/08/gorges-du-verdon-768x1024.jpg" target="_blank">https://familie-fernweh.de/wp-content/uploads/2023/08/gorges-du-verdon-768x1024.jpg</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch am Lac de Sainte-Croix</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Sehr früh losfahren.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 9 · Di, 18.08.2026</span>
+        <h2>Cassis + Marseille</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 220–260 km</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cassis Hafen" id="hybrid-variante-tag09-highlight01" src="https://www.provence-info.de/wp-content/uploads/cassis-provence-1536x767.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Cassis Hafen</h4>
+              <p>Einer der schönsten Küstenorte.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/cassis-provence-1536x767.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/cassis-provence-1536x767.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Calanques-Bootstour" id="hybrid-variante-tag09-highlight02" src="https://checkyeti.imgix.net/images/prod/products/25242/Atlantide-Promenades-en-mer-Bandol-gallery-7-3?auto=format,compress&amp;fit=crop&amp;w=1024&amp;q=45&amp;dpr=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Calanques-Bootstour</h4>
+              <p>Ausflugsschiff ab Cassis empfohlen.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://checkyeti.imgix.net/images/prod/products/25242/Atlantide-Promenades-en-mer-Bandol-gallery-7-3?auto=format,compress&amp;fit=crop&amp;w=1024&amp;q=45&amp;dpr=1" target="_blank">https://checkyeti.imgix.net/images/prod/products/25242/Atlantide-Promenades-en-mer-Bandol-gallery-7-3?auto=format,compress&amp;fit=crop&amp;w=1024&amp;q=45&amp;dpr=1</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cap Canaille" id="hybrid-variante-tag09-highlight03" src="https://www.provence-info.de/wp-content/uploads/falaises-cassis.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Cap Canaille</h4>
+              <p>Top-Aussichtspunkt.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/falaises-cassis.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/falaises-cassis.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Notre-Dame de la Garde" id="hybrid-variante-tag09-highlight04" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0a/d4/5c.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Notre-Dame de la Garde</h4>
+              <p>Marseille-Sonnenuntergang.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0a/d4/5c.jpg" target="_blank">https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0a/d4/5c.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Vieux-Port Marseille" id="hybrid-variante-tag09-highlight05" src="https://media.20min.ch/6/image/2025/09/03/79763f75-6e16-40ea-89c7-12c083407264.jpg?auto=format%2Ccompress%2Cenhance&amp;fit=max&amp;w=2001&amp;h=2000&amp;rect=0%2C0%2C3999%2C2333&amp;s=472c082578a551a5ce0247f7e91e85b5"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Vieux-Port Marseille</h4>
+              <p>Hafenstimmung und Abendessen.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://media.20min.ch/6/image/2025/09/03/79763f75-6e16-40ea-89c7-12c083407264.jpg?auto=format%2Ccompress%2Cenhance&amp;fit=max&amp;w=2001&amp;h=2000&amp;rect=0%2C0%2C3999%2C2333&amp;s=472c082578a551a5ce0247f7e91e85b5" target="_blank">https://media.20min.ch/6/image/2025/09/03/79763f75-6e16-40ea-89c7-12c083407264.jpg?auto=format%2Ccompress%2Cenhance&amp;fit=max&amp;w=2001&amp;h=2000&amp;rect=0%2C0%2C3999%2C2333&amp;s=472c082578a551a5ce0247f7e91e85b5</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch Cassis / Dinner Marseille</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Cassis früh anfahren; Marseille Parkhaus.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 10 · Mi, 19.08.2026</span>
+        <h2>Provence → Antibes</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 260 km / 3–3,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt Antibes" id="hybrid-variante-tag10-highlight01" src="https://provencelovers.fr/wp-content/uploads/2023/12/besuchen-antibes-1-tage-reiseroute.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt Antibes</h4>
+              <p>Riviera-Atmosphäre ohne Nizza-Stress.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://provencelovers.fr/wp-content/uploads/2023/12/besuchen-antibes-1-tage-reiseroute.jpg" target="_blank">https://provencelovers.fr/wp-content/uploads/2023/12/besuchen-antibes-1-tage-reiseroute.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Port Vauban" id="hybrid-variante-tag10-highlight02" src="https://leportvauban.com/wp-content/uploads/2025/01/Design-sans-titre-8.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Port Vauban</h4>
+              <p>Yachten und Hafen.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://leportvauban.com/wp-content/uploads/2025/01/Design-sans-titre-8.jpg" target="_blank">https://leportvauban.com/wp-content/uploads/2025/01/Design-sans-titre-8.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Stadtmauer am Meer" id="hybrid-variante-tag10-highlight03" src="https://www.provence-info.de/wp-content/uploads/antibes-altstadt.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Stadtmauer am Meer</h4>
+              <p>Sunset-Spaziergang.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.provence-info.de/wp-content/uploads/antibes-altstadt.jpg" target="_blank">https://www.provence-info.de/wp-content/uploads/antibes-altstadt.jpg</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Le Vauban / Altstadt-Bistro</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Unterkunft mit Parkplatz.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 11 · Do, 20.08.2026</span>
+        <h2>Nizza + Èze</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 60–90 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Promenade des Anglais" id="hybrid-variante-tag11-highlight01" src="https://img.static-kl.com/transform/e3ca9f67-ba76-4512-bf96-16e5e4c684bb/?io=transform:fill,width:2880,height:1440&amp;consumerid=bwp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Promenade des Anglais</h4>
+              <p>Klassischer Riviera-Blick.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://img.static-kl.com/transform/e3ca9f67-ba76-4512-bf96-16e5e4c684bb/?io=transform:fill,width:2880,height:1440&amp;consumerid=bwp" target="_blank">https://img.static-kl.com/transform/e3ca9f67-ba76-4512-bf96-16e5e4c684bb/?io=transform:fill,width:2880,height:1440&amp;consumerid=bwp</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt Nizza" id="hybrid-variante-tag11-highlight02" src="https://berlinerininfrankreich.de/wp-content/uploads/2023/06/Nizza-Altstadt-5-682x1024.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt Nizza</h4>
+              <p>Farben, Märkte, Cafés.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://berlinerininfrankreich.de/wp-content/uploads/2023/06/Nizza-Altstadt-5-682x1024.jpg" target="_blank">https://berlinerininfrankreich.de/wp-content/uploads/2023/06/Nizza-Altstadt-5-682x1024.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Èze + Jardin Exotique" id="hybrid-variante-tag11-highlight03" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/32/d5/da/caption.jpg?w=1000&amp;h=-1&amp;s=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Èze + Jardin Exotique</h4>
+              <p>Top-Aussicht der Riviera.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/32/d5/da/caption.jpg?w=1000&amp;h=-1&amp;s=1" target="_blank">https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/32/d5/da/caption.jpg?w=1000&amp;h=-1&amp;s=1</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch Nizza / Dinner Antibes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Èze früh oder spät.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 12 · Fr, 21.08.2026</span>
+        <h2>Cannes + Cap d’Antibes</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 50–80 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="La Croisette" id="hybrid-variante-tag12-highlight01" src="https://cdm0lfbn.cloudimg.io/v7/_images_base_/image_uploader/photos/0d/original/promenade-de-la-croisette-cannes-cannes.jpg?ua=1767168725&amp;p=large"/>
+            </div>
+            <div class="highlight-content">
+              <h4>La Croisette</h4>
+              <p>Palmen, Strand und Luxus-Hotels.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://cdm0lfbn.cloudimg.io/v7/_images_base_/image_uploader/photos/0d/original/promenade-de-la-croisette-cannes-cannes.jpg?ua=1767168725&amp;p=large" target="_blank">https://cdm0lfbn.cloudimg.io/v7/_images_base_/image_uploader/photos/0d/original/promenade-de-la-croisette-cannes-cannes.jpg?ua=1767168725&amp;p=large</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Le Suquet" id="hybrid-variante-tag12-highlight02" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/194847525.jpg?k=f48b2315edfe6beab5d55d1a9ce1a9fc9e0553764a29f4516f6b92c7deba00dd&amp;o="/>
+            </div>
+            <div class="highlight-content">
+              <h4>Le Suquet</h4>
+              <p>Charmante Altstadtseite von Cannes.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/194847525.jpg?k=f48b2315edfe6beab5d55d1a9ce1a9fc9e0553764a29f4516f6b92c7deba00dd&amp;o=" target="_blank">https://cf.bstatic.com/xdata/images/hotel/max1024x768/194847525.jpg?k=f48b2315edfe6beab5d55d1a9ce1a9fc9e0553764a29f4516f6b92c7deba00dd&amp;o=</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cap d’Antibes Küstenweg" id="hybrid-variante-tag12-highlight03" src="https://hikingthealps.com/wp-content/uploads/2023/02/Sentier-du-Littoral-am-Cap-d-Antibes3-1024x771.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Cap d’Antibes Küstenweg</h4>
+              <p>Einer der schönsten Spaziergänge.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://hikingthealps.com/wp-content/uploads/2023/02/Sentier-du-Littoral-am-Cap-d-Antibes3-1024x771.jpg" target="_blank">https://hikingthealps.com/wp-content/uploads/2023/02/Sentier-du-Littoral-am-Cap-d-Antibes3-1024x771.jpg</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch Cannes / Dinner Antibes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Cannes Parkhaus; Cap am Nachmittag.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 13 · Sa, 22.08.2026</span>
+        <h2>Antibes → Turin</h2>
+        <div class="meta">
+          <span>Übernachtung: Turin</span>
+          <span>Fahrzeit/Kilometer: ca. 290 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Piazza San Carlo" id="hybrid-variante-tag13-highlight01" src="https://tourismmedia.italia.it/is/image/mitur/20220223132855-piazza-san-carlo-torino-piemonte-shutterstock-2102981095-rid?wid=1240&amp;hei=500&amp;fit=constrain,1&amp;fmt=webp"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Piazza San Carlo</h4>
+              <p>Schönster Platz Turins.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://tourismmedia.italia.it/is/image/mitur/20220223132855-piazza-san-carlo-torino-piemonte-shutterstock-2102981095-rid?wid=1240&amp;hei=500&amp;fit=constrain,1&amp;fmt=webp" target="_blank">https://tourismmedia.italia.it/is/image/mitur/20220223132855-piazza-san-carlo-torino-piemonte-shutterstock-2102981095-rid?wid=1240&amp;hei=500&amp;fit=constrain,1&amp;fmt=webp</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Piazza Castello" id="hybrid-variante-tag13-highlight02" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Turin_piazza_costello.JPG"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Piazza Castello</h4>
+              <p>Historisches Zentrum.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/c/c0/Turin_piazza_costello.JPG" target="_blank">https://upload.wikimedia.org/wikipedia/commons/c/c0/Turin_piazza_costello.JPG</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Aperitivo" id="hybrid-variante-tag13-highlight03" src="https://dynamic-media.tacdn.com/media/photo-o/2f/0e/cd/35/caption.jpg?w=1400&amp;h=1000&amp;s=1"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Aperitivo</h4>
+              <p>Perfekter Italien-Abend.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://dynamic-media.tacdn.com/media/photo-o/2f/0e/cd/35/caption.jpg?w=1400&amp;h=1000&amp;s=1" target="_blank">https://dynamic-media.tacdn.com/media/photo-o/2f/0e/cd/35/caption.jpg?w=1400&amp;h=1000&amp;s=1</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Porto di Savona / Aperitivo-Bar</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Parkgarage im Centro Storico.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 14 · So, 23.08.2026</span>
+        <h2>Turin → Malcesine</h2>
+        <div class="meta">
+          <span>Übernachtung: Malcesine</span>
+          <span>Fahrzeit/Kilometer: ca. 250 km / 3–3,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Castello Scaligero" id="hybrid-variante-tag14-highlight01" src="https://www.lust-auf-italien.com/wp-content/uploads/2025/03/Castello-Malcesine_Beitragsbild.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Castello Scaligero</h4>
+              <p>Burg mit Aussicht.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.lust-auf-italien.com/wp-content/uploads/2025/03/Castello-Malcesine_Beitragsbild.jpg" target="_blank">https://www.lust-auf-italien.com/wp-content/uploads/2025/03/Castello-Malcesine_Beitragsbild.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Altstadt Malcesine" id="hybrid-variante-tag14-highlight02" src="https://cdn.urlaubsguru.at/wp-content/uploads/2016/06/lake-garda-town-of-malcesine-veneto-italy-shutterstock_379405306-2-1-707x468.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Altstadt Malcesine</h4>
+              <p>Gassen und Hafen.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://cdn.urlaubsguru.at/wp-content/uploads/2016/06/lake-garda-town-of-malcesine-veneto-italy-shutterstock_379405306-2-1-707x468.jpg" target="_blank">https://cdn.urlaubsguru.at/wp-content/uploads/2016/06/lake-garda-town-of-malcesine-veneto-italy-shutterstock_379405306-2-1-707x468.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Seepromenade" id="hybrid-variante-tag14-highlight03" src="https://www.domusrental.com/blog/wp-content/uploads/elementor/thumbs/malcesine-lake-garda-qjhzxja9f9k76vfyl862x6562fy351s03eevimzcds.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Seepromenade</h4>
+              <p>Dolce-Vita-Abschluss.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.domusrental.com/blog/wp-content/uploads/elementor/thumbs/malcesine-lake-garda-qjhzxja9f9k76vfyl862x6562fy351s03eevimzcds.jpg" target="_blank">https://www.domusrental.com/blog/wp-content/uploads/elementor/thumbs/malcesine-lake-garda-qjhzxja9f9k76vfyl862x6562fy351s03eevimzcds.jpg</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>La Pace / Restaurant am See</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Hotel mit Parkplatz.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 15 · Mo, 24.08.2026</span>
+        <h2>Gardasee → Graz</h2>
+        <div class="meta">
+          <span>Übernachtung: Heimfahrt</span>
+          <span>Fahrzeit/Kilometer: ca. 450 km / 6–7 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Limone sul Garda" id="hybrid-variante-tag15-highlight01" src="https://images.trvl-media.com/place/602201/85794316-41cc-4ed3-8397-42a453933e28.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Limone sul Garda</h4>
+              <p>Optionaler Kaffee-Stopp.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://images.trvl-media.com/place/602201/85794316-41cc-4ed3-8397-42a453933e28.jpg" target="_blank">https://images.trvl-media.com/place/602201/85794316-41cc-4ed3-8397-42a453933e28.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Heimfahrt" id="hybrid-variante-tag15-highlight02" src="https://www.sifa-sibe.de/wp-content/uploads/a/u/auto_AdobeStock_60027303.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Heimfahrt</h4>
+              <p>Früh starten.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://www.sifa-sibe.de/wp-content/uploads/a/u/auto_AdobeStock_60027303.jpg" target="_blank">https://www.sifa-sibe.de/wp-content/uploads/a/u/auto_AdobeStock_60027303.jpg</a></p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Pausen unterwegs" id="hybrid-variante-tag15-highlight03" src="https://images.t-online.de/2022/04/51918718v1004/63x0:515x290/fit-in/646x0/rasten-sie-bei-langen-autofahrten-regelmaessig.jpg"/>
+            </div>
+            <div class="highlight-content">
+              <h4>Pausen unterwegs</h4>
+              <p>1–2 längere Pausen einplanen.</p>
+              <p class="photo-link"><strong>Foto-Link:</strong> <a href="https://images.t-online.de/2022/04/51918718v1004/63x0:515x290/fit-in/646x0/rasten-sie-bei-langen-autofahrten-regelmaessig.jpg" target="_blank">https://images.t-online.de/2022/04/51918718v1004/63x0:515x290/fit-in/646x0/rasten-sie-bei-langen-autofahrten-regelmaessig.jpg</a></p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Frühstück/Kaffee in Limone oder direkte Abfahrt</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Kurzstopp nur früh morgens sinnvoll.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
