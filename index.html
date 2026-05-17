@@ -545,6 +545,63 @@
     .alternatives a:hover {
       text-decoration: underline !important;
     }
+
+    .alternatives li a,
+    .alternatives li a strong {
+      font-weight: 700 !important;
+    }
+
+    .hotel-summary {
+      margin-top: 26px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff6ea;
+    }
+
+    .hotel-summary h3 {
+      margin-top: 0;
+      color: #203040;
+    }
+
+    .hotel-summary table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .hotel-summary th,
+    .hotel-summary td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .hotel-summary th {
+      background: #f0e2d0;
+      font-size: 13px;
+    }
+
+    .hotel-summary td {
+      font-size: 14px;
+    }
+
+    @media print {
+      .hotel-summary {
+        break-before: page;
+        page-break-before: always;
+        margin-top: 0 !important;
+        padding: 3mm !important;
+        border-radius: 0 !important;
+      }
+
+      .hotel-summary th,
+      .hotel-summary td {
+        font-size: 7px !important;
+        padding: 1.5mm !important;
+      }
+    }
   </style>
   <script>
     function showVariant(id) {
@@ -581,6 +638,21 @@
         <span class="label">Variante 1</span>
         <h2>Mehr Südfrankreich-Fokus: Provence, Verdon, Cassis/Marseille, Antibes + Gardasee 1 Nacht</h2>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section class="card day">
         <span class="label">Tag 1 · Mo, 10.08.2026</span>
         <h2>Graz → München</h2>
@@ -637,23 +709,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Olympiapark+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Olympiapark</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Weitläufiges Gelände mit moderner Architektur; gut für einen kurzen
+                target="_blank"><strong>Olympiapark</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Weitläufiges Gelände mit moderner
+              Architektur; gut für einen kurzen
               Spaziergang und Aussicht vom Olympiaberg.</li>
             <li><a href="https://www.google.com/search?q=Viktualienmarkt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Viktualienmarkt</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Lebendiger Markt nahe der Altstadt; ideal für einen Snack oder
+                target="_blank"><strong>Viktualienmarkt</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Lebendiger Markt nahe der Altstadt;
+              ideal für einen Snack oder
               regionale Spezialitäten.</li>
             <li><a href="https://www.google.com/search?q=Isarauen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Isarauen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Entspannter Spaziergang am Wasser, wenn die Innenstadt zu voll ist.
+                target="_blank"><strong>Isarauen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Entspannter Spaziergang am Wasser,
+              wenn die Innenstadt zu voll ist.
             </li>
             <li><a href="https://www.google.com/search?q=BMW+Welt+%2F+BMW+Museum+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">BMW Welt / BMW Museum</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>BMW Welt / BMW Museum</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gute Indoor-Option mit moderner
               Architektur und Technikbezug; praktisch, wenn das Wetter nicht mitspielt.</li>
             <li><a href="https://www.google.com/search?q=Schloss+Nymphenburg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Schloss Nymphenburg</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Schloss Nymphenburg</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Große barocke Anlage mit Park;
               schöner Kontrast zur Innenstadt und gut für einen ruhigen Abendspaziergang.</li>
           </ul>
@@ -715,25 +790,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Barrage+Vauban+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Barrage Vauban</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Historisches Wehr mit schöner Aussicht auf Petite France und die
+                target="_blank"><strong>Barrage Vauban</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Historisches Wehr mit schöner
+              Aussicht auf Petite France und die
               überdachten Brücken.</li>
             <li><a
                 href="https://www.google.com/search?q=Parc+de+l%E2%80%99Orangerie+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Parc de l’Orangerie</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Parc de l’Orangerie</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhige Grünanlage etwas außerhalb
               des Zentrums, gut für eine Pause nach der Fahrt.</li>
             <li><a href="https://www.google.com/search?q=Bootsfahrt+auf+der+Ill+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bootsfahrt auf der Ill</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Bootsfahrt auf der Ill</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Bequeme Möglichkeit, die Altstadt
               und das Europaviertel vom Wasser aus zu sehen.</li>
             <li><a href="https://www.google.com/search?q=Ponts+Couverts+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ponts Couverts</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Historische Brücken und Türme direkt bei Petite France; gut als
+                target="_blank"><strong>Ponts Couverts</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historische Brücken und Türme direkt
+              bei Petite France; gut als
               kurzer Fotostopp.</li>
             <li><a href="https://www.google.com/search?q=Europaviertel+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Europaviertel</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Architektonisch interessant, wenn Zeit bleibt und ihr neben der
+                target="_blank"><strong>Europaviertel</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Architektonisch interessant, wenn
+              Zeit bleibt und ihr neben der
               Altstadt auch das moderne Straßburg sehen wollt.</li>
           </ul>
         </div>
@@ -793,22 +871,25 @@
           <ul>
             <li><a
                 href="https://www.google.com/search?q=Ch%C3%A2teau+d%E2%80%99Annecy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Château d’Annecy</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Burg oberhalb der Altstadt mit Blick auf Dächer, See und Berge.</li>
+                target="_blank"><strong>Château d’Annecy</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Burg oberhalb der Altstadt mit Blick
+              auf Dächer, See und Berge.</li>
             <li><a href="https://www.google.com/search?q=Pont+des+Amours+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Pont des Amours</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Klassischer Fotopunkt zwischen Altstadt, Kanal und Seeufer.</li>
+                target="_blank"><strong>Pont des Amours</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Klassischer Fotopunkt zwischen
+              Altstadt, Kanal und Seeufer.</li>
             <li><a href="https://www.google.com/search?q=Semnoz-Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Semnoz-Aussicht</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Optionaler Abstecher in die Höhe mit Panorama über See und Alpen.
+                target="_blank"><strong>Semnoz-Aussicht</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Optionaler Abstecher in die Höhe mit
+              Panorama über See und Alpen.
             </li>
             <li><a
                 href="https://www.google.com/search?q=Jardins+de+l%E2%80%99Europe+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Jardins de l’Europe</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Jardins de l’Europe</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Angenehme Parkanlage direkt am See;
               ideal für einen kurzen Spaziergang nach der Fahrt.</li>
             <li><a href="https://www.google.com/search?q=Basilique+de+la+Visitation+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Basilique de la Visitation</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Basilique de la Visitation</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Ruhiger Aussichtspunkt oberhalb der
               Stadt, wenn noch Energie für einen kurzen Anstieg bleibt.</li>
           </ul>
@@ -870,24 +951,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Fontaine-de-Vaucluse+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Fontaine-de-Vaucluse</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Fontaine-de-Vaucluse</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurzer Naturstopp an der Quelle der
               Sorgue, passend zur Region L’Isle-sur-la-Sorgue.</li>
             <li><a href="https://www.google.com/search?q=Apt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Apt</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Kleinstadt im Luberon mit südfranzösischem Alltagsflair und guter
+                target="_blank"><strong>Apt</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleinstadt im Luberon mit
+              südfranzösischem Alltagsflair und guter
               Lage für kurze Stopps.</li>
             <li><a href="https://www.google.com/search?q=Bonnieux+Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bonnieux Aussicht</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Bonnieux Aussicht</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Terrassendorf mit weitem Blick über
               den Luberon, besonders am späten Nachmittag schön.</li>
             <li><a href="https://www.google.com/search?q=Opp%C3%A8de-le-Vieux+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Oppède-le-Vieux</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhiger, atmosphärischer Ort mit alten Steinhäusern; gut, wenn ihr
+                target="_blank"><strong>Oppède-le-Vieux</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger, atmosphärischer Ort mit
+              alten Steinhäusern; gut, wenn ihr
               weniger Trubel wollt.</li>
             <li><a
                 href="https://www.google.com/search?q=Cavaillon+%2F+Melonen-Stopp+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cavaillon / Melonen-Stopp</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Cavaillon / Melonen-Stopp</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Pragmatischer Zwischenstopp für
               kurze Pause, Einkauf oder Café auf dem Weg in die Provence.</li>
           </ul>
@@ -950,24 +1033,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=M%C3%A9nerbes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ménerbes</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhigeres Dorf mit schöner Lage auf einem Höhenrücken und weniger
+                target="_blank"><strong>Ménerbes</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhigeres Dorf mit schöner Lage auf
+              einem Höhenrücken und weniger
               Trubel als Gordes.</li>
             <li><a href="https://www.google.com/search?q=Lacoste+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Lacoste</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Historischer Ort mit Burgruine und Blick über die
+                target="_blank"><strong>Lacoste</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historischer Ort mit Burgruine und
+              Blick über die
               Provence-Landschaft.</li>
             <li><a href="https://www.google.com/search?q=Ochre+Trail+kurz+halten+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ochre Trail kurz halten</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Ochre Trail kurz halten</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Bei Hitze nur eine kurze Runde
               einplanen; die Farben sind auch auf kleinen Abschnitten eindrucksvoll.</li>
             <li><a href="https://www.google.com/search?q=Saignon+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Saignon</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleines Dorf mit Aussichtsfelsen; gute Alternative zu den bekannteren
+                target="_blank"><strong>Saignon</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleines Dorf mit Aussichtsfelsen;
+              gute Alternative zu den bekannteren
               Orten.</li>
             <li><a href="https://www.google.com/search?q=March%C3%A9+in+Apt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Marché in Apt</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Lohnt sich besonders an Markttagen für regionale Produkte, Lavendel,
+                target="_blank"><strong>Marché in Apt</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Lohnt sich besonders an Markttagen
+              für regionale Produkte, Lavendel,
               Käse und Provence-Atmosphäre.</li>
           </ul>
         </div>
@@ -1027,25 +1114,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Les+Baux-de-Provence+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Les Baux-de-Provence</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Les Baux-de-Provence</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Spektakuläres Felsendorf mit
               Burgruine, gut kombinierbar mit Saint-Rémy.</li>
             <li><a
                 href="https://www.google.com/search?q=Carri%C3%A8res+des+Lumi%C3%A8res+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Carrières des Lumières</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Carrières des Lumières</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Multimediale Kunstprojektion in
               alten Steinbrüchen; sinnvoll bei großer Hitze oder als Schlechtwetteroption.</li>
             <li><a href="https://www.google.com/search?q=Pont+du+Gard+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Pont du Gard</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Römisches Aquädukt und UNESCO-Highlight, falls ein größerer
+                target="_blank"><strong>Pont du Gard</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Römisches Aquädukt und
+              UNESCO-Highlight, falls ein größerer
               Kulturabstecher gewünscht ist.</li>
             <li><a href="https://www.google.com/search?q=Glanum+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Glanum</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Antike Ausgrabungsstätte bei Saint-Rémy; gut für Geschichte ohne
+                target="_blank"><strong>Glanum</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Antike Ausgrabungsstätte bei
+              Saint-Rémy; gut für Geschichte ohne
               langen Umweg.</li>
             <li><a href="https://www.google.com/search?q=Rocher+des+Doms+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Rocher des Doms</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Garten oberhalb von Avignon mit Blick auf Rhône, Altstadt und Pont
+                target="_blank"><strong>Rocher des Doms</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Garten oberhalb von Avignon mit
+              Blick auf Rhône, Altstadt und Pont
               d’Avignon.</li>
           </ul>
         </div>
@@ -1109,23 +1199,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Moustiers-Sainte-Marie+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Moustiers-Sainte-Marie</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Moustiers-Sainte-Marie</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Schönes Dorf nahe dem Lac de
               Sainte-Croix, gut für Kaffee oder Abendessen.</li>
             <li><a href="https://www.google.com/search?q=Point+Sublime+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Point Sublime</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Aussichtspunkt mit starkem Blick in die Schlucht; Alternative oder
+                target="_blank"><strong>Point Sublime</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Aussichtspunkt mit starkem Blick in
+              die Schlucht; Alternative oder
               Ergänzung zur Route des Crêtes.</li>
             <li><a href="https://www.google.com/search?q=Aiguines+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Aiguines</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleiner Ort oberhalb des Sees mit Blick auf Wasser und Berge.</li>
+                target="_blank"><strong>Aiguines</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner Ort oberhalb des Sees mit
+              Blick auf Wasser und Berge.</li>
             <li><a href="https://www.google.com/search?q=Sentier+Blanc-Martel+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Sentier Blanc-Martel</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Sentier Blanc-Martel</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Sehr eindrucksvolle Wanderroute in
               der Schlucht; nur sinnvoll mit früher Planung, Zeit und passender Ausrüstung.</li>
             <li><a href="https://www.google.com/search?q=Bauduen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bauduen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhiger Seeort am Lac de Sainte-Croix, gut als entspannter Gegenpol
+                target="_blank"><strong>Bauduen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Seeort am Lac de
+              Sainte-Croix, gut als entspannter Gegenpol
               zu den Hauptspots.</li>
           </ul>
         </div>
@@ -1208,23 +1301,24 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Calanque+de+Port-Miou+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Calanque de Port-Miou</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Calanque de Port-Miou</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gut erreichbarer Einstieg in die
               Calanques-Landschaft nahe Cassis.</li>
             <li><a href="https://www.google.com/search?q=Le+Panier+in+Marseille+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Le Panier in Marseille</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Le Panier in Marseille</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ältestes Viertel der Stadt mit
               Gassen, Street-Art und Cafés.</li>
             <li><a href="https://www.google.com/search?q=Mucem-Au%C3%9Fenbereich+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mucem-Außenbereich</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Mucem-Außenbereich</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Moderne Architektur am Hafen; auch
               ohne Museumsbesuch ein guter Spaziergang.</li>
             <li><a href="https://www.google.com/search?q=Corniche+Kennedy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Corniche Kennedy</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Küstenstraße mit Meerblick in Marseille; schön als kurzer Fotostopp.
+                target="_blank"><strong>Corniche Kennedy</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Küstenstraße mit Meerblick in
+              Marseille; schön als kurzer Fotostopp.
             </li>
             <li><a href="https://www.google.com/search?q=Vallon+des+Auffes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Vallon des Auffes</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Vallon des Auffes</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kleiner Fischerhafen in Marseille
               mit viel Atmosphäre; gut für Abendstimmung und Fotos.</li>
           </ul>
@@ -1285,24 +1379,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Saint-Paul-de-Vence+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Saint-Paul-de-Vence</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Saint-Paul-de-Vence</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Künstlerdorf im Hinterland, sehr
               fotogen, aber im August früh besuchen.</li>
             <li><a href="https://www.google.com/search?q=Grasse+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Grasse</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Parfumstadt mit Altstadt und Duft-Thema, gut als Zwischenstopp
+                target="_blank"><strong>Grasse</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Parfumstadt mit Altstadt und
+              Duft-Thema, gut als Zwischenstopp
               Richtung Küste.</li>
             <li><a href="https://www.google.com/search?q=Biot+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Biot</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Kleiner Ort zwischen Antibes und Nizza, bekannt für Glas und ruhiger
+                target="_blank"><strong>Biot</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleiner Ort zwischen Antibes und
+              Nizza, bekannt für Glas und ruhiger
               als die großen Küstenorte.</li>
             <li><a href="https://www.google.com/search?q=Mougins+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mougins</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Gepflegtes Künstlerdorf oberhalb von Cannes; gute Option für
+                target="_blank"><strong>Mougins</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gepflegtes Künstlerdorf oberhalb von
+              Cannes; gute Option für
               Mittagessen oder kurzen Spaziergang.</li>
             <li><a href="https://www.google.com/search?q=Valbonne+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Valbonne</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Angenehmer Ort mit Arkadenplatz; weniger überlaufen als viele
+                target="_blank"><strong>Valbonne</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Angenehmer Ort mit Arkadenplatz;
+              weniger überlaufen als viele
               Küstenziele.</li>
           </ul>
         </div>
@@ -1363,22 +1461,24 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Colline+du+Ch%C3%A2teau+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Colline du Château</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Colline du Château</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Aussichtspunkt über Nizza, Hafen und
               Baie des Anges.</li>
             <li><a href="https://www.google.com/search?q=Cours+Saleya+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cours Saleya</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Markt- und Altstadtbereich mit viel Atmosphäre am Vormittag.</li>
+                target="_blank"><strong>Cours Saleya</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Markt- und Altstadtbereich mit viel
+              Atmosphäre am Vormittag.</li>
             <li><a href="https://www.google.com/search?q=Villefranche-sur-Mer+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villefranche-sur-Mer</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Villefranche-sur-Mer</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kleine Bucht nahe Nizza, gute
               Alternative, wenn Èze sehr voll ist.</li>
             <li><a href="https://www.google.com/search?q=Cap+Ferrat+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cap Ferrat</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Elegante Halbinsel mit schönen Küstenwegen und ruhigerem
+                target="_blank"><strong>Cap Ferrat</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Elegante Halbinsel mit schönen
+              Küstenwegen und ruhigerem
               Riviera-Flair.</li>
             <li><a href="https://www.google.com/search?q=Monast%C3%A8re+de+Cimiez+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monastère de Cimiez</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Monastère de Cimiez</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Ruhiger Kultur- und Gartenstopp
               oberhalb von Nizza, abseits der Promenade.</li>
           </ul>
@@ -1439,23 +1539,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=%C3%8Ele+Sainte-Marguerite+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Île Sainte-Marguerite</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Île Sainte-Marguerite</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurze Fährfahrt ab Cannes; ruhiger
               Natur- und Badekontrast zur Croisette.</li>
             <li><a href="https://www.google.com/search?q=March%C3%A9+Forville+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Marché Forville</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Markthalle in Cannes, gut für einen lokalen Start in den Tag.</li>
+                target="_blank"><strong>Marché Forville</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Markthalle in Cannes, gut für einen
+              lokalen Start in den Tag.</li>
             <li><a href="https://www.google.com/search?q=Plage+de+la+Garoupe+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Plage de la Garoupe</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Plage de la Garoupe</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Bekannter Strandbereich am Cap
               d’Antibes; früh kommen wegen Parkplätzen.</li>
             <li><a href="https://www.google.com/search?q=Villa+Eilenroc+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villa Eilenroc</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Anlage am Cap d’Antibes; interessant, wenn ihr Architektur und
+                target="_blank"><strong>Villa Eilenroc</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Anlage am Cap d’Antibes;
+              interessant, wenn ihr Architektur und
               Gärten mögt.</li>
             <li><a href="https://www.google.com/search?q=Juan-les-Pins+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Juan-les-Pins</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Lebhafter Badeort direkt neben Antibes; gut für Strand, Promenade und
+                target="_blank"><strong>Juan-les-Pins</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Lebhafter Badeort direkt neben
+              Antibes; gut für Strand, Promenade und
               Abendstimmung.</li>
           </ul>
         </div>
@@ -1515,23 +1618,23 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Jardin+Serre+de+la+Madone+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Jardin Serre de la Madone</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Jardin Serre de la Madone</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Garten mit exotischen
               Pflanzen, gute Alternative zur vollen Altstadt.</li>
             <li><a href="https://www.google.com/search?q=Roquebrune-Cap-Martin+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Roquebrune-Cap-Martin</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Roquebrune-Cap-Martin</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Mittelalterlicher Ort mit Aussicht
               zwischen Monaco und Menton.</li>
             <li><a href="https://www.google.com/search?q=Monaco+kurzer+Abstecher+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monaco kurzer Abstecher</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Monaco kurzer Abstecher</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Nur sinnvoll, wenn Interesse an
               Hafen, Altstadt oder Casino besteht; Parkhaus einplanen.</li>
             <li><a href="https://www.google.com/search?q=Jardin+Val+Rahmeh+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Jardin Val Rahmeh</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Jardin Val Rahmeh</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Botanischer Garten in Menton;
               angenehm, wenn der Tag bewusst ruhiger bleiben soll.</li>
             <li><a href="https://www.google.com/search?q=Plage+des+Sablettes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Plage des Sablettes</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Plage des Sablettes</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Zentrale Bademöglichkeit mit Blick
               auf die Altstadt; gut für eine entspannte Pause.</li>
           </ul>
@@ -1591,23 +1694,24 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Mole+Antonelliana+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mole Antonelliana</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Mole Antonelliana</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Wahrzeichen Turins mit Aussicht und
               Filmmuseum; gut für den ersten Abend.</li>
             <li><a href="https://www.google.com/search?q=Quadrilatero+Romano+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Quadrilatero Romano</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Quadrilatero Romano</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historisches Viertel mit Bars und
               Restaurants, ideal für Aperitivo.</li>
             <li><a href="https://www.google.com/search?q=Parco+del+Valentino+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Parco del Valentino</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Parco del Valentino</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Grüne Pause am Po, wenn nach der
               Fahrt noch Bewegung angenehm ist.</li>
             <li><a href="https://www.google.com/search?q=Museo+Egizio+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Museo Egizio</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Eines der wichtigsten Ägyptischen Museen Europas; gute Indoor-Option
+                target="_blank"><strong>Museo Egizio</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Eines der wichtigsten Ägyptischen
+              Museen Europas; gute Indoor-Option
               bei Hitze oder Regen.</li>
             <li><a href="https://www.google.com/search?q=Basilica+di+Superga+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Basilica di Superga</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Basilica di Superga</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Aussichtspunkt oberhalb von Turin;
               lohnt sich bei klarer Sicht und etwas zusätzlicher Zeit.</li>
           </ul>
@@ -1646,7 +1750,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Seepromenade" id="hybrid-variante-tag14-highlight03" src="images/malcesine-seepromenade.png" />
+              <img alt="Seepromenade" id="meine-variante-tag14-highlight03" src="images/malcesine-seepromenade.png" />
             </div>
             <div class="highlight-content">
               <h4><a href="https://www.google.com/search?q=Seepromenade" target="_blank">Seepromenade</a></h4>
@@ -1668,24 +1772,25 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Monte+Baldo+Seilbahn+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monte Baldo Seilbahn</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Monte Baldo Seilbahn</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Aussicht über den Gardasee; bei
               klarem Wetter besonders lohnend, Wartezeiten einplanen.</li>
             <li><a href="https://www.google.com/search?q=Hafen+von+Malcesine+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Hafen von Malcesine</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Hafen von Malcesine</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner, stimmungsvoller Bereich für
               Spaziergang, Fotos und Gelato.</li>
             <li><a href="https://www.google.com/search?q=Cassone+di+Malcesine+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cassone di Malcesine</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Cassone di Malcesine</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Nachbarort mit kleinem
               Hafen, wenn Malcesine selbst sehr voll ist.</li>
             <li><a href="https://www.google.com/search?q=Palazzo+dei+Capitani+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Palazzo dei Capitani</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Palazzo dei Capitani</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleiner historischer Stopp direkt im
               Ort; gut mit Altstadt und Ufer kombinierbar.</li>
             <li><a href="https://www.google.com/search?q=Val+di+Sogno+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Val di Sogno</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Bucht südlich von Malcesine; gut für ruhige Seeblicke und
+                target="_blank"><strong>Val di Sogno</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Bucht südlich von Malcesine;
+              gut für ruhige Seeblicke und
               kurze Spaziergänge.</li>
           </ul>
         </div>
@@ -1744,35 +1849,110 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Riva+del+Garda+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Riva del Garda</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Optionaler Morgenstopp am Nordufer mit alpiner Gardasee-Kulisse.</li>
+                target="_blank"><strong>Riva del Garda</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Optionaler Morgenstopp am Nordufer
+              mit alpiner Gardasee-Kulisse.</li>
             <li><a href="https://www.google.com/search?q=Arco+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Arco</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleiner Ort nördlich des Sees mit Burgblick, gut für eine kurze
+                target="_blank"><strong>Arco</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner Ort nördlich des Sees mit
+              Burgblick, gut für eine kurze
               Pause.</li>
             <li><a
                 href="https://www.google.com/search?q=Villach+oder+W%C3%B6rthersee-Pause+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villach oder Wörthersee-Pause</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Villach oder Wörthersee-Pause</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Praktischer Stopp auf der Rückfahrt,
               um die lange Etappe zu unterbrechen.</li>
             <li><a href="https://www.google.com/search?q=Brixen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Brixen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Altstadt auf der Rückfahrt-Variante über Südtirol; gut für
+                target="_blank"><strong>Brixen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Altstadt auf der
+              Rückfahrt-Variante über Südtirol; gut für
               Kaffee oder Mittagspause.</li>
             <li><a href="https://www.google.com/search?q=Klagenfurt+Altstadt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Klagenfurt Altstadt</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Klagenfurt Altstadt</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Naheliegender später Zwischenstopp,
               falls ihr vor Graz noch eine letzte Pause braucht.</li>
           </ul>
         </div>
       </section>
+      <section class="card hotel-summary">
+        <h3>Kurzübersicht Übernachtungen / Hotelbuchung</h3>
+        <p>Zusammenfassung der Übernachtungen mit korrektem Check-in- und Check-out-Tag.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Ort</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Nächte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>München</strong></td>
+              <td>Mo, 10.08.2026</td>
+              <td>Di, 11.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Straßburg</strong></td>
+              <td>Di, 11.08.2026</td>
+              <td>Mi, 12.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Annecy</strong></td>
+              <td>Mi, 12.08.2026</td>
+              <td>Do, 13.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>L’Isle-sur-la-Sorgue</strong></td>
+              <td>Do, 13.08.2026</td>
+              <td>Di, 18.08.2026</td>
+              <td>5 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Antibes</strong></td>
+              <td>Di, 18.08.2026</td>
+              <td>Sa, 22.08.2026</td>
+              <td>4 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Turin</strong></td>
+              <td>Sa, 22.08.2026</td>
+              <td>So, 23.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Malcesine</strong></td>
+              <td>So, 23.08.2026</td>
+              <td>Mo, 24.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </section>
     <section class="variant" id="hybrid-variante">
       <section class="card">
         <span class="label">Variante 2</span>
-        <h2>Mehr Balance: 2 Nächte Straßburg inkl. Colmar, 2 Nächte Annecy, kein Lyon, trotzdem
-          Provence/Cassis/Verdon/Antibes</h2>
+        <h2>Mehr Balance: 2 Nächte Straßburg inkl. Colmar, 2 Nächte Annecy, kein Menton/Monaco-Relax-Tag</h2>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section class="card day">
         <span class="label">Tag 1 · Mo, 10.08.2026</span>
         <h2>Graz → München</h2>
@@ -1829,23 +2009,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Olympiapark+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Olympiapark</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Weitläufiges Gelände mit moderner Architektur; gut für einen kurzen
+                target="_blank"><strong>Olympiapark</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Weitläufiges Gelände mit moderner
+              Architektur; gut für einen kurzen
               Spaziergang und Aussicht vom Olympiaberg.</li>
             <li><a href="https://www.google.com/search?q=Viktualienmarkt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Viktualienmarkt</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Lebendiger Markt nahe der Altstadt; ideal für einen Snack oder
+                target="_blank"><strong>Viktualienmarkt</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Lebendiger Markt nahe der Altstadt;
+              ideal für einen Snack oder
               regionale Spezialitäten.</li>
             <li><a href="https://www.google.com/search?q=Isarauen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Isarauen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Entspannter Spaziergang am Wasser, wenn die Innenstadt zu voll ist.
+                target="_blank"><strong>Isarauen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Entspannter Spaziergang am Wasser,
+              wenn die Innenstadt zu voll ist.
             </li>
             <li><a href="https://www.google.com/search?q=BMW+Welt+%2F+BMW+Museum+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">BMW Welt / BMW Museum</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>BMW Welt / BMW Museum</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gute Indoor-Option mit moderner
               Architektur und Technikbezug; praktisch, wenn das Wetter nicht mitspielt.</li>
             <li><a href="https://www.google.com/search?q=Schloss+Nymphenburg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Schloss Nymphenburg</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Schloss Nymphenburg</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Große barocke Anlage mit Park;
               schöner Kontrast zur Innenstadt und gut für einen ruhigen Abendspaziergang.</li>
           </ul>
@@ -1907,25 +2090,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Barrage+Vauban+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Barrage Vauban</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Historisches Wehr mit schöner Aussicht auf Petite France und die
+                target="_blank"><strong>Barrage Vauban</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Historisches Wehr mit schöner
+              Aussicht auf Petite France und die
               überdachten Brücken.</li>
             <li><a
                 href="https://www.google.com/search?q=Parc+de+l%E2%80%99Orangerie+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Parc de l’Orangerie</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Parc de l’Orangerie</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhige Grünanlage etwas außerhalb
               des Zentrums, gut für eine Pause nach der Fahrt.</li>
             <li><a href="https://www.google.com/search?q=Bootsfahrt+auf+der+Ill+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bootsfahrt auf der Ill</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Bootsfahrt auf der Ill</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Bequeme Möglichkeit, die Altstadt
               und das Europaviertel vom Wasser aus zu sehen.</li>
             <li><a href="https://www.google.com/search?q=Ponts+Couverts+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ponts Couverts</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Historische Brücken und Türme direkt bei Petite France; gut als
+                target="_blank"><strong>Ponts Couverts</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historische Brücken und Türme direkt
+              bei Petite France; gut als
               kurzer Fotostopp.</li>
             <li><a href="https://www.google.com/search?q=Europaviertel+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Europaviertel</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Architektonisch interessant, wenn Zeit bleibt und ihr neben der
+                target="_blank"><strong>Europaviertel</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Architektonisch interessant, wenn
+              Zeit bleibt und ihr neben der
               Altstadt auch das moderne Straßburg sehen wollt.</li>
           </ul>
         </div>
@@ -1989,15 +2175,17 @@
               Elsass.</li>
             <li><strong>Kaysersberg:</strong> Charmantes Weindorf mit weniger Trubel und schöner Altstadt.</li>
             <li><a href="https://www.google.com/search?q=Eguisheim+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Eguisheim</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Runder Dorfkern mit viel Elsass-Atmosphäre; gute Alternative, wenn
+                target="_blank"><strong>Eguisheim</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Runder Dorfkern mit viel
+              Elsass-Atmosphäre; gute Alternative, wenn
               Riquewihr zu voll ist.</li>
             <li><a href="https://www.google.com/search?q=Kaysersberg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Kaysersberg</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöner Ort mit Brücke, Altstadt und Burgruine; gut für einen
+                target="_blank"><strong>Kaysersberg</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöner Ort mit Brücke, Altstadt und
+              Burgruine; gut für einen
               zusätzlichen Fotostopp.</li>
             <li><a href="https://www.google.com/search?q=Haut-Koenigsbourg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Haut-Koenigsbourg</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Haut-Koenigsbourg</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Große Burganlage mit weitem Blick
               über das Elsass; sinnvoll, wenn ihr mehr Kultur als Dorfhopping wollt.</li>
           </ul>
@@ -2058,22 +2246,25 @@
           <ul>
             <li><a
                 href="https://www.google.com/search?q=Ch%C3%A2teau+d%E2%80%99Annecy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Château d’Annecy</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Burg oberhalb der Altstadt mit Blick auf Dächer, See und Berge.</li>
+                target="_blank"><strong>Château d’Annecy</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Burg oberhalb der Altstadt mit Blick
+              auf Dächer, See und Berge.</li>
             <li><a href="https://www.google.com/search?q=Pont+des+Amours+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Pont des Amours</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Klassischer Fotopunkt zwischen Altstadt, Kanal und Seeufer.</li>
+                target="_blank"><strong>Pont des Amours</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Klassischer Fotopunkt zwischen
+              Altstadt, Kanal und Seeufer.</li>
             <li><a href="https://www.google.com/search?q=Semnoz-Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Semnoz-Aussicht</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Optionaler Abstecher in die Höhe mit Panorama über See und Alpen.
+                target="_blank"><strong>Semnoz-Aussicht</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Optionaler Abstecher in die Höhe mit
+              Panorama über See und Alpen.
             </li>
             <li><a
                 href="https://www.google.com/search?q=Jardins+de+l%E2%80%99Europe+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Jardins de l’Europe</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Jardins de l’Europe</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Angenehme Parkanlage direkt am See;
               ideal für einen kurzen Spaziergang nach der Fahrt.</li>
             <li><a href="https://www.google.com/search?q=Basilique+de+la+Visitation+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Basilique de la Visitation</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Basilique de la Visitation</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Ruhiger Aussichtspunkt oberhalb der
               Stadt, wenn noch Energie für einen kurzen Anstieg bleibt.</li>
           </ul>
@@ -2136,24 +2327,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Altstadtmarkt+Annecy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Altstadtmarkt Annecy</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Altstadtmarkt Annecy</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Guter Start in den Tag mit
               regionalen Produkten, Cafés und viel Atmosphäre.</li>
             <li><a
                 href="https://www.google.com/search?q=Bootsfahrt+auf+dem+Lac+d%E2%80%99Annecy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bootsfahrt auf dem Lac d’Annecy</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Bootsfahrt auf dem Lac d’Annecy</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Entspannter Blick auf See, Berge und
               Uferorte ohne viel Laufaufwand.</li>
             <li><a href="https://www.google.com/search?q=Talloires+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Talloires</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöner Uferort mit ruhigerem Seegefühl und guten Ausblicken.</li>
+                target="_blank"><strong>Talloires</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöner Uferort mit ruhigerem
+              Seegefühl und guten Ausblicken.</li>
             <li><a href="https://www.google.com/search?q=Col+de+la+Forclaz+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Col de la Forclaz</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Col de la Forclaz</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Einer der besten Panoramapunkte über
               den See; bei klarem Wetter besonders stark.</li>
             <li><a href="https://www.google.com/search?q=Plage+d%E2%80%99Albigny+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Plage d’Albigny</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Praktische Bade- und Pausenoption nahe Annecy, gut für einen lockeren
+                target="_blank"><strong>Plage d’Albigny</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Praktische Bade- und Pausenoption
+              nahe Annecy, gut für einen lockeren
               Nachmittag.</li>
           </ul>
         </div>
@@ -2214,24 +2407,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Fontaine-de-Vaucluse+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Fontaine-de-Vaucluse</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Fontaine-de-Vaucluse</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurzer Naturstopp an der Quelle der
               Sorgue, passend zur Region L’Isle-sur-la-Sorgue.</li>
             <li><a href="https://www.google.com/search?q=Apt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Apt</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Kleinstadt im Luberon mit südfranzösischem Alltagsflair und guter
+                target="_blank"><strong>Apt</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleinstadt im Luberon mit
+              südfranzösischem Alltagsflair und guter
               Lage für kurze Stopps.</li>
             <li><a href="https://www.google.com/search?q=Bonnieux+Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bonnieux Aussicht</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Bonnieux Aussicht</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Terrassendorf mit weitem Blick über
               den Luberon, besonders am späten Nachmittag schön.</li>
             <li><a href="https://www.google.com/search?q=Opp%C3%A8de-le-Vieux+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Oppède-le-Vieux</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhiger, atmosphärischer Ort mit alten Steinhäusern; gut, wenn ihr
+                target="_blank"><strong>Oppède-le-Vieux</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger, atmosphärischer Ort mit
+              alten Steinhäusern; gut, wenn ihr
               weniger Trubel wollt.</li>
             <li><a
                 href="https://www.google.com/search?q=Cavaillon+%2F+Melonen-Stopp+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cavaillon / Melonen-Stopp</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Cavaillon / Melonen-Stopp</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Pragmatischer Zwischenstopp für
               kurze Pause, Einkauf oder Café auf dem Weg in die Provence.</li>
           </ul>
@@ -2294,24 +2489,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=M%C3%A9nerbes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ménerbes</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhigeres Dorf mit schöner Lage auf einem Höhenrücken und weniger
+                target="_blank"><strong>Ménerbes</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhigeres Dorf mit schöner Lage auf
+              einem Höhenrücken und weniger
               Trubel als Gordes.</li>
             <li><a href="https://www.google.com/search?q=Lacoste+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Lacoste</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Historischer Ort mit Burgruine und Blick über die
+                target="_blank"><strong>Lacoste</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historischer Ort mit Burgruine und
+              Blick über die
               Provence-Landschaft.</li>
             <li><a href="https://www.google.com/search?q=Ochre+Trail+kurz+halten+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ochre Trail kurz halten</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Ochre Trail kurz halten</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Bei Hitze nur eine kurze Runde
               einplanen; die Farben sind auch auf kleinen Abschnitten eindrucksvoll.</li>
             <li><a href="https://www.google.com/search?q=Saignon+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Saignon</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleines Dorf mit Aussichtsfelsen; gute Alternative zu den bekannteren
+                target="_blank"><strong>Saignon</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleines Dorf mit Aussichtsfelsen;
+              gute Alternative zu den bekannteren
               Orten.</li>
             <li><a href="https://www.google.com/search?q=March%C3%A9+in+Apt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Marché in Apt</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Lohnt sich besonders an Markttagen für regionale Produkte, Lavendel,
+                target="_blank"><strong>Marché in Apt</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Lohnt sich besonders an Markttagen
+              für regionale Produkte, Lavendel,
               Käse und Provence-Atmosphäre.</li>
           </ul>
         </div>
@@ -2371,23 +2570,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Moustiers-Sainte-Marie+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Moustiers-Sainte-Marie</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Moustiers-Sainte-Marie</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Schönes Dorf nahe dem Lac de
               Sainte-Croix, gut für Kaffee oder Abendessen.</li>
             <li><a href="https://www.google.com/search?q=Point+Sublime+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Point Sublime</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Aussichtspunkt mit starkem Blick in die Schlucht; Alternative oder
+                target="_blank"><strong>Point Sublime</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Aussichtspunkt mit starkem Blick in
+              die Schlucht; Alternative oder
               Ergänzung zur Route des Crêtes.</li>
             <li><a href="https://www.google.com/search?q=Aiguines+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Aiguines</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleiner Ort oberhalb des Sees mit Blick auf Wasser und Berge.</li>
+                target="_blank"><strong>Aiguines</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner Ort oberhalb des Sees mit
+              Blick auf Wasser und Berge.</li>
             <li><a href="https://www.google.com/search?q=Sentier+Blanc-Martel+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Sentier Blanc-Martel</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Sentier Blanc-Martel</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Sehr eindrucksvolle Wanderroute in
               der Schlucht; nur sinnvoll mit früher Planung, Zeit und passender Ausrüstung.</li>
             <li><a href="https://www.google.com/search?q=Bauduen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bauduen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhiger Seeort am Lac de Sainte-Croix, gut als entspannter Gegenpol
+                target="_blank"><strong>Bauduen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Seeort am Lac de
+              Sainte-Croix, gut als entspannter Gegenpol
               zu den Hauptspots.</li>
           </ul>
         </div>
@@ -2469,23 +2671,24 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Calanque+de+Port-Miou+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Calanque de Port-Miou</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Calanque de Port-Miou</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gut erreichbarer Einstieg in die
               Calanques-Landschaft nahe Cassis.</li>
             <li><a href="https://www.google.com/search?q=Le+Panier+in+Marseille+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Le Panier in Marseille</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Le Panier in Marseille</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ältestes Viertel der Stadt mit
               Gassen, Street-Art und Cafés.</li>
             <li><a href="https://www.google.com/search?q=Mucem-Au%C3%9Fenbereich+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mucem-Außenbereich</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Mucem-Außenbereich</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Moderne Architektur am Hafen; auch
               ohne Museumsbesuch ein guter Spaziergang.</li>
             <li><a href="https://www.google.com/search?q=Corniche+Kennedy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Corniche Kennedy</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Küstenstraße mit Meerblick in Marseille; schön als kurzer Fotostopp.
+                target="_blank"><strong>Corniche Kennedy</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Küstenstraße mit Meerblick in
+              Marseille; schön als kurzer Fotostopp.
             </li>
             <li><a href="https://www.google.com/search?q=Vallon+des+Auffes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Vallon des Auffes</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Vallon des Auffes</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kleiner Fischerhafen in Marseille
               mit viel Atmosphäre; gut für Abendstimmung und Fotos.</li>
           </ul>
@@ -2546,24 +2749,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Saint-Paul-de-Vence+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Saint-Paul-de-Vence</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Saint-Paul-de-Vence</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Künstlerdorf im Hinterland, sehr
               fotogen, aber im August früh besuchen.</li>
             <li><a href="https://www.google.com/search?q=Grasse+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Grasse</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Parfumstadt mit Altstadt und Duft-Thema, gut als Zwischenstopp
+                target="_blank"><strong>Grasse</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Parfumstadt mit Altstadt und
+              Duft-Thema, gut als Zwischenstopp
               Richtung Küste.</li>
             <li><a href="https://www.google.com/search?q=Biot+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Biot</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Kleiner Ort zwischen Antibes und Nizza, bekannt für Glas und ruhiger
+                target="_blank"><strong>Biot</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleiner Ort zwischen Antibes und
+              Nizza, bekannt für Glas und ruhiger
               als die großen Küstenorte.</li>
             <li><a href="https://www.google.com/search?q=Mougins+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mougins</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Gepflegtes Künstlerdorf oberhalb von Cannes; gute Option für
+                target="_blank"><strong>Mougins</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gepflegtes Künstlerdorf oberhalb von
+              Cannes; gute Option für
               Mittagessen oder kurzen Spaziergang.</li>
             <li><a href="https://www.google.com/search?q=Valbonne+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Valbonne</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Angenehmer Ort mit Arkadenplatz; weniger überlaufen als viele
+                target="_blank"><strong>Valbonne</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Angenehmer Ort mit Arkadenplatz;
+              weniger überlaufen als viele
               Küstenziele.</li>
           </ul>
         </div>
@@ -2624,22 +2831,24 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Colline+du+Ch%C3%A2teau+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Colline du Château</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Colline du Château</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Aussichtspunkt über Nizza, Hafen und
               Baie des Anges.</li>
             <li><a href="https://www.google.com/search?q=Cours+Saleya+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cours Saleya</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Markt- und Altstadtbereich mit viel Atmosphäre am Vormittag.</li>
+                target="_blank"><strong>Cours Saleya</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Markt- und Altstadtbereich mit viel
+              Atmosphäre am Vormittag.</li>
             <li><a href="https://www.google.com/search?q=Villefranche-sur-Mer+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villefranche-sur-Mer</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Villefranche-sur-Mer</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kleine Bucht nahe Nizza, gute
               Alternative, wenn Èze sehr voll ist.</li>
             <li><a href="https://www.google.com/search?q=Cap+Ferrat+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cap Ferrat</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Elegante Halbinsel mit schönen Küstenwegen und ruhigerem
+                target="_blank"><strong>Cap Ferrat</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Elegante Halbinsel mit schönen
+              Küstenwegen und ruhigerem
               Riviera-Flair.</li>
             <li><a href="https://www.google.com/search?q=Monast%C3%A8re+de+Cimiez+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monastère de Cimiez</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Monastère de Cimiez</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Ruhiger Kultur- und Gartenstopp
               oberhalb von Nizza, abseits der Promenade.</li>
           </ul>
@@ -2700,23 +2909,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=%C3%8Ele+Sainte-Marguerite+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Île Sainte-Marguerite</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Île Sainte-Marguerite</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurze Fährfahrt ab Cannes; ruhiger
               Natur- und Badekontrast zur Croisette.</li>
             <li><a href="https://www.google.com/search?q=March%C3%A9+Forville+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Marché Forville</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Markthalle in Cannes, gut für einen lokalen Start in den Tag.</li>
+                target="_blank"><strong>Marché Forville</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Markthalle in Cannes, gut für einen
+              lokalen Start in den Tag.</li>
             <li><a href="https://www.google.com/search?q=Plage+de+la+Garoupe+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Plage de la Garoupe</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Plage de la Garoupe</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Bekannter Strandbereich am Cap
               d’Antibes; früh kommen wegen Parkplätzen.</li>
             <li><a href="https://www.google.com/search?q=Villa+Eilenroc+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villa Eilenroc</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Anlage am Cap d’Antibes; interessant, wenn ihr Architektur und
+                target="_blank"><strong>Villa Eilenroc</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Anlage am Cap d’Antibes;
+              interessant, wenn ihr Architektur und
               Gärten mögt.</li>
             <li><a href="https://www.google.com/search?q=Juan-les-Pins+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Juan-les-Pins</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Lebhafter Badeort direkt neben Antibes; gut für Strand, Promenade und
+                target="_blank"><strong>Juan-les-Pins</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Lebhafter Badeort direkt neben
+              Antibes; gut für Strand, Promenade und
               Abendstimmung.</li>
           </ul>
         </div>
@@ -2775,23 +2987,24 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Mole+Antonelliana+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mole Antonelliana</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Mole Antonelliana</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Wahrzeichen Turins mit Aussicht und
               Filmmuseum; gut für den ersten Abend.</li>
             <li><a href="https://www.google.com/search?q=Quadrilatero+Romano+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Quadrilatero Romano</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Quadrilatero Romano</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historisches Viertel mit Bars und
               Restaurants, ideal für Aperitivo.</li>
             <li><a href="https://www.google.com/search?q=Parco+del+Valentino+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Parco del Valentino</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Parco del Valentino</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Grüne Pause am Po, wenn nach der
               Fahrt noch Bewegung angenehm ist.</li>
             <li><a href="https://www.google.com/search?q=Museo+Egizio+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Museo Egizio</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Eines der wichtigsten Ägyptischen Museen Europas; gute Indoor-Option
+                target="_blank"><strong>Museo Egizio</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Eines der wichtigsten Ägyptischen
+              Museen Europas; gute Indoor-Option
               bei Hitze oder Regen.</li>
             <li><a href="https://www.google.com/search?q=Basilica+di+Superga+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Basilica di Superga</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Basilica di Superga</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Aussichtspunkt oberhalb von Turin;
               lohnt sich bei klarer Sicht und etwas zusätzlicher Zeit.</li>
           </ul>
@@ -2852,24 +3065,25 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Monte+Baldo+Seilbahn+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monte Baldo Seilbahn</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Monte Baldo Seilbahn</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Aussicht über den Gardasee; bei
               klarem Wetter besonders lohnend, Wartezeiten einplanen.</li>
             <li><a href="https://www.google.com/search?q=Hafen+von+Malcesine+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Hafen von Malcesine</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Hafen von Malcesine</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner, stimmungsvoller Bereich für
               Spaziergang, Fotos und Gelato.</li>
             <li><a href="https://www.google.com/search?q=Cassone+di+Malcesine+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cassone di Malcesine</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Cassone di Malcesine</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Nachbarort mit kleinem
               Hafen, wenn Malcesine selbst sehr voll ist.</li>
             <li><a href="https://www.google.com/search?q=Palazzo+dei+Capitani+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Palazzo dei Capitani</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Palazzo dei Capitani</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleiner historischer Stopp direkt im
               Ort; gut mit Altstadt und Ufer kombinierbar.</li>
             <li><a href="https://www.google.com/search?q=Val+di+Sogno+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Val di Sogno</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Bucht südlich von Malcesine; gut für ruhige Seeblicke und
+                target="_blank"><strong>Val di Sogno</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Bucht südlich von Malcesine;
+              gut für ruhige Seeblicke und
               kurze Spaziergänge.</li>
           </ul>
         </div>
@@ -2928,34 +3142,111 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Riva+del+Garda+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Riva del Garda</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Optionaler Morgenstopp am Nordufer mit alpiner Gardasee-Kulisse.</li>
+                target="_blank"><strong>Riva del Garda</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Optionaler Morgenstopp am Nordufer
+              mit alpiner Gardasee-Kulisse.</li>
             <li><a href="https://www.google.com/search?q=Arco+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Arco</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleiner Ort nördlich des Sees mit Burgblick, gut für eine kurze
+                target="_blank"><strong>Arco</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner Ort nördlich des Sees mit
+              Burgblick, gut für eine kurze
               Pause.</li>
             <li><a
                 href="https://www.google.com/search?q=Villach+oder+W%C3%B6rthersee-Pause+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villach oder Wörthersee-Pause</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Villach oder Wörthersee-Pause</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Praktischer Stopp auf der Rückfahrt,
               um die lange Etappe zu unterbrechen.</li>
             <li><a href="https://www.google.com/search?q=Brixen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Brixen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Altstadt auf der Rückfahrt-Variante über Südtirol; gut für
+                target="_blank"><strong>Brixen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Altstadt auf der
+              Rückfahrt-Variante über Südtirol; gut für
               Kaffee oder Mittagspause.</li>
             <li><a href="https://www.google.com/search?q=Klagenfurt+Altstadt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Klagenfurt Altstadt</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Klagenfurt Altstadt</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Naheliegender später Zwischenstopp,
               falls ihr vor Graz noch eine letzte Pause braucht.</li>
           </ul>
         </div>
       </section>
+      <section class="card hotel-summary">
+        <h3>Kurzübersicht Übernachtungen / Hotelbuchung</h3>
+        <p>Zusammenfassung der Übernachtungen mit korrektem Check-in- und Check-out-Tag.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Ort</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Nächte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>München</strong></td>
+              <td>Mo, 10.08.2026</td>
+              <td>Di, 11.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Straßburg</strong></td>
+              <td>Di, 11.08.2026</td>
+              <td>Do, 13.08.2026</td>
+              <td>2 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Annecy</strong></td>
+              <td>Do, 13.08.2026</td>
+              <td>Sa, 15.08.2026</td>
+              <td>2 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>L’Isle-sur-la-Sorgue</strong></td>
+              <td>Sa, 15.08.2026</td>
+              <td>Mi, 19.08.2026</td>
+              <td>4 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Antibes</strong></td>
+              <td>Mi, 19.08.2026</td>
+              <td>Sa, 22.08.2026</td>
+              <td>3 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Turin</strong></td>
+              <td>Sa, 22.08.2026</td>
+              <td>So, 23.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Malcesine</strong></td>
+              <td>So, 23.08.2026</td>
+              <td>Mo, 24.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </section>
     <section class="variant" id="variante-3">
       <section class="card">
         <span class="label">Variante 3</span>
-        <h2>Colmar enthalten + Avignon/Saint‑Rémy statt Provence-Ruhetag, ohne Menton-Tag</h2>
+        <h2>Colmar/Elsass wie Variante 2, danach Provence kompakt: Annecy → Provence, Luberon, Avignon/Saint‑Rémy,
+          Verdon</h2>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section class="card day">
         <span class="label">Tag 1 · Mo, 10.08.2026</span>
         <h2>Graz → München</h2>
@@ -2967,7 +3258,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Marienplatz &amp; Neues Rathaus" id="hybrid-variante-tag01-highlight01"
+              <img alt="Marienplatz &amp; Neues Rathaus" id="variante-3-tag01-highlight01"
                 src="https://www.muenchen.de/sites/default/files/styles/3_2_w1216/public/2022-07/marienplatz-750.jpg.webp" />
             </div>
             <div class="highlight-content">
@@ -2978,7 +3269,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Englischer Garten" id="hybrid-variante-tag01-highlight02"
+              <img alt="Englischer Garten" id="variante-3-tag01-highlight02"
                 src="https://www.marienplatz-muenchen.de/wp-content/uploads/2019/06/muenchen-englischer-garten-2863483_pix.jpg" />
             </div>
             <div class="highlight-content">
@@ -2988,7 +3279,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Biergarten / Hofbräuhaus" id="hybrid-variante-tag01-highlight03"
+              <img alt="Biergarten / Hofbräuhaus" id="variante-3-tag01-highlight03"
                 src="https://pogs.b-cdn.net/wp-content/uploads/2023/04/Muenchen-Hofbraeuhaus.webp" />
             </div>
             <div class="highlight-content">
@@ -3012,23 +3303,26 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Olympiapark+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Olympiapark</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Weitläufiges Gelände mit moderner Architektur; gut für einen kurzen
+                target="_blank"><strong>Olympiapark</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Weitläufiges Gelände mit moderner
+              Architektur; gut für einen kurzen
               Spaziergang und Aussicht vom Olympiaberg.</li>
             <li><a href="https://www.google.com/search?q=Viktualienmarkt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Viktualienmarkt</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Lebendiger Markt nahe der Altstadt; ideal für einen Snack oder
+                target="_blank"><strong>Viktualienmarkt</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Lebendiger Markt nahe der Altstadt;
+              ideal für einen Snack oder
               regionale Spezialitäten.</li>
             <li><a href="https://www.google.com/search?q=Isarauen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Isarauen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Entspannter Spaziergang am Wasser, wenn die Innenstadt zu voll ist.
+                target="_blank"><strong>Isarauen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Entspannter Spaziergang am Wasser,
+              wenn die Innenstadt zu voll ist.
             </li>
             <li><a href="https://www.google.com/search?q=BMW+Welt+%2F+BMW+Museum+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">BMW Welt / BMW Museum</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>BMW Welt / BMW Museum</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gute Indoor-Option mit moderner
               Architektur und Technikbezug; praktisch, wenn das Wetter nicht mitspielt.</li>
             <li><a href="https://www.google.com/search?q=Schloss+Nymphenburg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Schloss Nymphenburg</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Schloss Nymphenburg</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Große barocke Anlage mit Park;
               schöner Kontrast zur Innenstadt und gut für einen ruhigen Abendspaziergang.</li>
           </ul>
@@ -3045,7 +3339,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Petite France" id="hybrid-variante-tag02-highlight01"
+              <img alt="Petite France" id="variante-3-tag02-highlight01"
                 src="https://blogs-images.forbes.com/geoffreymorrison/files/2018/10/Exploring-Petite-France-Strasbourg-by-Geoffrey-Morrison-3-of-10.jpg" />
             </div>
             <div class="highlight-content">
@@ -3055,7 +3349,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Straßburger Münster" id="hybrid-variante-tag02-highlight02"
+              <img alt="Straßburger Münster" id="variante-3-tag02-highlight02"
                 src="https://frankreich.city-tourist.de/assets/images/strassburg-muenster.webp" />
             </div>
             <div class="highlight-content">
@@ -3066,7 +3360,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Ill-Ufer / Altstadt" id="hybrid-variante-tag02-highlight03"
+              <img alt="Ill-Ufer / Altstadt" id="variante-3-tag02-highlight03"
                 src="https://frankreich-webazine.de/app/uploads/2022/11/strassburg-elsass-pexels-dusan-cvetanovic-12541481-scaled-1-de-991x0-c-default.webp" />
             </div>
             <div class="highlight-content">
@@ -3090,25 +3384,28 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Barrage+Vauban+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Barrage Vauban</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Historisches Wehr mit schöner Aussicht auf Petite France und die
+                target="_blank"><strong>Barrage Vauban</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Historisches Wehr mit schöner
+              Aussicht auf Petite France und die
               überdachten Brücken.</li>
             <li><a
                 href="https://www.google.com/search?q=Parc+de+l%E2%80%99Orangerie+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Parc de l’Orangerie</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Parc de l’Orangerie</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhige Grünanlage etwas außerhalb
               des Zentrums, gut für eine Pause nach der Fahrt.</li>
             <li><a href="https://www.google.com/search?q=Bootsfahrt+auf+der+Ill+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bootsfahrt auf der Ill</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Bootsfahrt auf der Ill</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Bequeme Möglichkeit, die Altstadt
               und das Europaviertel vom Wasser aus zu sehen.</li>
             <li><a href="https://www.google.com/search?q=Ponts+Couverts+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ponts Couverts</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Historische Brücken und Türme direkt bei Petite France; gut als
+                target="_blank"><strong>Ponts Couverts</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historische Brücken und Türme direkt
+              bei Petite France; gut als
               kurzer Fotostopp.</li>
             <li><a href="https://www.google.com/search?q=Europaviertel+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Europaviertel</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Architektonisch interessant, wenn Zeit bleibt und ihr neben der
+                target="_blank"><strong>Europaviertel</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Architektonisch interessant, wenn
+              Zeit bleibt und ihr neben der
               Altstadt auch das moderne Straßburg sehen wollt.</li>
           </ul>
         </div>
@@ -3124,7 +3421,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Colmar" id="hybrid-variante-tag03-highlight01"
+              <img alt="Colmar" id="variante-3-tag03-highlight01"
                 src="https://www.urlaubsguru.at/_next/image/?url=https%3A%2F%2Fthumb.holidayguru.de%2Fimage-service%2F5a558595-0193-4806-bd0d-6eea83a3fe74%3Fwidth%3D1920%26mimetype%3Dwebp&amp;w=3840&amp;q=75" />
             </div>
             <div class="highlight-content">
@@ -3134,7 +3431,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Riquewihr oder Eguisheim" id="hybrid-variante-tag03-highlight02"
+              <img alt="Riquewihr oder Eguisheim" id="variante-3-tag03-highlight02"
                 src="https://www.reisereporter.de/resizer/v2/MQZQ76MOZFHSHDYOMP2HAUITHY.jpg?auth=274058eed59699343953b831525ea4d8847ce5d8f87dbed7d782bbd9fb89ef39&amp;quality=70&amp;focal=1023%2C332&amp;width=596&amp;height=335" />
             </div>
             <div class="highlight-content">
@@ -3145,7 +3442,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Abend zurück in Straßburg" id="hybrid-variante-tag03-highlight03"
+              <img alt="Abend zurück in Straßburg" id="variante-3-tag03-highlight03"
                 src="https://cdn.urlaubsguru.at/wp-content/uploads/2019/07/istock-518594733-707x471.jpg" />
             </div>
             <div class="highlight-content">
@@ -3168,21 +3465,21 @@
         <div class="alternatives">
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
-            <li><strong>Château du Haut-Kœnigsbourg:</strong> Spektakuläre Burg mit Aussicht über die Vogesen und das
-              Elsass.</li>
-            <li><strong>Kaysersberg:</strong> Charmantes Weindorf mit weniger Trubel und schöner Altstadt.</li>
-            <li><a href="https://www.google.com/search?q=Eguisheim+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Eguisheim</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Runder Dorfkern mit viel Elsass-Atmosphäre; gute Alternative, wenn
-              Riquewihr zu voll ist.</li>
-            <li><a href="https://www.google.com/search?q=Kaysersberg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Kaysersberg</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöner Ort mit Brücke, Altstadt und Burgruine; gut für einen
-              zusätzlichen Fotostopp.</li>
-            <li><a href="https://www.google.com/search?q=Haut-Koenigsbourg+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Haut-Koenigsbourg</a> <span aria-label="4 von 5 Sternen"
-                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Große Burganlage mit weitem Blick
-              über das Elsass; sinnvoll, wenn ihr mehr Kultur als Dorfhopping wollt.</li>
+            <li><a href="https://de.wikipedia.org/wiki/Hohk%C3%B6nigsburg" target="_blank"><strong>Château du
+                  Haut-Kœnigsbourg</strong></a> <span class="rating">★★★★★</span><span class="rating-text">
+                (5/5)</span>: Spektakuläre Burganlage mit Panoramablick über das Elsass.</li>
+            <li><a href="https://de.wikipedia.org/wiki/Kaysersberg_Vignoble"
+                target="_blank"><strong>Kaysersberg</strong></a> <span class="rating">★★★★★</span><span
+                class="rating-text"> (5/5)</span>: Charmantes Weindorf mit Fachwerkhäusern und weniger Trubel.</li>
+            <li><a href="https://de.wikipedia.org/wiki/Route_des_Vins_d%27Alsace" target="_blank"><strong>Route des Vins
+                  d’Alsace</strong></a> <span class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>:
+              Malerische Weinstraße mit vielen Fotostopps.</li>
+            <li><a href="https://de.wikipedia.org/wiki/Turckheim" target="_blank"><strong>Turckheim</strong></a> <span
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhigeres mittelalterliches Dorf
+              nahe Colmar.</li>
+            <li><a href="https://de.wikipedia.org/wiki/Mont_Sainte-Odile" target="_blank"><strong>Mont
+                  Sainte-Odile</strong></a> <span class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>:
+              Klosterberg mit schöner Aussicht über die Vogesen.</li>
           </ul>
         </div>
       </section>
@@ -3197,7 +3494,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Lac d’Annecy" id="hybrid-variante-tag04-highlight01"
+              <img alt="Lac d’Annecy" id="variante-3-tag04-highlight01"
                 src="https://gites-production-wr-wp.s3.eu-central-1.amazonaws.com/uploads/sites/3/2023/05/Annecy-Lake-L-1024x683-1-586x452.jpg.webp" />
             </div>
             <div class="highlight-content">
@@ -3207,7 +3504,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Palais de l’Île" id="hybrid-variante-tag04-highlight02"
+              <img alt="Palais de l’Île" id="variante-3-tag04-highlight02"
                 src="https://www.annecy-ville.fr/wp-content/uploads/2021/03/Festival-Annecy-Paysages-devant-les-Vieilles-Prisons-dAnnecy.jpg" />
             </div>
             <div class="highlight-content">
@@ -3217,7 +3514,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Altstadtkanäle" id="hybrid-variante-tag04-highlight03"
+              <img alt="Altstadtkanäle" id="variante-3-tag04-highlight03"
                 src="https://www.campingsannecy.com/wp-content/uploads/2025/05/vieille-ville-annecy-2-edited.jpg.webp" />
             </div>
             <div class="highlight-content">
@@ -3241,22 +3538,25 @@
           <ul>
             <li><a
                 href="https://www.google.com/search?q=Ch%C3%A2teau+d%E2%80%99Annecy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Château d’Annecy</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Burg oberhalb der Altstadt mit Blick auf Dächer, See und Berge.</li>
+                target="_blank"><strong>Château d’Annecy</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Burg oberhalb der Altstadt mit Blick
+              auf Dächer, See und Berge.</li>
             <li><a href="https://www.google.com/search?q=Pont+des+Amours+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Pont des Amours</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Klassischer Fotopunkt zwischen Altstadt, Kanal und Seeufer.</li>
+                target="_blank"><strong>Pont des Amours</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Klassischer Fotopunkt zwischen
+              Altstadt, Kanal und Seeufer.</li>
             <li><a href="https://www.google.com/search?q=Semnoz-Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Semnoz-Aussicht</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Optionaler Abstecher in die Höhe mit Panorama über See und Alpen.
+                target="_blank"><strong>Semnoz-Aussicht</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Optionaler Abstecher in die Höhe mit
+              Panorama über See und Alpen.
             </li>
             <li><a
                 href="https://www.google.com/search?q=Jardins+de+l%E2%80%99Europe+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Jardins de l’Europe</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Jardins de l’Europe</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Angenehme Parkanlage direkt am See;
               ideal für einen kurzen Spaziergang nach der Fahrt.</li>
             <li><a href="https://www.google.com/search?q=Basilique+de+la+Visitation+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Basilique de la Visitation</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Basilique de la Visitation</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Ruhiger Aussichtspunkt oberhalb der
               Stadt, wenn noch Energie für einen kurzen Anstieg bleibt.</li>
           </ul>
@@ -3264,6 +3564,170 @@
       </section>
       <section class="card day">
         <span class="label">Tag 5 · Fr, 14.08.2026</span>
+        <h2>Annecy → Provence</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="L’Isle-sur-la-Sorgue" id="variante-3-tag05-highlight01"
+                src="https://www.provence-info.de/wp-content/uploads/l-Isle-sur-la-sorgue-1536x1024.jpg" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=L’Isle-sur-la-Sorgue"
+                  target="_blank">L’Isle-sur-la-Sorgue</a></h4>
+              <p>Kanäle und Wasserräder.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Gordes Aussichtspunkt" id="variante-3-tag05-highlight02"
+                src="https://www.provence-info.de/wp-content/uploads/gordes-provence-scaled.jpg" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Gordes+Aussichtspunkt" target="_blank">Gordes
+                  Aussichtspunkt</a></h4>
+              <p>Sonnenuntergang über der Provence. Dorfbesichtigung erst für den nächsten Tag geplant</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Provence-Dinner" id="variante-3-tag05-highlight03"
+                src="https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2018/05/isle-sur-la-sorgue-lake.jpg?ssl=1" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Provence-Dinner" target="_blank">Provence-Dinner</a></h4>
+              <p>Ankommen in der Provence.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>La Balade des Saveurs / Café de France</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Unterkunft mit Parkplatz wählen.</p>
+          </div>
+        </div>
+        <div class="alternatives">
+          <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
+          <ul>
+            <li><a href="https://www.google.com/search?q=Fontaine-de-Vaucluse+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Fontaine-de-Vaucluse</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurzer Naturstopp an der Quelle der
+              Sorgue, passend zur Region L’Isle-sur-la-Sorgue.</li>
+            <li><a href="https://www.google.com/search?q=Apt+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Apt</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleinstadt im Luberon mit
+              südfranzösischem Alltagsflair und guter
+              Lage für kurze Stopps.</li>
+            <li><a href="https://www.google.com/search?q=Bonnieux+Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Bonnieux Aussicht</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Terrassendorf mit weitem Blick über
+              den Luberon, besonders am späten Nachmittag schön.</li>
+            <li><a href="https://www.google.com/search?q=Opp%C3%A8de-le-Vieux+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Oppède-le-Vieux</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger, atmosphärischer Ort mit
+              alten Steinhäusern; gut, wenn ihr
+              weniger Trubel wollt.</li>
+            <li><a
+                href="https://www.google.com/search?q=Cavaillon+%2F+Melonen-Stopp+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Cavaillon / Melonen-Stopp</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Pragmatischer Zwischenstopp für
+              kurze Pause, Einkauf oder Café auf dem Weg in die Provence.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 6 · Sa, 15.08.2026</span>
+        <h2>Luberon-Dörfer</h2>
+        <div class="meta">
+          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
+          <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Roussillon &amp; Ockerfelsen" id="variante-3-tag06-highlight01"
+                src="https://www.provence-info.de/wp-content/uploads/ockerfelsen-roussillon-1536x1025.jpg" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Roussillon+&amp;+Ockerfelsen" target="_blank">Roussillon
+                  &amp; Ockerfelsen</a></h4>
+              <p>Farbstarker Provence-Ort.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Gordes Dorfzentrum" id="variante-3-tag06-highlight02"
+                src="https://image.geo.de/31480030/t/ER/v3/w1440/r1.5/-/eguisheim---adobestock-201870695.jpg" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Gordes+Dorfzentrum" target="_blank">Gordes Dorfzentrum</a>
+              </h4>
+              <p>Klassisches Provence-Dorf.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Abbaye de Sénanque" id="variante-3-tag06-highlight03"
+                src="https://www.provence-info.de/wp-content/uploads/abtei-senanque-provence-1536x940.jpg" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Abbaye+de+Sénanque" target="_blank">Abbaye de Sénanque</a>
+              </h4>
+              <p>Abtei als Fotomotiv.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Picknick / Bistro im Luberon</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Früh oder spät besuchen; mittags sehr voll.</p>
+          </div>
+        </div>
+        <div class="alternatives">
+          <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
+          <ul>
+            <li><a href="https://www.google.com/search?q=M%C3%A9nerbes+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Ménerbes</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhigeres Dorf mit schöner Lage auf
+              einem Höhenrücken und weniger
+              Trubel als Gordes.</li>
+            <li><a href="https://www.google.com/search?q=Lacoste+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Lacoste</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historischer Ort mit Burgruine und
+              Blick über die
+              Provence-Landschaft.</li>
+            <li><a href="https://www.google.com/search?q=Ochre+Trail+kurz+halten+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Ochre Trail kurz halten</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Bei Hitze nur eine kurze Runde
+              einplanen; die Farben sind auch auf kleinen Abschnitten eindrucksvoll.</li>
+            <li><a href="https://www.google.com/search?q=Saignon+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Saignon</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleines Dorf mit Aussichtsfelsen;
+              gute Alternative zu den bekannteren
+              Orten.</li>
+            <li><a href="https://www.google.com/search?q=March%C3%A9+in+Apt+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Marché in Apt</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Lohnt sich besonders an Markttagen
+              für regionale Produkte, Lavendel,
+              Käse und Provence-Atmosphäre.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 7 · So, 16.08.2026</span>
         <h2>Avignon + Saint-Rémy</h2>
         <div class="meta">
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
@@ -3273,7 +3737,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Palais des Papes" id="meine-variante-tag06-highlight01"
+              <img alt="Palais des Papes" id="variante-3-tag07-highlight01"
                 src="https://applications-media.feverup.com/image/upload/f_auto/fever2/plan/photo/5a700b44-158e-11f0-bf1a-92ee3feeb854.jpg" />
             </div>
             <div class="highlight-content">
@@ -3283,7 +3747,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Pont d’Avignon" id="meine-variante-tag06-highlight02"
+              <img alt="Pont d’Avignon" id="variante-3-tag07-highlight02"
                 src="https://images.musement.com/cover/0125/72/thumb_12471307_cover_header.jpeg?lossless=false&amp;auto=format&amp;fit=clip&amp;h=864.5&amp;w=1792" />
             </div>
             <div class="highlight-content">
@@ -3293,7 +3757,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Saint-Rémy-de-Provence" id="meine-variante-tag06-highlight03"
+              <img alt="Saint-Rémy-de-Provence" id="variante-3-tag07-highlight03"
                 src="https://www.provence-info.de/wp-content/uploads/saint-remy-de-provence-2.jpg" />
             </div>
             <div class="highlight-content">
@@ -3317,190 +3781,35 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Les+Baux-de-Provence+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Les Baux-de-Provence</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Les Baux-de-Provence</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Spektakuläres Felsendorf mit
               Burgruine, gut kombinierbar mit Saint-Rémy.</li>
             <li><a
                 href="https://www.google.com/search?q=Carri%C3%A8res+des+Lumi%C3%A8res+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Carrières des Lumières</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Carrières des Lumières</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Multimediale Kunstprojektion in
               alten Steinbrüchen; sinnvoll bei großer Hitze oder als Schlechtwetteroption.</li>
             <li><a href="https://www.google.com/search?q=Pont+du+Gard+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Pont du Gard</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Römisches Aquädukt und UNESCO-Highlight, falls ein größerer
+                target="_blank"><strong>Pont du Gard</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Römisches Aquädukt und
+              UNESCO-Highlight, falls ein größerer
               Kulturabstecher gewünscht ist.</li>
             <li><a href="https://www.google.com/search?q=Glanum+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Glanum</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Antike Ausgrabungsstätte bei Saint-Rémy; gut für Geschichte ohne
+                target="_blank"><strong>Glanum</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Antike Ausgrabungsstätte bei
+              Saint-Rémy; gut für Geschichte ohne
               langen Umweg.</li>
             <li><a href="https://www.google.com/search?q=Rocher+des+Doms+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Rocher des Doms</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Garten oberhalb von Avignon mit Blick auf Rhône, Altstadt und Pont
+                target="_blank"><strong>Rocher des Doms</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Garten oberhalb von Avignon mit
+              Blick auf Rhône, Altstadt und Pont
               d’Avignon.</li>
           </ul>
         </div>
       </section>
       <section class="card day">
-        <span class="label">Tag 6 · Sa, 15.08.2026</span>
-        <h2>Annecy → Provence</h2>
-        <div class="meta">
-          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
-          <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
-        </div>
-        <h3>Highlights mit Foto-Slots</h3>
-        <div class="highlight-grid">
-          <article class="highlight-card">
-            <div class="photo-box">
-              <img alt="L’Isle-sur-la-Sorgue" id="hybrid-variante-tag06-highlight01"
-                src="https://www.provence-info.de/wp-content/uploads/l-Isle-sur-la-sorgue-1536x1024.jpg" />
-            </div>
-            <div class="highlight-content">
-              <h4><a href="https://www.google.com/search?q=L’Isle-sur-la-Sorgue"
-                  target="_blank">L’Isle-sur-la-Sorgue</a></h4>
-              <p>Kanäle und Wasserräder.</p>
-            </div>
-          </article>
-          <article class="highlight-card">
-            <div class="photo-box">
-              <img alt="Gordes Aussichtspunkt" id="hybrid-variante-tag06-highlight02"
-                src="https://www.provence-info.de/wp-content/uploads/gordes-provence-scaled.jpg" />
-            </div>
-            <div class="highlight-content">
-              <h4><a href="https://www.google.com/search?q=Gordes+Aussichtspunkt" target="_blank">Gordes
-                  Aussichtspunkt</a></h4>
-              <p>Sonnenuntergang über der Provence.</p>
-            </div>
-          </article>
-          <article class="highlight-card">
-            <div class="photo-box">
-              <img alt="Provence-Dinner" id="hybrid-variante-tag06-highlight03"
-                src="https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2018/05/isle-sur-la-sorgue-lake.jpg?ssl=1" />
-            </div>
-            <div class="highlight-content">
-              <h4><a href="https://www.google.com/search?q=Provence-Dinner" target="_blank">Provence-Dinner</a></h4>
-              <p>Ankommen in der Provence.</p>
-            </div>
-          </article>
-        </div>
-        <div class="grid">
-          <div>
-            <h3>Restauranttipp</h3>
-            <p>Restaurant in L’Isle-sur-la-Sorgue / Gordes</p>
-          </div>
-          <div>
-            <h3>Park-/August-Tipp</h3>
-            <p>15.08. Feiertag: nicht überplanen.</p>
-          </div>
-        </div>
-        <div class="alternatives">
-          <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
-          <ul>
-            <li><a href="https://www.google.com/search?q=Fontaine-de-Vaucluse+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Fontaine-de-Vaucluse</a> <span aria-label="5 von 5 Sternen"
-                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurzer Naturstopp an der Quelle der
-              Sorgue, passend zur Region L’Isle-sur-la-Sorgue.</li>
-            <li><a href="https://www.google.com/search?q=Apt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Apt</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Kleinstadt im Luberon mit südfranzösischem Alltagsflair und guter
-              Lage für kurze Stopps.</li>
-            <li><a href="https://www.google.com/search?q=Bonnieux+Aussicht+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bonnieux Aussicht</a> <span aria-label="4 von 5 Sternen"
-                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Terrassendorf mit weitem Blick über
-              den Luberon, besonders am späten Nachmittag schön.</li>
-            <li><a href="https://www.google.com/search?q=Opp%C3%A8de-le-Vieux+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Oppède-le-Vieux</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhiger, atmosphärischer Ort mit alten Steinhäusern; gut, wenn ihr
-              weniger Trubel wollt.</li>
-            <li><a
-                href="https://www.google.com/search?q=Cavaillon+%2F+Melonen-Stopp+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cavaillon / Melonen-Stopp</a> <span aria-label="3 von 5 Sternen"
-                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Pragmatischer Zwischenstopp für
-              kurze Pause, Einkauf oder Café auf dem Weg in die Provence.</li>
-          </ul>
-        </div>
-      </section>
-      <section class="card day">
-        <span class="label">Tag 7 · So, 16.08.2026</span>
-        <h2>Verdon-Schlucht</h2>
-        <div class="meta">
-          <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
-          <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
-        </div>
-        <h3>Highlights mit Foto-Slots</h3>
-        <div class="highlight-grid">
-          <article class="highlight-card">
-            <div class="photo-box">
-              <img alt="Roussillon &amp; Ockerfelsen" id="hybrid-variante-tag07-highlight01"
-                src="https://www.provence-info.de/wp-content/uploads/ockerfelsen-roussillon-1536x1025.jpg" />
-            </div>
-            <div class="highlight-content">
-              <h4><a href="https://www.google.com/search?q=Roussillon+&amp;+Ockerfelsen" target="_blank">Roussillon
-                  &amp; Ockerfelsen</a></h4>
-              <p>Farbstarker Provence-Ort.</p>
-            </div>
-          </article>
-          <article class="highlight-card">
-            <div class="photo-box">
-              <img alt="Gordes Dorfzentrum" id="hybrid-variante-tag07-highlight02"
-                src="https://image.geo.de/31480030/t/ER/v3/w1440/r1.5/-/eguisheim---adobestock-201870695.jpg" />
-            </div>
-            <div class="highlight-content">
-              <h4><a href="https://www.google.com/search?q=Gordes+Dorfzentrum" target="_blank">Gordes Dorfzentrum</a>
-              </h4>
-              <p>Klassisches Provence-Dorf.</p>
-            </div>
-          </article>
-          <article class="highlight-card">
-            <div class="photo-box">
-              <img alt="Abbaye de Sénanque" id="hybrid-variante-tag07-highlight03"
-                src="https://www.provence-info.de/wp-content/uploads/abtei-senanque-provence-1536x940.jpg" />
-            </div>
-            <div class="highlight-content">
-              <h4><a href="https://www.google.com/search?q=Abbaye+de+Sénanque" target="_blank">Abbaye de Sénanque</a>
-              </h4>
-              <p>Abtei als Fotomotiv.</p>
-            </div>
-          </article>
-        </div>
-        <div class="grid">
-          <div>
-            <h3>Restauranttipp</h3>
-            <p>Bistro im Luberon / Picknick</p>
-          </div>
-          <div>
-            <h3>Park-/August-Tipp</h3>
-            <p>Mittagshitze in Gordes/Roussillon vermeiden.</p>
-          </div>
-        </div>
-        <div class="alternatives">
-          <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
-          <ul>
-            <li><a href="https://www.google.com/search?q=M%C3%A9nerbes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ménerbes</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhigeres Dorf mit schöner Lage auf einem Höhenrücken und weniger
-              Trubel als Gordes.</li>
-            <li><a href="https://www.google.com/search?q=Lacoste+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Lacoste</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Historischer Ort mit Burgruine und Blick über die
-              Provence-Landschaft.</li>
-            <li><a href="https://www.google.com/search?q=Ochre+Trail+kurz+halten+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Ochre Trail kurz halten</a> <span aria-label="5 von 5 Sternen"
-                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Bei Hitze nur eine kurze Runde
-              einplanen; die Farben sind auch auf kleinen Abschnitten eindrucksvoll.</li>
-            <li><a href="https://www.google.com/search?q=Saignon+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Saignon</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleines Dorf mit Aussichtsfelsen; gute Alternative zu den bekannteren
-              Orten.</li>
-            <li><a href="https://www.google.com/search?q=March%C3%A9+in+Apt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Marché in Apt</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Lohnt sich besonders an Markttagen für regionale Produkte, Lavendel,
-              Käse und Provence-Atmosphäre.</li>
-          </ul>
-        </div>
-      </section>
-      <section class="card day">
         <span class="label">Tag 8 · Mo, 17.08.2026</span>
-        <h2>Cassis + Marseille</h2>
+        <h2>Verdon-Schlucht</h2>
         <div class="meta">
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 230–280 km</span>
@@ -3509,7 +3818,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Route des Crêtes" id="hybrid-variante-tag08-highlight01"
+              <img alt="Route des Crêtes" id="variante-3-tag08-highlight01"
                 src="https://photos.smugmug.com/Provence-Lovers/n-rGbRdb/Route-des-Cr%C3%A8tes-de-Gorges-du-Verdon/i-tdQfjHH/0/Mw3kqdsMqQcJfWbWBXSn5Wh4SNJjPHRDnPzLNWDdw/L/route%20des%20cretes%20gorges%20du%20verdon-098-L.jpg" />
             </div>
             <div class="highlight-content">
@@ -3519,23 +3828,27 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Lac de Sainte-Croix" id="hybrid-variante-tag08-highlight02"
+              <img alt="Lac de Sainte-Croix" id="variante-3-tag08-highlight02"
                 src="https://www.provence-info.de/wp-content/uploads/lac-de-sainte-croix-1.jpg" />
             </div>
             <div class="highlight-content">
               <h4><a href="https://www.google.com/search?q=Lac+de+Sainte-Croix" target="_blank">Lac de Sainte-Croix</a>
               </h4>
               <p>Türkisblauer See.</p>
+              <p class="photo-link"><strong>Video-Link:</strong> <a
+                  href="https://www.youtube.com/watch?v=W6WVeOfT6aM&amp;t=110s" target="_blank">Video über Lac de Sainte
+                  &amp; Route des Crêtes </a></p>
             </div>
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Boot/Kajak" id="hybrid-variante-tag08-highlight03"
+              <img alt="Boot/Kajak" id="variante-3-tag08-highlight03"
                 src="https://familie-fernweh.de/wp-content/uploads/2023/08/gorges-du-verdon-768x1024.jpg" />
             </div>
             <div class="highlight-content">
               <h4><a href="https://www.google.com/search?q=Boot/Kajak" target="_blank">Boot/Kajak</a></h4>
               <p>In die Schlucht hineinfahren.</p>
+              <p>Sehr beliebt. Es gibt eine zweistündige Bootstour (rechtzeitig reservieren)</p>
             </div>
           </article>
         </div>
@@ -3546,37 +3859,40 @@
           </div>
           <div>
             <h3>Park-/August-Tipp</h3>
-            <p>Sehr früh losfahren.</p>
+            <p>Sehr früh losfahren; Boote im August stark gefragt.</p>
           </div>
         </div>
         <div class="alternatives">
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Moustiers-Sainte-Marie+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Moustiers-Sainte-Marie</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Moustiers-Sainte-Marie</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Schönes Dorf nahe dem Lac de
               Sainte-Croix, gut für Kaffee oder Abendessen.</li>
             <li><a href="https://www.google.com/search?q=Point+Sublime+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Point Sublime</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Aussichtspunkt mit starkem Blick in die Schlucht; Alternative oder
+                target="_blank"><strong>Point Sublime</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Aussichtspunkt mit starkem Blick in
+              die Schlucht; Alternative oder
               Ergänzung zur Route des Crêtes.</li>
             <li><a href="https://www.google.com/search?q=Aiguines+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Aiguines</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleiner Ort oberhalb des Sees mit Blick auf Wasser und Berge.</li>
+                target="_blank"><strong>Aiguines</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner Ort oberhalb des Sees mit
+              Blick auf Wasser und Berge.</li>
             <li><a href="https://www.google.com/search?q=Sentier+Blanc-Martel+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Sentier Blanc-Martel</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Sentier Blanc-Martel</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Sehr eindrucksvolle Wanderroute in
               der Schlucht; nur sinnvoll mit früher Planung, Zeit und passender Ausrüstung.</li>
             <li><a href="https://www.google.com/search?q=Bauduen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Bauduen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Ruhiger Seeort am Lac de Sainte-Croix, gut als entspannter Gegenpol
+                target="_blank"><strong>Bauduen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Seeort am Lac de
+              Sainte-Croix, gut als entspannter Gegenpol
               zu den Hauptspots.</li>
           </ul>
         </div>
       </section>
       <section class="card day">
         <span class="label">Tag 9 · Di, 18.08.2026</span>
-        <h2>Provence → Antibes</h2>
+        <h2>Cassis + Marseille</h2>
         <div class="meta">
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 220–260 km</span>
@@ -3585,7 +3901,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Cassis Hafen" id="hybrid-variante-tag09-highlight01"
+              <img alt="Cassis Hafen" id="variante-3-tag09-highlight01"
                 src="https://www.provence-info.de/wp-content/uploads/cassis-provence-1536x767.jpg" />
             </div>
             <div class="highlight-content">
@@ -3595,7 +3911,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Calanques-Bootstour" id="hybrid-variante-tag09-highlight02"
+              <img alt="Calanques-Bootstour" id="variante-3-tag09-highlight02"
                 src="https://checkyeti.imgix.net/images/prod/products/25242/Atlantide-Promenades-en-mer-Bandol-gallery-7-3?auto=format,compress&amp;fit=crop&amp;w=1024&amp;q=45&amp;dpr=1" />
             </div>
             <div class="highlight-content">
@@ -3606,7 +3922,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Cap Canaille" id="hybrid-variante-tag09-highlight03"
+              <img alt="Cap Canaille" id="variante-3-tag09-highlight03"
                 src="https://www.provence-info.de/wp-content/uploads/falaises-cassis.jpg" />
             </div>
             <div class="highlight-content">
@@ -3616,18 +3932,19 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Notre-Dame de la Garde" id="hybrid-variante-tag09-highlight04"
+              <img alt="Notre-Dame de la Garde" id="variante-3-tag09-highlight04"
                 src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/0a/d4/5c.jpg" />
             </div>
             <div class="highlight-content">
               <h4><a href="https://www.google.com/search?q=Notre-Dame+de+la+Garde" target="_blank">Notre-Dame de la
                   Garde</a></h4>
-              <p>Marseille-Sonnenuntergang.</p>
+              <p>Marien-Wallfahrtskirche. Das neuromanisch-byzantinische Gotteshaus ist ein Wahrzeichen von Marseille.
+                Marseille-Sonnenuntergang.</p>
             </div>
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Vieux-Port Marseille" id="hybrid-variante-tag09-highlight05"
+              <img alt="Vieux-Port Marseille" id="variante-3-tag09-highlight05"
                 src="https://media.20min.ch/6/image/2025/09/03/79763f75-6e16-40ea-89c7-12c083407264.jpg?auto=format%2Ccompress%2Cenhance&amp;fit=max&amp;w=2001&amp;h=2000&amp;rect=0%2C0%2C3999%2C2333&amp;s=472c082578a551a5ce0247f7e91e85b5" />
             </div>
             <div class="highlight-content">
@@ -3640,34 +3957,35 @@
         <div class="grid">
           <div>
             <h3>Restauranttipp</h3>
-            <p>Lunch Cassis / Dinner Marseille</p>
+            <p>Lunch in Cassis / Dinner Vieux-Port</p>
           </div>
           <div>
             <h3>Park-/August-Tipp</h3>
-            <p>Cassis früh anfahren; Marseille Parkhaus.</p>
+            <p>Cassis früh anfahren; Marseille-Parkhaus nutzen.</p>
           </div>
         </div>
         <div class="alternatives">
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Calanque+de+Port-Miou+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Calanque de Port-Miou</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Calanque de Port-Miou</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gut erreichbarer Einstieg in die
               Calanques-Landschaft nahe Cassis.</li>
             <li><a href="https://www.google.com/search?q=Le+Panier+in+Marseille+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Le Panier in Marseille</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Le Panier in Marseille</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ältestes Viertel der Stadt mit
               Gassen, Street-Art und Cafés.</li>
             <li><a href="https://www.google.com/search?q=Mucem-Au%C3%9Fenbereich+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mucem-Außenbereich</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Mucem-Außenbereich</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Moderne Architektur am Hafen; auch
               ohne Museumsbesuch ein guter Spaziergang.</li>
             <li><a href="https://www.google.com/search?q=Corniche+Kennedy+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Corniche Kennedy</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Küstenstraße mit Meerblick in Marseille; schön als kurzer Fotostopp.
+                target="_blank"><strong>Corniche Kennedy</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Küstenstraße mit Meerblick in
+              Marseille; schön als kurzer Fotostopp.
             </li>
             <li><a href="https://www.google.com/search?q=Vallon+des+Auffes+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Vallon des Auffes</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Vallon des Auffes</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kleiner Fischerhafen in Marseille
               mit viel Atmosphäre; gut für Abendstimmung und Fotos.</li>
           </ul>
@@ -3675,7 +3993,7 @@
       </section>
       <section class="card day">
         <span class="label">Tag 10 · Mi, 19.08.2026</span>
-        <h2>Nizza + Èze</h2>
+        <h2>Provence → Antibes</h2>
         <div class="meta">
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 260 km / 3–3,5 h</span>
@@ -3684,7 +4002,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Altstadt Antibes" id="hybrid-variante-tag10-highlight01"
+              <img alt="Altstadt Antibes" id="variante-3-tag10-highlight01"
                 src="https://provencelovers.fr/wp-content/uploads/2023/12/besuchen-antibes-1-tage-reiseroute.jpg" />
             </div>
             <div class="highlight-content">
@@ -3694,7 +4012,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Port Vauban" id="hybrid-variante-tag10-highlight02"
+              <img alt="Port Vauban" id="variante-3-tag10-highlight02"
                 src="https://leportvauban.com/wp-content/uploads/2025/01/Design-sans-titre-8.jpg" />
             </div>
             <div class="highlight-content">
@@ -3704,7 +4022,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Stadtmauer am Meer" id="hybrid-variante-tag10-highlight03"
+              <img alt="Stadtmauer am Meer" id="variante-3-tag10-highlight03"
                 src="https://www.provence-info.de/wp-content/uploads/antibes-altstadt.jpg" />
             </div>
             <div class="highlight-content">
@@ -3721,38 +4039,42 @@
           </div>
           <div>
             <h3>Park-/August-Tipp</h3>
-            <p>Unterkunft mit Parkplatz.</p>
+            <p>Unterkunft mit Parkplatz; Altstadt zu Fuß.</p>
           </div>
         </div>
         <div class="alternatives">
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Saint-Paul-de-Vence+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Saint-Paul-de-Vence</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Saint-Paul-de-Vence</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Künstlerdorf im Hinterland, sehr
               fotogen, aber im August früh besuchen.</li>
             <li><a href="https://www.google.com/search?q=Grasse+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Grasse</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Parfumstadt mit Altstadt und Duft-Thema, gut als Zwischenstopp
+                target="_blank"><strong>Grasse</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Parfumstadt mit Altstadt und
+              Duft-Thema, gut als Zwischenstopp
               Richtung Küste.</li>
             <li><a href="https://www.google.com/search?q=Biot+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Biot</a> <span aria-label="3 von 5 Sternen" class="rating">★★★☆☆</span><span
-                class="rating-text"> (3/5)</span>: Kleiner Ort zwischen Antibes und Nizza, bekannt für Glas und ruhiger
+                target="_blank"><strong>Biot</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleiner Ort zwischen Antibes und
+              Nizza, bekannt für Glas und ruhiger
               als die großen Küstenorte.</li>
             <li><a href="https://www.google.com/search?q=Mougins+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mougins</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Gepflegtes Künstlerdorf oberhalb von Cannes; gute Option für
+                target="_blank"><strong>Mougins</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Gepflegtes Künstlerdorf oberhalb von
+              Cannes; gute Option für
               Mittagessen oder kurzen Spaziergang.</li>
             <li><a href="https://www.google.com/search?q=Valbonne+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Valbonne</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Angenehmer Ort mit Arkadenplatz; weniger überlaufen als viele
+                target="_blank"><strong>Valbonne</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Angenehmer Ort mit Arkadenplatz;
+              weniger überlaufen als viele
               Küstenziele.</li>
           </ul>
         </div>
       </section>
       <section class="card day">
         <span class="label">Tag 11 · Do, 20.08.2026</span>
-        <h2>Cannes + Cap d’Antibes</h2>
+        <h2>Nizza + Èze</h2>
         <div class="meta">
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 60–90 km lokal</span>
@@ -3761,7 +4083,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Promenade des Anglais" id="hybrid-variante-tag11-highlight01"
+              <img alt="Promenade des Anglais" id="variante-3-tag11-highlight01"
                 src="https://img.static-kl.com/transform/e3ca9f67-ba76-4512-bf96-16e5e4c684bb/?io=transform:fill,width:2880,height:1440&amp;consumerid=bwp" />
             </div>
             <div class="highlight-content">
@@ -3772,7 +4094,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Altstadt Nizza" id="hybrid-variante-tag11-highlight02"
+              <img alt="Altstadt Nizza" id="variante-3-tag11-highlight02"
                 src="https://berlinerininfrankreich.de/wp-content/uploads/2023/06/Nizza-Altstadt-5-682x1024.jpg" />
             </div>
             <div class="highlight-content">
@@ -3782,7 +4104,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Èze + Jardin Exotique" id="hybrid-variante-tag11-highlight03"
+              <img alt="Èze + Jardin Exotique" id="variante-3-tag11-highlight03"
                 src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/32/d5/da/caption.jpg?w=1000&amp;h=-1&amp;s=1" />
             </div>
             <div class="highlight-content">
@@ -3799,37 +4121,117 @@
           </div>
           <div>
             <h3>Park-/August-Tipp</h3>
-            <p>Èze früh oder spät.</p>
+            <p>Èze früh oder spät; Parkplätze knapp.</p>
           </div>
         </div>
         <div class="alternatives">
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Colline+du+Ch%C3%A2teau+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Colline du Château</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Colline du Château</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Aussichtspunkt über Nizza, Hafen und
               Baie des Anges.</li>
             <li><a href="https://www.google.com/search?q=Cours+Saleya+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cours Saleya</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Markt- und Altstadtbereich mit viel Atmosphäre am Vormittag.</li>
+                target="_blank"><strong>Cours Saleya</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Markt- und Altstadtbereich mit viel
+              Atmosphäre am Vormittag.</li>
             <li><a href="https://www.google.com/search?q=Villefranche-sur-Mer+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villefranche-sur-Mer</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Villefranche-sur-Mer</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kleine Bucht nahe Nizza, gute
               Alternative, wenn Èze sehr voll ist.</li>
             <li><a href="https://www.google.com/search?q=Cap+Ferrat+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cap Ferrat</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Elegante Halbinsel mit schönen Küstenwegen und ruhigerem
+                target="_blank"><strong>Cap Ferrat</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Elegante Halbinsel mit schönen
+              Küstenwegen und ruhigerem
               Riviera-Flair.</li>
             <li><a href="https://www.google.com/search?q=Monast%C3%A8re+de+Cimiez+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monastère de Cimiez</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Monastère de Cimiez</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Ruhiger Kultur- und Gartenstopp
               oberhalb von Nizza, abseits der Promenade.</li>
           </ul>
         </div>
       </section>
-
       <section class="card day">
         <span class="label">Tag 12 · Fr, 21.08.2026</span>
+        <h2>Cannes + Cap d’Antibes</h2>
+        <div class="meta">
+          <span>Übernachtung: Antibes</span>
+          <span>Fahrzeit/Kilometer: ca. 50–80 km lokal</span>
+        </div>
+        <h3>Highlights mit Foto-Slots</h3>
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="La Croisette" id="variante-3-tag12-highlight01"
+                src="https://cdm0lfbn.cloudimg.io/v7/_images_base_/image_uploader/photos/0d/original/promenade-de-la-croisette-cannes-cannes.jpg?ua=1767168725&amp;p=large" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=La+Croisette" target="_blank">La Croisette</a></h4>
+              <p>Palmen, Strand und Luxus-Hotels.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Le Suquet" id="variante-3-tag12-highlight02"
+                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/194847525.jpg?k=f48b2315edfe6beab5d55d1a9ce1a9fc9e0553764a29f4516f6b92c7deba00dd&amp;o=" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Le+Suquet" target="_blank">Le Suquet</a></h4>
+              <p>Charmante Altstadtseite von Cannes.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="photo-box">
+              <img alt="Cap d’Antibes Küstenweg" id="variante-3-tag12-highlight03"
+                src="https://hikingthealps.com/wp-content/uploads/2023/02/Sentier-du-Littoral-am-Cap-d-Antibes3-1024x771.jpg" />
+            </div>
+            <div class="highlight-content">
+              <h4><a href="https://www.google.com/search?q=Cap+d’Antibes+Küstenweg" target="_blank">Cap d’Antibes
+                  Küstenweg</a></h4>
+              <p>Einer der schönsten Spaziergänge.</p>
+            </div>
+          </article>
+        </div>
+        <div class="grid">
+          <div>
+            <h3>Restauranttipp</h3>
+            <p>Lunch Cannes / Dinner Antibes</p>
+          </div>
+          <div>
+            <h3>Park-/August-Tipp</h3>
+            <p>Cannes Parkhaus; Cap am Nachmittag.</p>
+          </div>
+        </div>
+        <div class="alternatives">
+          <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
+          <ul>
+            <li><a href="https://www.google.com/search?q=%C3%8Ele+Sainte-Marguerite+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Île Sainte-Marguerite</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Kurze Fährfahrt ab Cannes; ruhiger
+              Natur- und Badekontrast zur Croisette.</li>
+            <li><a href="https://www.google.com/search?q=March%C3%A9+Forville+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Marché Forville</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Markthalle in Cannes, gut für einen
+              lokalen Start in den Tag.</li>
+            <li><a href="https://www.google.com/search?q=Plage+de+la+Garoupe+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Plage de la Garoupe</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Bekannter Strandbereich am Cap
+              d’Antibes; früh kommen wegen Parkplätzen.</li>
+            <li><a href="https://www.google.com/search?q=Villa+Eilenroc+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Villa Eilenroc</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Anlage am Cap d’Antibes;
+              interessant, wenn ihr Architektur und
+              Gärten mögt.</li>
+            <li><a href="https://www.google.com/search?q=Juan-les-Pins+Sehensw%C3%BCrdigkeit+Informationen"
+                target="_blank"><strong>Juan-les-Pins</strong></a> <span aria-label="3 von 5 Sternen"
+                class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Lebhafter Badeort direkt neben
+              Antibes; gut für Strand, Promenade und
+              Abendstimmung.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="card day">
+        <span class="label">Tag 13 · Sa, 22.08.2026</span>
         <h2>Antibes → Turin</h2>
         <div class="meta">
           <span>Übernachtung: Turin</span>
@@ -3839,7 +4241,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Piazza San Carlo" id="hybrid-variante-tag13-highlight01"
+              <img alt="Piazza San Carlo" id="variante-3-tag13-highlight01"
                 src="https://tourismmedia.italia.it/is/image/mitur/20220223132855-piazza-san-carlo-torino-piemonte-shutterstock-2102981095-rid?wid=1240&amp;hei=500&amp;fit=constrain,1&amp;fmt=webp" />
             </div>
             <div class="highlight-content">
@@ -3849,7 +4251,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Piazza Castello" id="hybrid-variante-tag13-highlight02"
+              <img alt="Piazza Castello" id="variante-3-tag13-highlight02"
                 src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Turin_piazza_costello.JPG" />
             </div>
             <div class="highlight-content">
@@ -3859,7 +4261,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Aperitivo" id="hybrid-variante-tag13-highlight03"
+              <img alt="Aperitivo" id="variante-3-tag13-highlight03"
                 src="https://dynamic-media.tacdn.com/media/photo-o/2f/0e/cd/35/caption.jpg?w=1400&amp;h=1000&amp;s=1" />
             </div>
             <div class="highlight-content">
@@ -3882,30 +4284,31 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Mole+Antonelliana+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Mole Antonelliana</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Mole Antonelliana</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Wahrzeichen Turins mit Aussicht und
               Filmmuseum; gut für den ersten Abend.</li>
             <li><a href="https://www.google.com/search?q=Quadrilatero+Romano+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Quadrilatero Romano</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Quadrilatero Romano</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Historisches Viertel mit Bars und
               Restaurants, ideal für Aperitivo.</li>
             <li><a href="https://www.google.com/search?q=Parco+del+Valentino+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Parco del Valentino</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Parco del Valentino</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Grüne Pause am Po, wenn nach der
               Fahrt noch Bewegung angenehm ist.</li>
             <li><a href="https://www.google.com/search?q=Museo+Egizio+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Museo Egizio</a> <span aria-label="5 von 5 Sternen" class="rating">★★★★★</span><span
-                class="rating-text"> (5/5)</span>: Eines der wichtigsten Ägyptischen Museen Europas; gute Indoor-Option
+                target="_blank"><strong>Museo Egizio</strong></a> <span aria-label="5 von 5 Sternen"
+                class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Eines der wichtigsten Ägyptischen
+              Museen Europas; gute Indoor-Option
               bei Hitze oder Regen.</li>
             <li><a href="https://www.google.com/search?q=Basilica+di+Superga+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Basilica di Superga</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Basilica di Superga</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Aussichtspunkt oberhalb von Turin;
               lohnt sich bei klarer Sicht und etwas zusätzlicher Zeit.</li>
           </ul>
         </div>
       </section>
       <section class="card day">
-        <span class="label">Tag 13 · Sa, 22.08.2026</span>
+        <span class="label">Tag 14 · So, 23.08.2026</span>
         <h2>Turin → Malcesine</h2>
         <div class="meta">
           <span>Übernachtung: Malcesine</span>
@@ -3915,7 +4318,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Castello Scaligero" id="hybrid-variante-tag14-highlight01"
+              <img alt="Castello Scaligero" id="variante-3-tag14-highlight01"
                 src="https://www.lust-auf-italien.com/wp-content/uploads/2025/03/Castello-Malcesine_Beitragsbild.jpg" />
             </div>
             <div class="highlight-content">
@@ -3926,7 +4329,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Altstadt Malcesine" id="hybrid-variante-tag14-highlight02"
+              <img alt="Altstadt Malcesine" id="variante-3-tag14-highlight02"
                 src="https://cdn.urlaubsguru.at/wp-content/uploads/2016/06/lake-garda-town-of-malcesine-veneto-italy-shutterstock_379405306-2-1-707x468.jpg" />
             </div>
             <div class="highlight-content">
@@ -3937,7 +4340,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Seepromenade" id="hybrid-variante-tag14-highlight03" src="images/malcesine-seepromenade.png" />
+              <img alt="Seepromenade" id="variante-3-tag14-highlight03" src="images/malcesine-seepromenade.png" />
             </div>
             <div class="highlight-content">
               <h4><a href="https://www.google.com/search?q=Seepromenade" target="_blank">Seepromenade</a></h4>
@@ -3959,30 +4362,31 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Monte+Baldo+Seilbahn+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Monte Baldo Seilbahn</a> <span aria-label="5 von 5 Sternen"
+                target="_blank"><strong>Monte Baldo Seilbahn</strong></a> <span aria-label="5 von 5 Sternen"
                 class="rating">★★★★★</span><span class="rating-text"> (5/5)</span>: Aussicht über den Gardasee; bei
               klarem Wetter besonders lohnend, Wartezeiten einplanen.</li>
             <li><a href="https://www.google.com/search?q=Hafen+von+Malcesine+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Hafen von Malcesine</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Hafen von Malcesine</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner, stimmungsvoller Bereich für
               Spaziergang, Fotos und Gelato.</li>
             <li><a href="https://www.google.com/search?q=Cassone+di+Malcesine+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Cassone di Malcesine</a> <span aria-label="4 von 5 Sternen"
+                target="_blank"><strong>Cassone di Malcesine</strong></a> <span aria-label="4 von 5 Sternen"
                 class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Ruhiger Nachbarort mit kleinem
               Hafen, wenn Malcesine selbst sehr voll ist.</li>
             <li><a href="https://www.google.com/search?q=Palazzo+dei+Capitani+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Palazzo dei Capitani</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Palazzo dei Capitani</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Kleiner historischer Stopp direkt im
               Ort; gut mit Altstadt und Ufer kombinierbar.</li>
             <li><a href="https://www.google.com/search?q=Val+di+Sogno+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Val di Sogno</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Bucht südlich von Malcesine; gut für ruhige Seeblicke und
+                target="_blank"><strong>Val di Sogno</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Bucht südlich von Malcesine;
+              gut für ruhige Seeblicke und
               kurze Spaziergänge.</li>
           </ul>
         </div>
       </section>
       <section class="card day">
-        <span class="label">Tag 14 · So, 23.08.2026</span>
+        <span class="label">Tag 15 · Mo, 24.08.2026</span>
         <h2>Gardasee → Graz</h2>
         <div class="meta">
           <span>Übernachtung: Heimfahrt</span>
@@ -3992,7 +4396,7 @@
         <div class="highlight-grid">
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Limone sul Garda" id="hybrid-variante-tag15-highlight01"
+              <img alt="Limone sul Garda" id="variante-3-tag15-highlight01"
                 src="https://images.trvl-media.com/place/602201/85794316-41cc-4ed3-8397-42a453933e28.jpg" />
             </div>
             <div class="highlight-content">
@@ -4002,7 +4406,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Heimfahrt" id="hybrid-variante-tag15-highlight02"
+              <img alt="Heimfahrt" id="variante-3-tag15-highlight02"
                 src="https://www.sifa-sibe.de/wp-content/uploads/a/u/auto_AdobeStock_60027303.jpg" />
             </div>
             <div class="highlight-content">
@@ -4012,7 +4416,7 @@
           </article>
           <article class="highlight-card">
             <div class="photo-box">
-              <img alt="Pausen unterwegs" id="hybrid-variante-tag15-highlight03"
+              <img alt="Pausen unterwegs" id="variante-3-tag15-highlight03"
                 src="https://images.t-online.de/2022/04/51918718v1004/63x0:515x290/fit-in/646x0/rasten-sie-bei-langen-autofahrten-regelmaessig.jpg" />
             </div>
             <div class="highlight-content">
@@ -4035,27 +4439,88 @@
           <h3>Alternative Sightseeing-Empfehlungen mit Bewertung</h3>
           <ul>
             <li><a href="https://www.google.com/search?q=Riva+del+Garda+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Riva del Garda</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Optionaler Morgenstopp am Nordufer mit alpiner Gardasee-Kulisse.</li>
+                target="_blank"><strong>Riva del Garda</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Optionaler Morgenstopp am Nordufer
+              mit alpiner Gardasee-Kulisse.</li>
             <li><a href="https://www.google.com/search?q=Arco+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Arco</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Kleiner Ort nördlich des Sees mit Burgblick, gut für eine kurze
+                target="_blank"><strong>Arco</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Kleiner Ort nördlich des Sees mit
+              Burgblick, gut für eine kurze
               Pause.</li>
             <li><a
                 href="https://www.google.com/search?q=Villach+oder+W%C3%B6rthersee-Pause+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Villach oder Wörthersee-Pause</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Villach oder Wörthersee-Pause</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Praktischer Stopp auf der Rückfahrt,
               um die lange Etappe zu unterbrechen.</li>
             <li><a href="https://www.google.com/search?q=Brixen+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Brixen</a> <span aria-label="4 von 5 Sternen" class="rating">★★★★☆</span><span
-                class="rating-text"> (4/5)</span>: Schöne Altstadt auf der Rückfahrt-Variante über Südtirol; gut für
+                target="_blank"><strong>Brixen</strong></a> <span aria-label="4 von 5 Sternen"
+                class="rating">★★★★☆</span><span class="rating-text"> (4/5)</span>: Schöne Altstadt auf der
+              Rückfahrt-Variante über Südtirol; gut für
               Kaffee oder Mittagspause.</li>
             <li><a href="https://www.google.com/search?q=Klagenfurt+Altstadt+Sehensw%C3%BCrdigkeit+Informationen"
-                target="_blank">Klagenfurt Altstadt</a> <span aria-label="3 von 5 Sternen"
+                target="_blank"><strong>Klagenfurt Altstadt</strong></a> <span aria-label="3 von 5 Sternen"
                 class="rating">★★★☆☆</span><span class="rating-text"> (3/5)</span>: Naheliegender später Zwischenstopp,
               falls ihr vor Graz noch eine letzte Pause braucht.</li>
           </ul>
         </div>
+      </section>
+      <section class="card hotel-summary">
+        <h3>Kurzübersicht Übernachtungen / Hotelbuchung</h3>
+        <p>Zusammenfassung der Übernachtungen mit korrektem Check-in- und Check-out-Tag.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Ort</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Nächte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>München</strong></td>
+              <td>Mo, 10.08.2026</td>
+              <td>Di, 11.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Straßburg</strong></td>
+              <td>Di, 11.08.2026</td>
+              <td>Do, 13.08.2026</td>
+              <td>2 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Annecy</strong></td>
+              <td>Do, 13.08.2026</td>
+              <td>Fr, 14.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>L’Isle-sur-la-Sorgue</strong></td>
+              <td>Fr, 14.08.2026</td>
+              <td>Mi, 19.08.2026</td>
+              <td>5 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Antibes</strong></td>
+              <td>Mi, 19.08.2026</td>
+              <td>Sa, 22.08.2026</td>
+              <td>3 Nächte</td>
+            </tr>
+            <tr>
+              <td><strong>Turin</strong></td>
+              <td>Sa, 22.08.2026</td>
+              <td>So, 23.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+            <tr>
+              <td><strong>Malcesine</strong></td>
+              <td>So, 23.08.2026</td>
+              <td>Mo, 24.08.2026</td>
+              <td>1 Nacht</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </section>
   </main>
