@@ -621,6 +621,60 @@
       line-height: 1.5;
       font-size: 14px;
     }
+
+    .day-restaurant-link {
+      margin-top: 10px
+    }
+
+    .day-restaurant-link a {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #f0e2d0;
+      color: #203040 !important;
+      font-weight: 700;
+      text-decoration: none !important
+    }
+
+    .restaurant-page {
+      margin-top: 34px;
+      padding: 26px;
+      border-radius: 22px;
+      background: var(--paper);
+      border: 1px solid rgba(0, 0, 0, .05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08)
+    }
+
+    .restaurant-day {
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff6ea
+    }
+
+    .restaurant-list a {
+      color: #203040 !important;
+      font-weight: 700;
+      text-decoration: none !important
+    }
+
+    .restaurant-list li {
+      margin: 8px 0
+    }
+
+    @media print {
+      .restaurant-page {
+        break-before: page;
+        page-break-before: always;
+        box-shadow: none !important
+      }
+
+      .day-restaurant-link a,
+      .restaurant-list li {
+        font-size: 7px !important
+      }
+    }
   </style>
   <script>
     function showVariant(id) {
@@ -638,6 +692,7 @@
 </head>
 
 <body>
+  <div id="top"></div>
   <section class="cover">
     <h1>Roadbook Südfrankreich 2026</h1>
   </section>
@@ -664,6 +719,7 @@
           <span>Übernachtung: München</span>
           <span>Fahrzeit/Kilometer: ca. 390 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag01">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -745,6 +801,7 @@
           <span>Übernachtung: Straßburg</span>
           <span>Fahrzeit/Kilometer: ca. 360 km / 3,5–4 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag02">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -827,6 +884,7 @@
           <span>Übernachtung: Annecy</span>
           <span>Fahrzeit/Kilometer: ca. 470 km / 4,5–5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag03">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -910,6 +968,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag04">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -991,6 +1050,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag05">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1074,6 +1134,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 90–120 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag06">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1155,6 +1216,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 230–280 km</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag07">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1238,6 +1300,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 220–260 km</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag08">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1339,6 +1402,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 260 km / 3–3,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag09">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1420,6 +1484,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 60–90 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag10">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1499,6 +1564,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 50–80 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag11">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1578,6 +1644,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 90–120 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag12">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1655,6 +1722,7 @@
           <span>Übernachtung: Turin</span>
           <span>Fahrzeit/Kilometer: ca. 290 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag13">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1732,6 +1800,7 @@
           <span>Übernachtung: Malcesine</span>
           <span>Fahrzeit/Kilometer: ca. 250 km / 3–3,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag14">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1810,6 +1879,7 @@
           <span>Übernachtung: Heimfahrt</span>
           <span>Fahrzeit/Kilometer: ca. 450 km / 6–7 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-meine-variante-tag15">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -1953,6 +2023,7 @@
           <span>Übernachtung: München</span>
           <span>Fahrzeit/Kilometer: ca. 390 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag01">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2034,6 +2105,7 @@
           <span>Übernachtung: Straßburg</span>
           <span>Fahrzeit/Kilometer: ca. 360 km / 3,5–4 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag02">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2116,6 +2188,7 @@
           <span>Übernachtung: Straßburg</span>
           <span>Fahrzeit/Kilometer: ca. 120–180 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag03">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2191,6 +2264,7 @@
           <span>Übernachtung: Annecy</span>
           <span>Fahrzeit/Kilometer: ca. 470 km / 4,5–5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag04">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2274,6 +2348,7 @@
           <span>Übernachtung: Annecy</span>
           <span>Fahrzeit/Kilometer: ca. 30–80 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag05">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2355,6 +2430,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag06">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2436,6 +2512,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag07">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2519,6 +2596,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 230–280 km</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag08">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2598,6 +2676,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 220–260 km</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag09">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2698,6 +2777,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 260 km / 3–3,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag10">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2779,6 +2859,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 60–90 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag11">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2858,6 +2939,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 50–80 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag12">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -2937,6 +3019,7 @@
           <span>Übernachtung: Turin</span>
           <span>Fahrzeit/Kilometer: ca. 290 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag13">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3014,6 +3097,7 @@
           <span>Übernachtung: Malcesine</span>
           <span>Fahrzeit/Kilometer: ca. 250 km / 3–3,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag14">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3092,6 +3176,7 @@
           <span>Übernachtung: Heimfahrt</span>
           <span>Fahrzeit/Kilometer: ca. 450 km / 6–7 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-hybrid-variante-tag15">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3236,6 +3321,7 @@
           <span>Übernachtung: München</span>
           <span>Fahrzeit/Kilometer: ca. 390 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag01">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3317,6 +3403,7 @@
           <span>Übernachtung: Straßburg</span>
           <span>Fahrzeit/Kilometer: ca. 360 km / 3,5–4 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag02">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3399,6 +3486,7 @@
           <span>Übernachtung: Straßburg</span>
           <span>Fahrzeit/Kilometer: ca. 120–180 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag03">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3472,6 +3560,7 @@
           <span>Übernachtung: Annecy</span>
           <span>Fahrzeit/Kilometer: ca. 470 km / 4,5–5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag04">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3555,6 +3644,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 330 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag05">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3650,6 +3740,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 80–120 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag06">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3733,6 +3824,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 90–120 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag07">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3814,6 +3906,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 230–280 km</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag08">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3897,6 +3990,7 @@
           <span>Übernachtung: L’Isle-sur-la-Sorgue</span>
           <span>Fahrzeit/Kilometer: ca. 220–260 km</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag09">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -3998,6 +4092,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 260 km / 3–3,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag10">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -4079,6 +4174,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 60–90 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag11">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -4158,6 +4254,7 @@
           <span>Übernachtung: Antibes</span>
           <span>Fahrzeit/Kilometer: ca. 50–80 km lokal</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag12">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -4237,6 +4334,7 @@
           <span>Übernachtung: Turin</span>
           <span>Fahrzeit/Kilometer: ca. 290 km / 4–4,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag13">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -4314,6 +4412,7 @@
           <span>Übernachtung: Malcesine</span>
           <span>Fahrzeit/Kilometer: ca. 250 km / 3–3,5 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag14">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -4392,6 +4491,7 @@
           <span>Übernachtung: Heimfahrt</span>
           <span>Fahrzeit/Kilometer: ca. 450 km / 6–7 h</span>
         </div>
+        <div class="day-restaurant-link"><a href="#restaurants-variante-3-tag15">Restaurants/Cafés</a></div>
         <h3>Highlights mit Foto-Slots</h3>
         <div class="highlight-grid">
           <article class="highlight-card">
@@ -4521,6 +4621,1150 @@
             </tr>
           </tbody>
         </table>
+      </section>
+    </section>
+    <section class="restaurant-page" id="restaurants-cafes">
+      <h2>Empfohlene Restaurants und Cafés pro Tag</h2>
+      <p class="note">Bewertungen sind Eignungsbewertungen für eure Reiseplanung, keine Live-Google-Ratings. Die Links
+        öffnen Infoseiten/Suchergebnisse zum jeweiligen Restaurant oder Café.</p>
+      <h2>Variante 1</h2>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag01">
+        <h3>Tag 1 · Mo, 10.08.2026 · Graz → München</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Augustiner+Keller+München" target="_blank">Augustiner Keller</a>
+            <span class="rating">★★★★★</span>: Klassischer Biergarten, sehr passend für den ersten Abend.</li>
+          <li><a href="https://www.google.com/search?q=Augustiner+Bräustuben+München" target="_blank">Augustiner
+              Bräustuben</a> <span class="rating">★★★★☆</span>: Urig und etwas weniger touristisch.</li>
+          <li><a href="https://www.google.com/search?q=Viktualienmarkt+München+Essen"
+              target="_blank">Viktualienmarkt</a> <span class="rating">★★★★☆</span>: Ideal für Snack/Kaffee beim
+            Altstadtspaziergang.</li>
+          <li><a href="https://www.google.com/search?q=Hofbräuhaus+München" target="_blank">Hofbräuhaus München</a>
+            <span class="rating">★★★★☆</span>: Sehr touristisch, aber als kurzer München-Klassiker passend.</li>
+          <li><a href="https://www.google.com/search?q=Paulaner+Bräuhaus+München" target="_blank">Paulaner Bräuhaus</a>
+            <span class="rating">★★★★☆</span>: Solide bayerische Küche mit Bierhaus-Atmosphäre.</li>
+          <li><a href="https://www.google.com/search?q=Spatenhaus+an+der+Oper+München" target="_blank">Spatenhaus an der
+              Oper</a> <span class="rating">★★★★☆</span>: Traditioneller, etwas eleganterer Klassiker nahe Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Ratskeller+München" target="_blank">Ratskeller München</a> <span
+              class="rating">★★★★☆</span>: Zentral am Marienplatz; praktisch bei kurzem Altstadtbesuch.</li>
+          <li><a href="https://www.google.com/search?q=Café+Frischhut+München" target="_blank">Café Frischhut</a> <span
+              class="rating">★★★★☆</span>: Sehr guter süßer Stopp nahe Viktualienmarkt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Luitpold+München" target="_blank">Café Luitpold</a> <span
+              class="rating">★★★★☆</span>: Klassisches Kaffeehaus für Kuchen/Kaffee.</li>
+          <li><a href="https://www.google.com/search?q=Schneider+Bräuhaus+München" target="_blank">Schneider
+              Bräuhaus</a> <span class="rating">★★★★☆</span>: Traditionelle bayerische Küche in zentraler Lage.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag02">
+        <h3>Tag 2 · Di, 11.08.2026 · München → Straßburg</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Tire-Bouchon+Strasbourg" target="_blank">Le Tire-Bouchon</a>
+            <span class="rating">★★★★★</span>: Elsässische Küche in zentraler Altstadtlage.</li>
+          <li><a href="https://www.google.com/search?q=Maison+Kammerzell+Strasbourg" target="_blank">Maison
+              Kammerzell</a> <span class="rating">★★★★☆</span>: Historisches Haus direkt beim Münster.</li>
+          <li><a href="https://www.google.com/search?q=La+Corde+à+Linge+Strasbourg" target="_blank">La Corde à Linge</a>
+            <span class="rating">★★★★☆</span>: Beliebt in Petite France.</li>
+          <li><a href="https://www.google.com/search?q=Au+Pont+Corbeau+Strasbourg" target="_blank">Au Pont Corbeau</a>
+            <span class="rating">★★★★★</span>: Sehr guter Klassiker für regionale Küche.</li>
+          <li><a href="https://www.google.com/search?q=Winstub+S'Kaechele+Strasbourg" target="_blank">Winstub
+              S'Kaechele</a> <span class="rating">★★★★☆</span>: Gemütliche Winstub mit Elsass-Flair.</li>
+          <li><a href="https://www.google.com/search?q=Le+Clou+Strasbourg" target="_blank">Le Clou</a> <span
+              class="rating">★★★★☆</span>: Traditionelle Adresse nahe Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Perles+de+Saveurs+Strasbourg" target="_blank">Perles de
+              Saveurs</a> <span class="rating">★★★★☆</span>: Kleine Adresse für gehobenere Küche.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+et+Chocolat+Strasbourg" target="_blank">Bistrot &amp;
+              Chocolat</a> <span class="rating">★★★★☆</span>: Guter Café-/Brunch-Stopp nahe Münster.</li>
+          <li><a href="https://www.google.com/search?q=Café+Bretelles+Strasbourg" target="_blank">Café Bretelles</a>
+            <span class="rating">★★★★☆</span>: Netter Kaffee-Stopp in der Stadt.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Christian+Strasbourg" target="_blank">Pâtisserie
+              Christian</a> <span class="rating">★★★★☆</span>: Klassischer süßer Stopp in Straßburg.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag03">
+        <h3>Tag 3 · Mi, 12.08.2026 · Straßburg → Annecy</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Freti+Annecy" target="_blank">Le Freti</a> <span
+              class="rating">★★★★★</span>: Savoyer Klassiker in Annecy.</li>
+          <li><a href="https://www.google.com/search?q=Café+des+Arts+Annecy" target="_blank">Café des Arts</a> <span
+              class="rating">★★★★☆</span>: Gut für Kaffee oder Aperitif nahe Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Brasserie+des+Européens+Annecy" target="_blank">Brasserie des
+              Européens</a> <span class="rating">★★★★☆</span>: Zentral und unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Le+Chalet+Annecy" target="_blank">Le Chalet</a> <span
+              class="rating">★★★★☆</span>: Savoyer Küche in gemütlicher Lage.</li>
+          <li><a href="https://www.google.com/search?q=L'Etage+Annecy" target="_blank">L'Etage</a> <span
+              class="rating">★★★★☆</span>: Gute Option in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=La+Ciboulette+Annecy" target="_blank">La Ciboulette</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=Glacier+des+Alpes+Annecy" target="_blank">Glacier des Alpes</a>
+            <span class="rating">★★★★☆</span>: Beliebter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Buvette+du+Marché+Annecy" target="_blank">Buvette du Marché</a>
+            <span class="rating">★★★★☆</span>: Locker für kleinen Snack/Drink.</li>
+          <li><a href="https://www.google.com/search?q=Cozna+Annecy" target="_blank">Cozna</a> <span
+              class="rating">★★★★★</span>: Sehr gutes modernes Restaurant; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Les+Palettes+Annecy" target="_blank">Les Palettes</a> <span
+              class="rating">★★★★☆</span>: Netter Café-/Brunch-Stopp.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag04">
+        <h3>Tag 4 · Do, 13.08.2026 · Annecy → Provence</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Balade+des+Saveurs+L'Isle-sur-la-Sorgue" target="_blank">La
+              Balade des Saveurs</a> <span class="rating">★★★★★</span>: Sehr passend für ein Provence-Abendessen.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+France+L'Isle-sur-la-Sorgue" target="_blank">Café de
+              France</a> <span class="rating">★★★★☆</span>: Klassischer Platz zum Ankommen.</li>
+          <li><a href="https://www.google.com/search?q=Jouvaud+L'Isle-sur-la-Sorgue" target="_blank">Maison Jouvaud</a>
+            <span class="rating">★★★★☆</span>: Schöner Patisserie-/Café-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Le+Jardin+du+Quai+L'Isle-sur-la-Sorgue" target="_blank">Le Jardin
+              du Quai</a> <span class="rating">★★★★★</span>: Schöne Adresse in L’Isle-sur-la-Sorgue; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=UMAMI+L'Isle-sur-la-Sorgue" target="_blank">Restaurant UMAMI</a>
+            <span class="rating">★★★★☆</span>: Modernere Küche in der Region.</li>
+          <li><a href="https://www.google.com/search?q=Bella+Ciao+L'Isle-sur-la-Sorgue" target="_blank">Bella Ciao</a>
+            <span class="rating">★★★★☆</span>: Unkomplizierte Option, wenn ihr nach der Fahrt nicht groß suchen wollt.
+          </li>
+          <li><a href="https://www.google.com/search?q=Le+Carré+d'Herbes+L'Isle-sur-la-Sorgue" target="_blank">Le Carré
+              d'Herbes</a> <span class="rating">★★★★☆</span>: Gute Bistro-Option in L’Isle.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Leyris+L'Isle-sur-la-Sorgue"
+              target="_blank">Pâtisserie Leyris</a> <span class="rating">★★★★☆</span>: Süßer Stopp/Kaffee in der
+            Umgebung.</li>
+          <li><a href="https://www.google.com/search?q=Le+Vivier+L'Isle-sur-la-Sorgue" target="_blank">Le Vivier</a>
+            <span class="rating">★★★★★</span>: Gehobene Küche nahe L’Isle; gut für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=L'Aparté+L'Isle-sur-la-Sorgue" target="_blank">L'Aparté</a> <span
+              class="rating">★★★★☆</span>: Kleine moderne Adresse in der Umgebung.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag05">
+        <h3>Tag 5 · Fr, 14.08.2026 · Luberon-Dörfer</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Trinquette+Gordes" target="_blank">La Trinquette</a> <span
+              class="rating">★★★★☆</span>: Gute Option in Gordes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Piquebaure+Roussillon" target="_blank">Le Piquebaure</a> <span
+              class="rating">★★★★☆</span>: Ruhigere Provence-Küche nahe Roussillon.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+la+Poste+Goult" target="_blank">Café de la Poste</a>
+            <span class="rating">★★★★☆</span>: Praktisch für Kaffee/Pause im Luberon.</li>
+          <li><a href="https://www.google.com/search?q=La+Bastide+de+Pierres+Gordes" target="_blank">La Bastide de
+              Pierres</a> <span class="rating">★★★★☆</span>: Schöne Option in Gordes.</li>
+          <li><a href="https://www.google.com/search?q=L'Orangerie+Gordes" target="_blank">L'Orangerie Gordes</a> <span
+              class="rating">★★★★★</span>: Sehr schöne Lage, eher gehoben.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+David+Roussillon" target="_blank">David Roussillon</a>
+            <span class="rating">★★★★☆</span>: Gute Adresse in Roussillon.</li>
+          <li><a href="https://www.google.com/search?q=Le+Bistrot+de+Roussillon" target="_blank">Le Bistrot de
+              Roussillon</a> <span class="rating">★★★★☆</span>: Praktisch nach Ockerfelsen-Besuch.</li>
+          <li><a href="https://www.google.com/search?q=Le+Fournil+Bonnieux" target="_blank">Le Fournil</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Bonnieux.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+la+Gare+Bonnieux" target="_blank">Café de la Gare</a>
+            <span class="rating">★★★★☆</span>: Beliebter Stopp nahe Bonnieux/Lacoste.</li>
+          <li><a href="https://www.google.com/search?q=La+Terrasse+Goult" target="_blank">La Terrasse Goult</a> <span
+              class="rating">★★★★☆</span>: Guter Lunch-/Aperitif-Stopp in ruhigerem Ort.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag06">
+        <h3>Tag 6 · Sa, 15.08.2026 · Avignon + Saint-Rémy</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=L'Agape+Avignon" target="_blank">L’Agape</a> <span
+              class="rating">★★★★★</span>: Gepflegte Küche in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+du+Paradou" target="_blank">Le Bistrot du Paradou</a>
+            <span class="rating">★★★★☆</span>: Klassischer Provence-Tipp nahe Saint-Rémy.</li>
+          <li><a href="https://www.google.com/search?q=Maison+Marshall+Saint-Rémy-de-Provence" target="_blank">Maison
+              Marshall</a> <span class="rating">★★★★☆</span>: Café/Patisserie in Saint-Rémy.</li>
+          <li><a href="https://www.google.com/search?q=Hiély+Lucullus+Avignon" target="_blank">Hiély Lucullus</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=La+Fourchette+Avignon" target="_blank">La Fourchette</a> <span
+              class="rating">★★★★☆</span>: Solide Adresse in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=Le+Goût+du+Jour+Avignon" target="_blank">Le Goût du Jour</a>
+            <span class="rating">★★★★★</span>: Sehr gute Küche in Avignon; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Ginette+et+Marcel+Avignon" target="_blank">Ginette et Marcel</a>
+            <span class="rating">★★★★☆</span>: Locker und zentral in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+des+Alpilles+Saint-Rémy-de-Provence"
+              target="_blank">Bistrot des Alpilles</a> <span class="rating">★★★★☆</span>: Gute Option in Saint-Rémy.
+          </li>
+          <li><a href="https://www.google.com/search?q=Le+Roma+Saint-Rémy-de-Provence" target="_blank">Le Roma
+              Saint-Rémy</a> <span class="rating">★★★★☆</span>: Unkompliziert für Abendessen in Saint-Rémy.</li>
+          <li><a href="https://www.google.com/search?q=Chapeau+de+Paille+Saint-Rémy-de-Provence" target="_blank">Chapeau
+              de Paille</a> <span class="rating">★★★★☆</span>: Schöne Provence-Adresse bei Saint-Rémy.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag07">
+        <h3>Tag 7 · So, 16.08.2026 · Verdon-Schlucht</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Terrasse+de+Cassius+Moustiers+Sainte+Marie" target="_blank">La
+              Terrasse de Cassius</a> <span class="rating">★★★★☆</span>: Schöner Stopp in Moustiers-Sainte-Marie.</li>
+          <li><a href="https://www.google.com/search?q=Côté+Jardin+Moustiers+Sainte+Marie" target="_blank">Côté
+              Jardin</a> <span class="rating">★★★★☆</span>: Gute Option für Lunch/frühes Dinner.</li>
+          <li><a href="https://www.google.com/search?q=restaurant+Lac+de+Sainte-Croix" target="_blank">Lac de
+              Sainte-Croix Snack</a> <span class="rating">★★★☆☆</span>: Pragmatisch für kurze Pause am See.</li>
+          <li><a href="https://www.google.com/search?q=La+Treille+Muscate+Moustiers+Sainte+Marie" target="_blank">La
+              Treille Muscate</a> <span class="rating">★★★★☆</span>: Schöne Adresse in Moustiers.</li>
+          <li><a href="https://www.google.com/search?q=Le+Relais+Moustiers+Sainte+Marie" target="_blank">Le Relais</a>
+            <span class="rating">★★★★☆</span>: Praktische Option im Dorf.</li>
+          <li><a href="https://www.google.com/search?q=Les+Santons+Moustiers+Sainte+Marie" target="_blank">Les
+              Santons</a> <span class="rating">★★★★☆</span>: Gute regionale Küche in Moustiers.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Benoit+Moustiers+Sainte+Marie" target="_blank">Chez
+              Benoit</a> <span class="rating">★★★★☆</span>: Locker für Lunch im Verdon-Gebiet.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+Le+Styx+Gorges+du+Verdon" target="_blank">Restaurant
+              Le Styx</a> <span class="rating">★★★★☆</span>: Passend, wenn ihr nahe Schlucht essen wollt.</li>
+          <li><a href="https://www.google.com/search?q=Auberge+des+Salles" target="_blank">Auberge des Salles</a> <span
+              class="rating">★★★★☆</span>: Schöne Lage bei Les Salles-sur-Verdon.</li>
+          <li><a href="https://www.google.com/search?q=crêperie+Lac+de+Sainte-Croix" target="_blank">Crêperie am See</a>
+            <span class="rating">★★★☆☆</span>: Einfach, aber praktisch für kurze Pause am Lac.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag08">
+        <h3>Tag 8 · Mo, 17.08.2026 · Cassis + Marseille</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Grand+Large+Cassis" target="_blank">Le Grand Large</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Cassis am Meer/Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Fonfon+Marseille" target="_blank">Chez Fonfon</a> <span
+              class="rating">★★★★★</span>: Marseille-Klassiker für Fisch/Bouillabaisse.</li>
+          <li><a href="https://www.google.com/search?q=La+Caravelle+Marseille" target="_blank">La Caravelle</a> <span
+              class="rating">★★★★☆</span>: Bar/Café mit Vieux-Port-Stimmung.</li>
+          <li><a href="https://www.google.com/search?q=Nino+Cassis" target="_blank">Nino Cassis</a> <span
+              class="rating">★★★★☆</span>: Gute Hafenoption in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=La+Vieille+Auberge+Cassis" target="_blank">La Vieille Auberge</a>
+            <span class="rating">★★★★☆</span>: Klassisch in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=Le+Bonaparte+Cassis" target="_blank">Le Bonaparte</a> <span
+              class="rating">★★★★☆</span>: Beliebte Option in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=La+Boîte+à+Sardine+Marseille" target="_blank">La Boîte à
+              Sardine</a> <span class="rating">★★★★☆</span>: Marseille-Fischadresse, locker und charaktervoll.</li>
+          <li><a href="https://www.google.com/search?q=Les+Bords+de+Mer+Marseille" target="_blank">Les Bords de Mer</a>
+            <span class="rating">★★★★☆</span>: Schöne Meerblick-Option in Marseille.</li>
+          <li><a href="https://www.google.com/search?q=Le+Miramar+Marseille" target="_blank">Le Miramar</a> <span
+              class="rating">★★★★☆</span>: Bekannte Bouillabaisse-Adresse am Vieux-Port.</li>
+          <li><a href="https://www.google.com/search?q=Deep+Coffee+Roasters+Marseille" target="_blank">Deep Coffee
+              Roasters</a> <span class="rating">★★★★☆</span>: Guter Kaffee-Stopp in Marseille.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag09">
+        <h3>Tag 9 · Di, 18.08.2026 · Provence → Antibes</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Vauban+Antibes" target="_blank">Le Vauban</a> <span
+              class="rating">★★★★★</span>: Sehr gute Adresse in Antibes Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Milano+Antibes" target="_blank">Café Milano</a> <span
+              class="rating">★★★★☆</span>: Zentral und unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Gelateria+Del+Porto+Antibes" target="_blank">Gelateria Del
+              Porto</a> <span class="rating">★★★★☆</span>: Guter Eis-/Dessert-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Jeanne+Antibes+restaurant" target="_blank">Jeanne</a> <span
+              class="rating">★★★★☆</span>: Moderne Küche in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Figuier+de+Saint-Esprit+Antibes" target="_blank">Le Figuier de
+              Saint-Esprit</a> <span class="rating">★★★★★</span>: Gehobene Küche in Antibes; besonderer Abend.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Jules+Antibes" target="_blank">Chez Jules</a> <span
+              class="rating">★★★★☆</span>: Gute Bistro-Option in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Le+P'tit+Cageot+Antibes" target="_blank">Le P'tit Cageot</a>
+            <span class="rating">★★★★☆</span>: Beliebtes kleines Restaurant in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Café+Brun+Antibes" target="_blank">Café Brun</a> <span
+              class="rating">★★★★☆</span>: Netter Drink-/Aperitif-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Nomads+Coffee+Antibes" target="_blank">Nomads Coffee</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Merry+Mary+Antibes" target="_blank">Merry Mary</a> <span
+              class="rating">★★★★☆</span>: Brunch/Café-Option in Antibes.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag10">
+        <h3>Tag 10 · Mi, 19.08.2026 · Nizza + Èze</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Chez+Acchiardo+Nice" target="_blank">Chez Acchiardo</a> <span
+              class="rating">★★★★★</span>: Klassiker in Nizza Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Le+Safari+Nice" target="_blank">Le Safari</a> <span
+              class="rating">★★★★☆</span>: Bekannt am Cours Saleya.</li>
+          <li><a href="https://www.google.com/search?q=Château+Eza+restaurant+Èze" target="_blank">Château Eza</a> <span
+              class="rating">★★★★☆</span>: Teurer, aber starker Aussichtsstopp in Èze.</li>
+          <li><a href="https://www.google.com/search?q=La+Merenda+Nice" target="_blank">La Merenda</a> <span
+              class="rating">★★★★★</span>: Sehr gute Niçoise-Küche; klein, reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Peixes+Nice" target="_blank">Peixes</a> <span
+              class="rating">★★★★☆</span>: Moderne Fischküche in Nizza.</li>
+          <li><a href="https://www.google.com/search?q=Babel+Babel+Nice" target="_blank">Babel Babel</a> <span
+              class="rating">★★★★☆</span>: Gute Bar/Restaurant mit Riviera-Stimmung.</li>
+          <li><a href="https://www.google.com/search?q=Fenocchio+Nice" target="_blank">Fenocchio</a> <span
+              class="rating">★★★★☆</span>: Bekannter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Marché+Nice" target="_blank">Café Marché</a> <span
+              class="rating">★★★★☆</span>: Netter Brunch-/Lunch-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Deli+Bo+Nice" target="_blank">Deli Bo</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee/Kuchen in Nizza.</li>
+          <li><a href="https://www.google.com/search?q=Le+Nid+d'Aigle+Èze" target="_blank">Le Nid d'Aigle</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Èze mit Aussicht.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag11">
+        <h3>Tag 11 · Do, 20.08.2026 · Cannes + Cap d’Antibes</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Astoux+et+Brun+Cannes" target="_blank">Astoux et Brun</a> <span
+              class="rating">★★★★★</span>: Cannes-Klassiker für Seafood.</li>
+          <li><a href="https://www.google.com/search?q=Marché+Forville+Cannes" target="_blank">Marché Forville</a> <span
+              class="rating">★★★★☆</span>: Sehr guter Markt-/Snackstopp.</li>
+          <li><a href="https://www.google.com/search?q=Plage+Keller+Antibes" target="_blank">Plage Keller</a> <span
+              class="rating">★★★★☆</span>: Schöne Lunchoption am Cap d’Antibes.</li>
+          <li><a href="https://www.google.com/search?q=La+Môme+Cannes" target="_blank">La Môme</a> <span
+              class="rating">★★★★☆</span>: Stylische Option in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Bobo+Bistro+Cannes" target="_blank">Bobo Bistro</a> <span
+              class="rating">★★★★☆</span>: Zentral und unkompliziert in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Maschou+Cannes" target="_blank">Le Maschou</a> <span
+              class="rating">★★★★☆</span>: Bekannter Grill-Klassiker in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Da+Laura+Cannes" target="_blank">Da Laura</a> <span
+              class="rating">★★★★☆</span>: Beliebte italienische Option in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Noisette+Café+Cannes" target="_blank">Noisette Café</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee/Brunch in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Café+Hoche+Cannes" target="_blank">Café Hoche</a> <span
+              class="rating">★★★★☆</span>: Praktischer Café-Stopp im Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Le+César+Antibes" target="_blank">Le César</a> <span
+              class="rating">★★★★☆</span>: Option am Cap/Antibes für mediterrane Küche.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag12">
+        <h3>Tag 12 · Fr, 21.08.2026 · Menton / Relax-Tag</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Mirazur+Menton" target="_blank">Mirazur</a> <span
+              class="rating">★★★★★</span>: Weltbekannte Fine-Dining-Adresse; nur bei Reservierung/Budget.</li>
+          <li><a href="https://www.google.com/search?q=Le+Stanley+Menton" target="_blank">Le Stanley</a> <span
+              class="rating">★★★★☆</span>: Solide mediterrane Küche/Seafood.</li>
+          <li><a href="https://www.google.com/search?q=Vanilla+Bakery+Menton" target="_blank">Vanilla Bakery</a> <span
+              class="rating">★★★★☆</span>: Netter Café-/Süßstopp.</li>
+          <li><a href="https://www.google.com/search?q=A+Boire+à+Manger+Menton" target="_blank">A Boire à Manger</a>
+            <span class="rating">★★★★☆</span>: Locker und gut für Lunch/Abend.</li>
+          <li><a href="https://www.google.com/search?q=Le+Petit+Port+Menton" target="_blank">Le Petit Port</a> <span
+              class="rating">★★★★☆</span>: Seafood/mediterrane Küche nahe Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Maison+Martin+Menton" target="_blank">Maison Martin</a> <span
+              class="rating">★★★★☆</span>: Beliebte Adresse in Menton.</li>
+          <li><a href="https://www.google.com/search?q=Café+des+Arts+Menton" target="_blank">Café des Arts</a> <span
+              class="rating">★★★★☆</span>: Netter Café-/Aperitif-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=La+Trattoria+Menton" target="_blank">La Trattoria</a> <span
+              class="rating">★★★★☆</span>: Italienisch geprägte Küche, passend zur Lage.</li>
+          <li><a href="https://www.google.com/search?q=Pecora+Negra+Menton" target="_blank">Pecora Negra</a> <span
+              class="rating">★★★★☆</span>: Pizza/italienisch, unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Fleur+de+Sel+Menton" target="_blank">Fleur de Sel</a> <span
+              class="rating">★★★★☆</span>: Gute Option für gepflegtes Essen.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag13">
+        <h3>Tag 13 · Sa, 22.08.2026 · Antibes → Turin</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Porto+di+Savona+Torino" target="_blank">Porto di Savona</a> <span
+              class="rating">★★★★★</span>: Traditionelle piemontesische Küche.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Torino+Turin" target="_blank">Caffè Torino</a> <span
+              class="rating">★★★★☆</span>: Klassischer Aperitivo-/Café-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Farmacia+Del+Cambio+Torino" target="_blank">Farmacia Del
+              Cambio</a> <span class="rating">★★★★☆</span>: Schöner Café/Patisserie-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Del+Cambio+Torino" target="_blank">Del Cambio</a> <span
+              class="rating">★★★★★</span>: Historische Top-Adresse; gehoben.</li>
+          <li><a href="https://www.google.com/search?q=Tre+Galline+Torino" target="_blank">Tre Galline</a> <span
+              class="rating">★★★★☆</span>: Piemont-Klassiker in Turin.</li>
+          <li><a href="https://www.google.com/search?q=Scannabue+Torino" target="_blank">Scannabue</a> <span
+              class="rating">★★★★☆</span>: Sehr beliebtes modernes Piemont-Restaurant.</li>
+          <li><a href="https://www.google.com/search?q=Pastis+Torino" target="_blank">Pastis</a> <span
+              class="rating">★★★★☆</span>: Guter Aperitivo im Quadrilatero.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Al+Bicerin+Torino" target="_blank">Caffè Al Bicerin</a>
+            <span class="rating">★★★★☆</span>: Historischer Kaffee/Bicerin-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Mulassano+Torino" target="_blank">Caffè Mulassano</a> <span
+              class="rating">★★★★☆</span>: Klassisches Café im Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Eataly+Torino+Lingotto" target="_blank">Eataly Torino
+              Lingotto</a> <span class="rating">★★★★☆</span>: Praktisch für italienische Produkte/lockeres Essen.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag14">
+        <h3>Tag 14 · So, 23.08.2026 · Turin → Malcesine</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Al+Gondoliere+Malcesine" target="_blank">Al Gondoliere</a> <span
+              class="rating">★★★★☆</span>: Beliebtes Restaurant in Malcesine.</li>
+          <li><a href="https://www.google.com/search?q=La+Pace+Malcesine+restaurant" target="_blank">La Pace</a> <span
+              class="rating">★★★★☆</span>: Praktische Option am See.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Gelateria+Andreis+Malcesine" target="_blank">Caffè
+              Gelateria Andreis</a> <span class="rating">★★★★☆</span>: Kaffee/Eis beim Abendspaziergang.</li>
+          <li><a href="https://www.google.com/search?q=Vecchia+Malcesine+restaurant" target="_blank">Ristorante Vecchia
+              Malcesine</a> <span class="rating">★★★★★</span>: Gehobene Küche mit Aussicht; besonderer Abend.</li>
+          <li><a href="https://www.google.com/search?q=Osteria+Santo+Cielo+Malcesine" target="_blank">Osteria Santo
+              Cielo</a> <span class="rating">★★★★☆</span>: Gute, gemütliche Option in Malcesine.</li>
+          <li><a href="https://www.google.com/search?q=Ristorante+Al+Gondoliere+Malcesine" target="_blank">Ristorante Al
+              Gondoliere</a> <span class="rating">★★★★☆</span>: Klassiker in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Speck+Stube+Malcesine" target="_blank">Speck Stube</a> <span
+              class="rating">★★★★☆</span>: Unkompliziert, rustikal, gut erreichbar.</li>
+          <li><a href="https://www.google.com/search?q=Gelateria+Cento+Per+Cento+Malcesine" target="_blank">Gelateria
+              Cento Per Cento</a> <span class="rating">★★★★☆</span>: Guter Eis-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Bar+Al+Porto+Malcesine" target="_blank">Bar Al Porto</a> <span
+              class="rating">★★★★☆</span>: Schöner Drink/Kaffee am Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Ristorante+Pizzeria+Capri+Malcesine" target="_blank">Ristorante
+              Pizzeria Capri</a> <span class="rating">★★★★☆</span>: Praktisch und familienfreundlich.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-meine-variante-tag15">
+        <h3>Tag 15 · Mo, 24.08.2026 · Gardasee → Graz</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Limone+sul+Garda+Café" target="_blank">Café in Limone sul
+              Garda</a> <span class="rating">★★★★☆</span>: Schöner Morgenstopp, wenn Zeit bleibt.</li>
+          <li><a href="https://www.google.com/search?q=Riva+del+Garda+Café+Altstadt" target="_blank">Riva del Garda
+              Café</a> <span class="rating">★★★★☆</span>: Guter kurzer Stopp am Nordufer.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+Villach+Raststation" target="_blank">Villach Pause</a>
+            <span class="rating">★★★☆☆</span>: Pragmatische Pause Richtung Graz.</li>
+          <li><a href="https://www.google.com/search?q=Panem+Riva+del+Garda" target="_blank">Panem Riva del Garda</a>
+            <span class="rating">★★★★☆</span>: Guter Frühstücks-/Snackstopp.</li>
+          <li><a href="https://www.google.com/search?q=Flora+Riva+del+Garda" target="_blank">Flora Riva del Garda</a>
+            <span class="rating">★★★★☆</span>: Café/Kuchen am Nordufer.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Trentino+Riva+del+Garda" target="_blank">Caffè Trentino</a>
+            <span class="rating">★★★★☆</span>: Zentraler Kaffee-Stopp in Riva.</li>
+          <li><a href="https://www.google.com/search?q=Raststation+Feistritz+Drau" target="_blank">Raststation
+              Feistritz/Drau</a> <span class="rating">★★★☆☆</span>: Pragmatisch für die Heimfahrt.</li>
+          <li><a href="https://www.google.com/search?q=Villacher+Brauhof" target="_blank">Villacher Brauhof</a> <span
+              class="rating">★★★★☆</span>: Wenn ihr eine längere Pause in Villach wollt.</li>
+          <li><a href="https://www.google.com/search?q=Pizzeria+Dobner+Villach" target="_blank">Pizzeria Dobner
+              Villach</a> <span class="rating">★★★★☆</span>: Unkomplizierter Essensstopp in Villach.</li>
+          <li><a href="https://www.google.com/search?q=Café+Wörthersee+Pörtschach" target="_blank">Wörthersee
+              Café-Stopp</a> <span class="rating">★★★★☆</span>: Schöner kurzer See-Stopp vor Graz.</li>
+        </ul>
+      </section>
+      <h2>Variante 2</h2>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag01">
+        <h3>Tag 1 · Mo, 10.08.2026 · Graz → München</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Augustiner+Keller+München" target="_blank">Augustiner Keller</a>
+            <span class="rating">★★★★★</span>: Klassischer Biergarten, sehr passend für den ersten Abend.</li>
+          <li><a href="https://www.google.com/search?q=Augustiner+Bräustuben+München" target="_blank">Augustiner
+              Bräustuben</a> <span class="rating">★★★★☆</span>: Urig und etwas weniger touristisch.</li>
+          <li><a href="https://www.google.com/search?q=Viktualienmarkt+München+Essen"
+              target="_blank">Viktualienmarkt</a> <span class="rating">★★★★☆</span>: Ideal für Snack/Kaffee beim
+            Altstadtspaziergang.</li>
+          <li><a href="https://www.google.com/search?q=Hofbräuhaus+München" target="_blank">Hofbräuhaus München</a>
+            <span class="rating">★★★★☆</span>: Sehr touristisch, aber als kurzer München-Klassiker passend.</li>
+          <li><a href="https://www.google.com/search?q=Paulaner+Bräuhaus+München" target="_blank">Paulaner Bräuhaus</a>
+            <span class="rating">★★★★☆</span>: Solide bayerische Küche mit Bierhaus-Atmosphäre.</li>
+          <li><a href="https://www.google.com/search?q=Spatenhaus+an+der+Oper+München" target="_blank">Spatenhaus an der
+              Oper</a> <span class="rating">★★★★☆</span>: Traditioneller, etwas eleganterer Klassiker nahe Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Ratskeller+München" target="_blank">Ratskeller München</a> <span
+              class="rating">★★★★☆</span>: Zentral am Marienplatz; praktisch bei kurzem Altstadtbesuch.</li>
+          <li><a href="https://www.google.com/search?q=Café+Frischhut+München" target="_blank">Café Frischhut</a> <span
+              class="rating">★★★★☆</span>: Sehr guter süßer Stopp nahe Viktualienmarkt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Luitpold+München" target="_blank">Café Luitpold</a> <span
+              class="rating">★★★★☆</span>: Klassisches Kaffeehaus für Kuchen/Kaffee.</li>
+          <li><a href="https://www.google.com/search?q=Schneider+Bräuhaus+München" target="_blank">Schneider
+              Bräuhaus</a> <span class="rating">★★★★☆</span>: Traditionelle bayerische Küche in zentraler Lage.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag02">
+        <h3>Tag 2 · Di, 11.08.2026 · München → Straßburg</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Tire-Bouchon+Strasbourg" target="_blank">Le Tire-Bouchon</a>
+            <span class="rating">★★★★★</span>: Elsässische Küche in zentraler Altstadtlage.</li>
+          <li><a href="https://www.google.com/search?q=Maison+Kammerzell+Strasbourg" target="_blank">Maison
+              Kammerzell</a> <span class="rating">★★★★☆</span>: Historisches Haus direkt beim Münster.</li>
+          <li><a href="https://www.google.com/search?q=La+Corde+à+Linge+Strasbourg" target="_blank">La Corde à Linge</a>
+            <span class="rating">★★★★☆</span>: Beliebt in Petite France.</li>
+          <li><a href="https://www.google.com/search?q=Au+Pont+Corbeau+Strasbourg" target="_blank">Au Pont Corbeau</a>
+            <span class="rating">★★★★★</span>: Sehr guter Klassiker für regionale Küche.</li>
+          <li><a href="https://www.google.com/search?q=Winstub+S'Kaechele+Strasbourg" target="_blank">Winstub
+              S'Kaechele</a> <span class="rating">★★★★☆</span>: Gemütliche Winstub mit Elsass-Flair.</li>
+          <li><a href="https://www.google.com/search?q=Le+Clou+Strasbourg" target="_blank">Le Clou</a> <span
+              class="rating">★★★★☆</span>: Traditionelle Adresse nahe Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Perles+de+Saveurs+Strasbourg" target="_blank">Perles de
+              Saveurs</a> <span class="rating">★★★★☆</span>: Kleine Adresse für gehobenere Küche.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+et+Chocolat+Strasbourg" target="_blank">Bistrot &amp;
+              Chocolat</a> <span class="rating">★★★★☆</span>: Guter Café-/Brunch-Stopp nahe Münster.</li>
+          <li><a href="https://www.google.com/search?q=Café+Bretelles+Strasbourg" target="_blank">Café Bretelles</a>
+            <span class="rating">★★★★☆</span>: Netter Kaffee-Stopp in der Stadt.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Christian+Strasbourg" target="_blank">Pâtisserie
+              Christian</a> <span class="rating">★★★★☆</span>: Klassischer süßer Stopp in Straßburg.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag03">
+        <h3>Tag 3 · Mi, 12.08.2026 · Elsass-Tag ab Straßburg</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Wistub+Brenner+Colmar" target="_blank">Wistub Brenner</a> <span
+              class="rating">★★★★★</span>: Gute Adresse für elsässische Küche in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=La+Soï+Colmar" target="_blank">La Soï</a> <span
+              class="rating">★★★★☆</span>: Kleines Lokal für Flammkuchen/Klassiker.</li>
+          <li><a href="https://www.google.com/search?q=Café+Rapp+Colmar" target="_blank">Café Rapp</a> <span
+              class="rating">★★★★☆</span>: Praktischer Café-Stopp in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=JY'S+Colmar" target="_blank">JY'S</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche in Colmar; nur bei Budget/Reservierung.</li>
+          <li><a href="https://www.google.com/search?q=L'Atelier+du+Peintre+Colmar" target="_blank">L'Atelier du
+              Peintre</a> <span class="rating">★★★★★</span>: Fine Dining in Colmar für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=Wistub+de+la+Petite+Venise+Colmar" target="_blank">Wistub de la
+              Petite Venise</a> <span class="rating">★★★★☆</span>: Sehr passend beim Bummel durch Petite Venise.</li>
+          <li><a href="https://www.google.com/search?q=La+Romantica+Colmar" target="_blank">Restaurant La Romantica</a>
+            <span class="rating">★★★★☆</span>: Solide Option in Colmar, wenn Elsass-Küche voll ist.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Gilg+Colmar" target="_blank">Gilg Pâtisserie</a> <span
+              class="rating">★★★★☆</span>: Sehr guter süßer Stopp in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=Caveau+Saint-Pierre+Colmar" target="_blank">Caveau
+              Saint-Pierre</a> <span class="rating">★★★★☆</span>: Klassisch und zentral in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=AOR+La+Table+Colmar" target="_blank">AOR La Table</a> <span
+              class="rating">★★★★☆</span>: Modernere Küche, wenn ihr etwas anderes als Winstub wollt.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag04">
+        <h3>Tag 4 · Do, 13.08.2026 · Straßburg → Annecy</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Freti+Annecy" target="_blank">Le Freti</a> <span
+              class="rating">★★★★★</span>: Savoyer Klassiker in Annecy.</li>
+          <li><a href="https://www.google.com/search?q=Café+des+Arts+Annecy" target="_blank">Café des Arts</a> <span
+              class="rating">★★★★☆</span>: Gut für Kaffee oder Aperitif nahe Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Brasserie+des+Européens+Annecy" target="_blank">Brasserie des
+              Européens</a> <span class="rating">★★★★☆</span>: Zentral und unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Le+Chalet+Annecy" target="_blank">Le Chalet</a> <span
+              class="rating">★★★★☆</span>: Savoyer Küche in gemütlicher Lage.</li>
+          <li><a href="https://www.google.com/search?q=L'Etage+Annecy" target="_blank">L'Etage</a> <span
+              class="rating">★★★★☆</span>: Gute Option in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=La+Ciboulette+Annecy" target="_blank">La Ciboulette</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=Glacier+des+Alpes+Annecy" target="_blank">Glacier des Alpes</a>
+            <span class="rating">★★★★☆</span>: Beliebter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Buvette+du+Marché+Annecy" target="_blank">Buvette du Marché</a>
+            <span class="rating">★★★★☆</span>: Locker für kleinen Snack/Drink.</li>
+          <li><a href="https://www.google.com/search?q=Cozna+Annecy" target="_blank">Cozna</a> <span
+              class="rating">★★★★★</span>: Sehr gutes modernes Restaurant; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Les+Palettes+Annecy" target="_blank">Les Palettes</a> <span
+              class="rating">★★★★☆</span>: Netter Café-/Brunch-Stopp.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag05">
+        <h3>Tag 5 · Fr, 14.08.2026 · Annecy-Tag</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Freti+Annecy" target="_blank">Le Freti</a> <span
+              class="rating">★★★★★</span>: Savoyer Küche, sehr passend für Annecy.</li>
+          <li><a href="https://www.google.com/search?q=Les+Terrasses+du+Lac+Annecy" target="_blank">Les Terrasses du
+              Lac</a> <span class="rating">★★★★☆</span>: Schöne See-/Aussichtsstimmung.</li>
+          <li><a href="https://www.google.com/search?q=Glacier+des+Alpes+Annecy" target="_blank">Glacier des Alpes</a>
+            <span class="rating">★★★★☆</span>: Beliebter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Le+Chalet+Annecy" target="_blank">Le Chalet</a> <span
+              class="rating">★★★★☆</span>: Klassiker für Käse/Savoyer Küche.</li>
+          <li><a href="https://www.google.com/search?q=Cozna+Annecy" target="_blank">Cozna</a> <span
+              class="rating">★★★★★</span>: Modern und hochwertig; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=La+Ciboulette+Annecy" target="_blank">La Ciboulette</a> <span
+              class="rating">★★★★★</span>: Gehobener Abend, wenn ihr euch etwas gönnen wollt.</li>
+          <li><a href="https://www.google.com/search?q=L'Etage+Annecy" target="_blank">L'Etage</a> <span
+              class="rating">★★★★☆</span>: Gute Altstadtlage und solide Küche.</li>
+          <li><a href="https://www.google.com/search?q=Café+Bunna+Annecy" target="_blank">Café Bunna</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Boulangerie+Rouge+Annecy" target="_blank">Boulangerie Rouge</a>
+            <span class="rating">★★★★☆</span>: Praktisch für Frühstück/Gebäck.</li>
+          <li><a href="https://www.google.com/search?q=Auberge+du+Lyonnais+Annecy" target="_blank">Auberge du
+              Lyonnais</a> <span class="rating">★★★★☆</span>: Schöne Lage am Kanal, eher etwas besonderer.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag06">
+        <h3>Tag 6 · Sa, 15.08.2026 · Annecy → Provence</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Balade+des+Saveurs+L'Isle-sur-la-Sorgue" target="_blank">La
+              Balade des Saveurs</a> <span class="rating">★★★★★</span>: Sehr passend für ein Provence-Abendessen.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+France+L'Isle-sur-la-Sorgue" target="_blank">Café de
+              France</a> <span class="rating">★★★★☆</span>: Klassischer Platz zum Ankommen.</li>
+          <li><a href="https://www.google.com/search?q=Jouvaud+L'Isle-sur-la-Sorgue" target="_blank">Maison Jouvaud</a>
+            <span class="rating">★★★★☆</span>: Schöner Patisserie-/Café-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Le+Jardin+du+Quai+L'Isle-sur-la-Sorgue" target="_blank">Le Jardin
+              du Quai</a> <span class="rating">★★★★★</span>: Schöne Adresse in L’Isle-sur-la-Sorgue; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=UMAMI+L'Isle-sur-la-Sorgue" target="_blank">Restaurant UMAMI</a>
+            <span class="rating">★★★★☆</span>: Modernere Küche in der Region.</li>
+          <li><a href="https://www.google.com/search?q=Bella+Ciao+L'Isle-sur-la-Sorgue" target="_blank">Bella Ciao</a>
+            <span class="rating">★★★★☆</span>: Unkomplizierte Option, wenn ihr nach der Fahrt nicht groß suchen wollt.
+          </li>
+          <li><a href="https://www.google.com/search?q=Le+Carré+d'Herbes+L'Isle-sur-la-Sorgue" target="_blank">Le Carré
+              d'Herbes</a> <span class="rating">★★★★☆</span>: Gute Bistro-Option in L’Isle.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Leyris+L'Isle-sur-la-Sorgue"
+              target="_blank">Pâtisserie Leyris</a> <span class="rating">★★★★☆</span>: Süßer Stopp/Kaffee in der
+            Umgebung.</li>
+          <li><a href="https://www.google.com/search?q=Le+Vivier+L'Isle-sur-la-Sorgue" target="_blank">Le Vivier</a>
+            <span class="rating">★★★★★</span>: Gehobene Küche nahe L’Isle; gut für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=L'Aparté+L'Isle-sur-la-Sorgue" target="_blank">L'Aparté</a> <span
+              class="rating">★★★★☆</span>: Kleine moderne Adresse in der Umgebung.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag07">
+        <h3>Tag 7 · So, 16.08.2026 · Luberon-Dörfer</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Trinquette+Gordes" target="_blank">La Trinquette</a> <span
+              class="rating">★★★★☆</span>: Gute Option in Gordes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Piquebaure+Roussillon" target="_blank">Le Piquebaure</a> <span
+              class="rating">★★★★☆</span>: Ruhigere Provence-Küche nahe Roussillon.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+la+Poste+Goult" target="_blank">Café de la Poste</a>
+            <span class="rating">★★★★☆</span>: Praktisch für Kaffee/Pause im Luberon.</li>
+          <li><a href="https://www.google.com/search?q=La+Bastide+de+Pierres+Gordes" target="_blank">La Bastide de
+              Pierres</a> <span class="rating">★★★★☆</span>: Schöne Option in Gordes.</li>
+          <li><a href="https://www.google.com/search?q=L'Orangerie+Gordes" target="_blank">L'Orangerie Gordes</a> <span
+              class="rating">★★★★★</span>: Sehr schöne Lage, eher gehoben.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+David+Roussillon" target="_blank">David Roussillon</a>
+            <span class="rating">★★★★☆</span>: Gute Adresse in Roussillon.</li>
+          <li><a href="https://www.google.com/search?q=Le+Bistrot+de+Roussillon" target="_blank">Le Bistrot de
+              Roussillon</a> <span class="rating">★★★★☆</span>: Praktisch nach Ockerfelsen-Besuch.</li>
+          <li><a href="https://www.google.com/search?q=Le+Fournil+Bonnieux" target="_blank">Le Fournil</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Bonnieux.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+la+Gare+Bonnieux" target="_blank">Café de la Gare</a>
+            <span class="rating">★★★★☆</span>: Beliebter Stopp nahe Bonnieux/Lacoste.</li>
+          <li><a href="https://www.google.com/search?q=La+Terrasse+Goult" target="_blank">La Terrasse Goult</a> <span
+              class="rating">★★★★☆</span>: Guter Lunch-/Aperitif-Stopp in ruhigerem Ort.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag08">
+        <h3>Tag 8 · Mo, 17.08.2026 · Verdon-Schlucht</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Terrasse+de+Cassius+Moustiers+Sainte+Marie" target="_blank">La
+              Terrasse de Cassius</a> <span class="rating">★★★★☆</span>: Schöner Stopp in Moustiers-Sainte-Marie.</li>
+          <li><a href="https://www.google.com/search?q=Côté+Jardin+Moustiers+Sainte+Marie" target="_blank">Côté
+              Jardin</a> <span class="rating">★★★★☆</span>: Gute Option für Lunch/frühes Dinner.</li>
+          <li><a href="https://www.google.com/search?q=restaurant+Lac+de+Sainte-Croix" target="_blank">Lac de
+              Sainte-Croix Snack</a> <span class="rating">★★★☆☆</span>: Pragmatisch für kurze Pause am See.</li>
+          <li><a href="https://www.google.com/search?q=La+Treille+Muscate+Moustiers+Sainte+Marie" target="_blank">La
+              Treille Muscate</a> <span class="rating">★★★★☆</span>: Schöne Adresse in Moustiers.</li>
+          <li><a href="https://www.google.com/search?q=Le+Relais+Moustiers+Sainte+Marie" target="_blank">Le Relais</a>
+            <span class="rating">★★★★☆</span>: Praktische Option im Dorf.</li>
+          <li><a href="https://www.google.com/search?q=Les+Santons+Moustiers+Sainte+Marie" target="_blank">Les
+              Santons</a> <span class="rating">★★★★☆</span>: Gute regionale Küche in Moustiers.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Benoit+Moustiers+Sainte+Marie" target="_blank">Chez
+              Benoit</a> <span class="rating">★★★★☆</span>: Locker für Lunch im Verdon-Gebiet.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+Le+Styx+Gorges+du+Verdon" target="_blank">Restaurant
+              Le Styx</a> <span class="rating">★★★★☆</span>: Passend, wenn ihr nahe Schlucht essen wollt.</li>
+          <li><a href="https://www.google.com/search?q=Auberge+des+Salles" target="_blank">Auberge des Salles</a> <span
+              class="rating">★★★★☆</span>: Schöne Lage bei Les Salles-sur-Verdon.</li>
+          <li><a href="https://www.google.com/search?q=crêperie+Lac+de+Sainte-Croix" target="_blank">Crêperie am See</a>
+            <span class="rating">★★★☆☆</span>: Einfach, aber praktisch für kurze Pause am Lac.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag09">
+        <h3>Tag 9 · Di, 18.08.2026 · Cassis + Marseille</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Grand+Large+Cassis" target="_blank">Le Grand Large</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Cassis am Meer/Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Fonfon+Marseille" target="_blank">Chez Fonfon</a> <span
+              class="rating">★★★★★</span>: Marseille-Klassiker für Fisch/Bouillabaisse.</li>
+          <li><a href="https://www.google.com/search?q=La+Caravelle+Marseille" target="_blank">La Caravelle</a> <span
+              class="rating">★★★★☆</span>: Bar/Café mit Vieux-Port-Stimmung.</li>
+          <li><a href="https://www.google.com/search?q=Nino+Cassis" target="_blank">Nino Cassis</a> <span
+              class="rating">★★★★☆</span>: Gute Hafenoption in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=La+Vieille+Auberge+Cassis" target="_blank">La Vieille Auberge</a>
+            <span class="rating">★★★★☆</span>: Klassisch in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=Le+Bonaparte+Cassis" target="_blank">Le Bonaparte</a> <span
+              class="rating">★★★★☆</span>: Beliebte Option in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=La+Boîte+à+Sardine+Marseille" target="_blank">La Boîte à
+              Sardine</a> <span class="rating">★★★★☆</span>: Marseille-Fischadresse, locker und charaktervoll.</li>
+          <li><a href="https://www.google.com/search?q=Les+Bords+de+Mer+Marseille" target="_blank">Les Bords de Mer</a>
+            <span class="rating">★★★★☆</span>: Schöne Meerblick-Option in Marseille.</li>
+          <li><a href="https://www.google.com/search?q=Le+Miramar+Marseille" target="_blank">Le Miramar</a> <span
+              class="rating">★★★★☆</span>: Bekannte Bouillabaisse-Adresse am Vieux-Port.</li>
+          <li><a href="https://www.google.com/search?q=Deep+Coffee+Roasters+Marseille" target="_blank">Deep Coffee
+              Roasters</a> <span class="rating">★★★★☆</span>: Guter Kaffee-Stopp in Marseille.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag10">
+        <h3>Tag 10 · Mi, 19.08.2026 · Provence → Antibes</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Vauban+Antibes" target="_blank">Le Vauban</a> <span
+              class="rating">★★★★★</span>: Sehr gute Adresse in Antibes Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Milano+Antibes" target="_blank">Café Milano</a> <span
+              class="rating">★★★★☆</span>: Zentral und unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Gelateria+Del+Porto+Antibes" target="_blank">Gelateria Del
+              Porto</a> <span class="rating">★★★★☆</span>: Guter Eis-/Dessert-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Jeanne+Antibes+restaurant" target="_blank">Jeanne</a> <span
+              class="rating">★★★★☆</span>: Moderne Küche in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Figuier+de+Saint-Esprit+Antibes" target="_blank">Le Figuier de
+              Saint-Esprit</a> <span class="rating">★★★★★</span>: Gehobene Küche in Antibes; besonderer Abend.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Jules+Antibes" target="_blank">Chez Jules</a> <span
+              class="rating">★★★★☆</span>: Gute Bistro-Option in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Le+P'tit+Cageot+Antibes" target="_blank">Le P'tit Cageot</a>
+            <span class="rating">★★★★☆</span>: Beliebtes kleines Restaurant in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Café+Brun+Antibes" target="_blank">Café Brun</a> <span
+              class="rating">★★★★☆</span>: Netter Drink-/Aperitif-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Nomads+Coffee+Antibes" target="_blank">Nomads Coffee</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Merry+Mary+Antibes" target="_blank">Merry Mary</a> <span
+              class="rating">★★★★☆</span>: Brunch/Café-Option in Antibes.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag11">
+        <h3>Tag 11 · Do, 20.08.2026 · Nizza + Èze</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Chez+Acchiardo+Nice" target="_blank">Chez Acchiardo</a> <span
+              class="rating">★★★★★</span>: Klassiker in Nizza Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Le+Safari+Nice" target="_blank">Le Safari</a> <span
+              class="rating">★★★★☆</span>: Bekannt am Cours Saleya.</li>
+          <li><a href="https://www.google.com/search?q=Château+Eza+restaurant+Èze" target="_blank">Château Eza</a> <span
+              class="rating">★★★★☆</span>: Teurer, aber starker Aussichtsstopp in Èze.</li>
+          <li><a href="https://www.google.com/search?q=La+Merenda+Nice" target="_blank">La Merenda</a> <span
+              class="rating">★★★★★</span>: Sehr gute Niçoise-Küche; klein, reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Peixes+Nice" target="_blank">Peixes</a> <span
+              class="rating">★★★★☆</span>: Moderne Fischküche in Nizza.</li>
+          <li><a href="https://www.google.com/search?q=Babel+Babel+Nice" target="_blank">Babel Babel</a> <span
+              class="rating">★★★★☆</span>: Gute Bar/Restaurant mit Riviera-Stimmung.</li>
+          <li><a href="https://www.google.com/search?q=Fenocchio+Nice" target="_blank">Fenocchio</a> <span
+              class="rating">★★★★☆</span>: Bekannter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Marché+Nice" target="_blank">Café Marché</a> <span
+              class="rating">★★★★☆</span>: Netter Brunch-/Lunch-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Deli+Bo+Nice" target="_blank">Deli Bo</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee/Kuchen in Nizza.</li>
+          <li><a href="https://www.google.com/search?q=Le+Nid+d'Aigle+Èze" target="_blank">Le Nid d'Aigle</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Èze mit Aussicht.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag12">
+        <h3>Tag 12 · Fr, 21.08.2026 · Cannes + Cap d’Antibes</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Astoux+et+Brun+Cannes" target="_blank">Astoux et Brun</a> <span
+              class="rating">★★★★★</span>: Cannes-Klassiker für Seafood.</li>
+          <li><a href="https://www.google.com/search?q=Marché+Forville+Cannes" target="_blank">Marché Forville</a> <span
+              class="rating">★★★★☆</span>: Sehr guter Markt-/Snackstopp.</li>
+          <li><a href="https://www.google.com/search?q=Plage+Keller+Antibes" target="_blank">Plage Keller</a> <span
+              class="rating">★★★★☆</span>: Schöne Lunchoption am Cap d’Antibes.</li>
+          <li><a href="https://www.google.com/search?q=La+Môme+Cannes" target="_blank">La Môme</a> <span
+              class="rating">★★★★☆</span>: Stylische Option in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Bobo+Bistro+Cannes" target="_blank">Bobo Bistro</a> <span
+              class="rating">★★★★☆</span>: Zentral und unkompliziert in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Maschou+Cannes" target="_blank">Le Maschou</a> <span
+              class="rating">★★★★☆</span>: Bekannter Grill-Klassiker in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Da+Laura+Cannes" target="_blank">Da Laura</a> <span
+              class="rating">★★★★☆</span>: Beliebte italienische Option in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Noisette+Café+Cannes" target="_blank">Noisette Café</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee/Brunch in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Café+Hoche+Cannes" target="_blank">Café Hoche</a> <span
+              class="rating">★★★★☆</span>: Praktischer Café-Stopp im Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Le+César+Antibes" target="_blank">Le César</a> <span
+              class="rating">★★★★☆</span>: Option am Cap/Antibes für mediterrane Küche.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag13">
+        <h3>Tag 13 · Sa, 22.08.2026 · Antibes → Turin</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Porto+di+Savona+Torino" target="_blank">Porto di Savona</a> <span
+              class="rating">★★★★★</span>: Traditionelle piemontesische Küche.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Torino+Turin" target="_blank">Caffè Torino</a> <span
+              class="rating">★★★★☆</span>: Klassischer Aperitivo-/Café-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Farmacia+Del+Cambio+Torino" target="_blank">Farmacia Del
+              Cambio</a> <span class="rating">★★★★☆</span>: Schöner Café/Patisserie-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Del+Cambio+Torino" target="_blank">Del Cambio</a> <span
+              class="rating">★★★★★</span>: Historische Top-Adresse; gehoben.</li>
+          <li><a href="https://www.google.com/search?q=Tre+Galline+Torino" target="_blank">Tre Galline</a> <span
+              class="rating">★★★★☆</span>: Piemont-Klassiker in Turin.</li>
+          <li><a href="https://www.google.com/search?q=Scannabue+Torino" target="_blank">Scannabue</a> <span
+              class="rating">★★★★☆</span>: Sehr beliebtes modernes Piemont-Restaurant.</li>
+          <li><a href="https://www.google.com/search?q=Pastis+Torino" target="_blank">Pastis</a> <span
+              class="rating">★★★★☆</span>: Guter Aperitivo im Quadrilatero.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Al+Bicerin+Torino" target="_blank">Caffè Al Bicerin</a>
+            <span class="rating">★★★★☆</span>: Historischer Kaffee/Bicerin-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Mulassano+Torino" target="_blank">Caffè Mulassano</a> <span
+              class="rating">★★★★☆</span>: Klassisches Café im Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Eataly+Torino+Lingotto" target="_blank">Eataly Torino
+              Lingotto</a> <span class="rating">★★★★☆</span>: Praktisch für italienische Produkte/lockeres Essen.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag14">
+        <h3>Tag 14 · So, 23.08.2026 · Turin → Malcesine</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Al+Gondoliere+Malcesine" target="_blank">Al Gondoliere</a> <span
+              class="rating">★★★★☆</span>: Beliebtes Restaurant in Malcesine.</li>
+          <li><a href="https://www.google.com/search?q=La+Pace+Malcesine+restaurant" target="_blank">La Pace</a> <span
+              class="rating">★★★★☆</span>: Praktische Option am See.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Gelateria+Andreis+Malcesine" target="_blank">Caffè
+              Gelateria Andreis</a> <span class="rating">★★★★☆</span>: Kaffee/Eis beim Abendspaziergang.</li>
+          <li><a href="https://www.google.com/search?q=Vecchia+Malcesine+restaurant" target="_blank">Ristorante Vecchia
+              Malcesine</a> <span class="rating">★★★★★</span>: Gehobene Küche mit Aussicht; besonderer Abend.</li>
+          <li><a href="https://www.google.com/search?q=Osteria+Santo+Cielo+Malcesine" target="_blank">Osteria Santo
+              Cielo</a> <span class="rating">★★★★☆</span>: Gute, gemütliche Option in Malcesine.</li>
+          <li><a href="https://www.google.com/search?q=Ristorante+Al+Gondoliere+Malcesine" target="_blank">Ristorante Al
+              Gondoliere</a> <span class="rating">★★★★☆</span>: Klassiker in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Speck+Stube+Malcesine" target="_blank">Speck Stube</a> <span
+              class="rating">★★★★☆</span>: Unkompliziert, rustikal, gut erreichbar.</li>
+          <li><a href="https://www.google.com/search?q=Gelateria+Cento+Per+Cento+Malcesine" target="_blank">Gelateria
+              Cento Per Cento</a> <span class="rating">★★★★☆</span>: Guter Eis-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Bar+Al+Porto+Malcesine" target="_blank">Bar Al Porto</a> <span
+              class="rating">★★★★☆</span>: Schöner Drink/Kaffee am Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Ristorante+Pizzeria+Capri+Malcesine" target="_blank">Ristorante
+              Pizzeria Capri</a> <span class="rating">★★★★☆</span>: Praktisch und familienfreundlich.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-hybrid-variante-tag15">
+        <h3>Tag 15 · Mo, 24.08.2026 · Gardasee → Graz</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Limone+sul+Garda+Café" target="_blank">Café in Limone sul
+              Garda</a> <span class="rating">★★★★☆</span>: Schöner Morgenstopp, wenn Zeit bleibt.</li>
+          <li><a href="https://www.google.com/search?q=Riva+del+Garda+Café+Altstadt" target="_blank">Riva del Garda
+              Café</a> <span class="rating">★★★★☆</span>: Guter kurzer Stopp am Nordufer.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+Villach+Raststation" target="_blank">Villach Pause</a>
+            <span class="rating">★★★☆☆</span>: Pragmatische Pause Richtung Graz.</li>
+          <li><a href="https://www.google.com/search?q=Panem+Riva+del+Garda" target="_blank">Panem Riva del Garda</a>
+            <span class="rating">★★★★☆</span>: Guter Frühstücks-/Snackstopp.</li>
+          <li><a href="https://www.google.com/search?q=Flora+Riva+del+Garda" target="_blank">Flora Riva del Garda</a>
+            <span class="rating">★★★★☆</span>: Café/Kuchen am Nordufer.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Trentino+Riva+del+Garda" target="_blank">Caffè Trentino</a>
+            <span class="rating">★★★★☆</span>: Zentraler Kaffee-Stopp in Riva.</li>
+          <li><a href="https://www.google.com/search?q=Raststation+Feistritz+Drau" target="_blank">Raststation
+              Feistritz/Drau</a> <span class="rating">★★★☆☆</span>: Pragmatisch für die Heimfahrt.</li>
+          <li><a href="https://www.google.com/search?q=Villacher+Brauhof" target="_blank">Villacher Brauhof</a> <span
+              class="rating">★★★★☆</span>: Wenn ihr eine längere Pause in Villach wollt.</li>
+          <li><a href="https://www.google.com/search?q=Pizzeria+Dobner+Villach" target="_blank">Pizzeria Dobner
+              Villach</a> <span class="rating">★★★★☆</span>: Unkomplizierter Essensstopp in Villach.</li>
+          <li><a href="https://www.google.com/search?q=Café+Wörthersee+Pörtschach" target="_blank">Wörthersee
+              Café-Stopp</a> <span class="rating">★★★★☆</span>: Schöner kurzer See-Stopp vor Graz.</li>
+        </ul>
+      </section>
+      <h2>Variante 3</h2>
+      <section class="restaurant-day" id="restaurants-variante-3-tag01">
+        <h3>Tag 1 · Mo, 10.08.2026 · Graz → München</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Augustiner+Keller+München" target="_blank">Augustiner Keller</a>
+            <span class="rating">★★★★★</span>: Klassischer Biergarten, sehr passend für den ersten Abend.</li>
+          <li><a href="https://www.google.com/search?q=Augustiner+Bräustuben+München" target="_blank">Augustiner
+              Bräustuben</a> <span class="rating">★★★★☆</span>: Urig und etwas weniger touristisch.</li>
+          <li><a href="https://www.google.com/search?q=Viktualienmarkt+München+Essen"
+              target="_blank">Viktualienmarkt</a> <span class="rating">★★★★☆</span>: Ideal für Snack/Kaffee beim
+            Altstadtspaziergang.</li>
+          <li><a href="https://www.google.com/search?q=Hofbräuhaus+München" target="_blank">Hofbräuhaus München</a>
+            <span class="rating">★★★★☆</span>: Sehr touristisch, aber als kurzer München-Klassiker passend.</li>
+          <li><a href="https://www.google.com/search?q=Paulaner+Bräuhaus+München" target="_blank">Paulaner Bräuhaus</a>
+            <span class="rating">★★★★☆</span>: Solide bayerische Küche mit Bierhaus-Atmosphäre.</li>
+          <li><a href="https://www.google.com/search?q=Spatenhaus+an+der+Oper+München" target="_blank">Spatenhaus an der
+              Oper</a> <span class="rating">★★★★☆</span>: Traditioneller, etwas eleganterer Klassiker nahe Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Ratskeller+München" target="_blank">Ratskeller München</a> <span
+              class="rating">★★★★☆</span>: Zentral am Marienplatz; praktisch bei kurzem Altstadtbesuch.</li>
+          <li><a href="https://www.google.com/search?q=Café+Frischhut+München" target="_blank">Café Frischhut</a> <span
+              class="rating">★★★★☆</span>: Sehr guter süßer Stopp nahe Viktualienmarkt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Luitpold+München" target="_blank">Café Luitpold</a> <span
+              class="rating">★★★★☆</span>: Klassisches Kaffeehaus für Kuchen/Kaffee.</li>
+          <li><a href="https://www.google.com/search?q=Schneider+Bräuhaus+München" target="_blank">Schneider
+              Bräuhaus</a> <span class="rating">★★★★☆</span>: Traditionelle bayerische Küche in zentraler Lage.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag02">
+        <h3>Tag 2 · Di, 11.08.2026 · München → Straßburg</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Tire-Bouchon+Strasbourg" target="_blank">Le Tire-Bouchon</a>
+            <span class="rating">★★★★★</span>: Elsässische Küche in zentraler Altstadtlage.</li>
+          <li><a href="https://www.google.com/search?q=Maison+Kammerzell+Strasbourg" target="_blank">Maison
+              Kammerzell</a> <span class="rating">★★★★☆</span>: Historisches Haus direkt beim Münster.</li>
+          <li><a href="https://www.google.com/search?q=La+Corde+à+Linge+Strasbourg" target="_blank">La Corde à Linge</a>
+            <span class="rating">★★★★☆</span>: Beliebt in Petite France.</li>
+          <li><a href="https://www.google.com/search?q=Au+Pont+Corbeau+Strasbourg" target="_blank">Au Pont Corbeau</a>
+            <span class="rating">★★★★★</span>: Sehr guter Klassiker für regionale Küche.</li>
+          <li><a href="https://www.google.com/search?q=Winstub+S'Kaechele+Strasbourg" target="_blank">Winstub
+              S'Kaechele</a> <span class="rating">★★★★☆</span>: Gemütliche Winstub mit Elsass-Flair.</li>
+          <li><a href="https://www.google.com/search?q=Le+Clou+Strasbourg" target="_blank">Le Clou</a> <span
+              class="rating">★★★★☆</span>: Traditionelle Adresse nahe Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Perles+de+Saveurs+Strasbourg" target="_blank">Perles de
+              Saveurs</a> <span class="rating">★★★★☆</span>: Kleine Adresse für gehobenere Küche.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+et+Chocolat+Strasbourg" target="_blank">Bistrot &amp;
+              Chocolat</a> <span class="rating">★★★★☆</span>: Guter Café-/Brunch-Stopp nahe Münster.</li>
+          <li><a href="https://www.google.com/search?q=Café+Bretelles+Strasbourg" target="_blank">Café Bretelles</a>
+            <span class="rating">★★★★☆</span>: Netter Kaffee-Stopp in der Stadt.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Christian+Strasbourg" target="_blank">Pâtisserie
+              Christian</a> <span class="rating">★★★★☆</span>: Klassischer süßer Stopp in Straßburg.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag03">
+        <h3>Tag 3 · Mi, 12.08.2026 · Elsass-Tag ab Straßburg</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Wistub+Brenner+Colmar" target="_blank">Wistub Brenner</a> <span
+              class="rating">★★★★★</span>: Gute Adresse für elsässische Küche in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=La+Soï+Colmar" target="_blank">La Soï</a> <span
+              class="rating">★★★★☆</span>: Kleines Lokal für Flammkuchen/Klassiker.</li>
+          <li><a href="https://www.google.com/search?q=Café+Rapp+Colmar" target="_blank">Café Rapp</a> <span
+              class="rating">★★★★☆</span>: Praktischer Café-Stopp in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=JY'S+Colmar" target="_blank">JY'S</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche in Colmar; nur bei Budget/Reservierung.</li>
+          <li><a href="https://www.google.com/search?q=L'Atelier+du+Peintre+Colmar" target="_blank">L'Atelier du
+              Peintre</a> <span class="rating">★★★★★</span>: Fine Dining in Colmar für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=Wistub+de+la+Petite+Venise+Colmar" target="_blank">Wistub de la
+              Petite Venise</a> <span class="rating">★★★★☆</span>: Sehr passend beim Bummel durch Petite Venise.</li>
+          <li><a href="https://www.google.com/search?q=La+Romantica+Colmar" target="_blank">Restaurant La Romantica</a>
+            <span class="rating">★★★★☆</span>: Solide Option in Colmar, wenn Elsass-Küche voll ist.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Gilg+Colmar" target="_blank">Gilg Pâtisserie</a> <span
+              class="rating">★★★★☆</span>: Sehr guter süßer Stopp in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=Caveau+Saint-Pierre+Colmar" target="_blank">Caveau
+              Saint-Pierre</a> <span class="rating">★★★★☆</span>: Klassisch und zentral in Colmar.</li>
+          <li><a href="https://www.google.com/search?q=AOR+La+Table+Colmar" target="_blank">AOR La Table</a> <span
+              class="rating">★★★★☆</span>: Modernere Küche, wenn ihr etwas anderes als Winstub wollt.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag04">
+        <h3>Tag 4 · Do, 13.08.2026 · Straßburg → Annecy</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Freti+Annecy" target="_blank">Le Freti</a> <span
+              class="rating">★★★★★</span>: Savoyer Klassiker in Annecy.</li>
+          <li><a href="https://www.google.com/search?q=Café+des+Arts+Annecy" target="_blank">Café des Arts</a> <span
+              class="rating">★★★★☆</span>: Gut für Kaffee oder Aperitif nahe Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Brasserie+des+Européens+Annecy" target="_blank">Brasserie des
+              Européens</a> <span class="rating">★★★★☆</span>: Zentral und unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Le+Chalet+Annecy" target="_blank">Le Chalet</a> <span
+              class="rating">★★★★☆</span>: Savoyer Küche in gemütlicher Lage.</li>
+          <li><a href="https://www.google.com/search?q=L'Etage+Annecy" target="_blank">L'Etage</a> <span
+              class="rating">★★★★☆</span>: Gute Option in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=La+Ciboulette+Annecy" target="_blank">La Ciboulette</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=Glacier+des+Alpes+Annecy" target="_blank">Glacier des Alpes</a>
+            <span class="rating">★★★★☆</span>: Beliebter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Buvette+du+Marché+Annecy" target="_blank">Buvette du Marché</a>
+            <span class="rating">★★★★☆</span>: Locker für kleinen Snack/Drink.</li>
+          <li><a href="https://www.google.com/search?q=Cozna+Annecy" target="_blank">Cozna</a> <span
+              class="rating">★★★★★</span>: Sehr gutes modernes Restaurant; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Les+Palettes+Annecy" target="_blank">Les Palettes</a> <span
+              class="rating">★★★★☆</span>: Netter Café-/Brunch-Stopp.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag05">
+        <h3>Tag 5 · Fr, 14.08.2026 · Annecy → Provence</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Balade+des+Saveurs+L'Isle-sur-la-Sorgue" target="_blank">La
+              Balade des Saveurs</a> <span class="rating">★★★★★</span>: Sehr passend für ein Provence-Abendessen.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+France+L'Isle-sur-la-Sorgue" target="_blank">Café de
+              France</a> <span class="rating">★★★★☆</span>: Klassischer Platz zum Ankommen.</li>
+          <li><a href="https://www.google.com/search?q=Jouvaud+L'Isle-sur-la-Sorgue" target="_blank">Maison Jouvaud</a>
+            <span class="rating">★★★★☆</span>: Schöner Patisserie-/Café-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Le+Jardin+du+Quai+L'Isle-sur-la-Sorgue" target="_blank">Le Jardin
+              du Quai</a> <span class="rating">★★★★★</span>: Schöne Adresse in L’Isle-sur-la-Sorgue; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=UMAMI+L'Isle-sur-la-Sorgue" target="_blank">Restaurant UMAMI</a>
+            <span class="rating">★★★★☆</span>: Modernere Küche in der Region.</li>
+          <li><a href="https://www.google.com/search?q=Bella+Ciao+L'Isle-sur-la-Sorgue" target="_blank">Bella Ciao</a>
+            <span class="rating">★★★★☆</span>: Unkomplizierte Option, wenn ihr nach der Fahrt nicht groß suchen wollt.
+          </li>
+          <li><a href="https://www.google.com/search?q=Le+Carré+d'Herbes+L'Isle-sur-la-Sorgue" target="_blank">Le Carré
+              d'Herbes</a> <span class="rating">★★★★☆</span>: Gute Bistro-Option in L’Isle.</li>
+          <li><a href="https://www.google.com/search?q=Pâtisserie+Leyris+L'Isle-sur-la-Sorgue"
+              target="_blank">Pâtisserie Leyris</a> <span class="rating">★★★★☆</span>: Süßer Stopp/Kaffee in der
+            Umgebung.</li>
+          <li><a href="https://www.google.com/search?q=Le+Vivier+L'Isle-sur-la-Sorgue" target="_blank">Le Vivier</a>
+            <span class="rating">★★★★★</span>: Gehobene Küche nahe L’Isle; gut für besonderen Abend.</li>
+          <li><a href="https://www.google.com/search?q=L'Aparté+L'Isle-sur-la-Sorgue" target="_blank">L'Aparté</a> <span
+              class="rating">★★★★☆</span>: Kleine moderne Adresse in der Umgebung.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag06">
+        <h3>Tag 6 · Sa, 15.08.2026 · Luberon-Dörfer</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Trinquette+Gordes" target="_blank">La Trinquette</a> <span
+              class="rating">★★★★☆</span>: Gute Option in Gordes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Piquebaure+Roussillon" target="_blank">Le Piquebaure</a> <span
+              class="rating">★★★★☆</span>: Ruhigere Provence-Küche nahe Roussillon.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+la+Poste+Goult" target="_blank">Café de la Poste</a>
+            <span class="rating">★★★★☆</span>: Praktisch für Kaffee/Pause im Luberon.</li>
+          <li><a href="https://www.google.com/search?q=La+Bastide+de+Pierres+Gordes" target="_blank">La Bastide de
+              Pierres</a> <span class="rating">★★★★☆</span>: Schöne Option in Gordes.</li>
+          <li><a href="https://www.google.com/search?q=L'Orangerie+Gordes" target="_blank">L'Orangerie Gordes</a> <span
+              class="rating">★★★★★</span>: Sehr schöne Lage, eher gehoben.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+David+Roussillon" target="_blank">David Roussillon</a>
+            <span class="rating">★★★★☆</span>: Gute Adresse in Roussillon.</li>
+          <li><a href="https://www.google.com/search?q=Le+Bistrot+de+Roussillon" target="_blank">Le Bistrot de
+              Roussillon</a> <span class="rating">★★★★☆</span>: Praktisch nach Ockerfelsen-Besuch.</li>
+          <li><a href="https://www.google.com/search?q=Le+Fournil+Bonnieux" target="_blank">Le Fournil</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Bonnieux.</li>
+          <li><a href="https://www.google.com/search?q=Café+de+la+Gare+Bonnieux" target="_blank">Café de la Gare</a>
+            <span class="rating">★★★★☆</span>: Beliebter Stopp nahe Bonnieux/Lacoste.</li>
+          <li><a href="https://www.google.com/search?q=La+Terrasse+Goult" target="_blank">La Terrasse Goult</a> <span
+              class="rating">★★★★☆</span>: Guter Lunch-/Aperitif-Stopp in ruhigerem Ort.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag07">
+        <h3>Tag 7 · So, 16.08.2026 · Avignon + Saint-Rémy</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=L'Agape+Avignon" target="_blank">L’Agape</a> <span
+              class="rating">★★★★★</span>: Gepflegte Küche in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+du+Paradou" target="_blank">Le Bistrot du Paradou</a>
+            <span class="rating">★★★★☆</span>: Klassischer Provence-Tipp nahe Saint-Rémy.</li>
+          <li><a href="https://www.google.com/search?q=Maison+Marshall+Saint-Rémy-de-Provence" target="_blank">Maison
+              Marshall</a> <span class="rating">★★★★☆</span>: Café/Patisserie in Saint-Rémy.</li>
+          <li><a href="https://www.google.com/search?q=Hiély+Lucullus+Avignon" target="_blank">Hiély Lucullus</a> <span
+              class="rating">★★★★★</span>: Gehobene Küche in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=La+Fourchette+Avignon" target="_blank">La Fourchette</a> <span
+              class="rating">★★★★☆</span>: Solide Adresse in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=Le+Goût+du+Jour+Avignon" target="_blank">Le Goût du Jour</a>
+            <span class="rating">★★★★★</span>: Sehr gute Küche in Avignon; reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Ginette+et+Marcel+Avignon" target="_blank">Ginette et Marcel</a>
+            <span class="rating">★★★★☆</span>: Locker und zentral in Avignon.</li>
+          <li><a href="https://www.google.com/search?q=Bistrot+des+Alpilles+Saint-Rémy-de-Provence"
+              target="_blank">Bistrot des Alpilles</a> <span class="rating">★★★★☆</span>: Gute Option in Saint-Rémy.
+          </li>
+          <li><a href="https://www.google.com/search?q=Le+Roma+Saint-Rémy-de-Provence" target="_blank">Le Roma
+              Saint-Rémy</a> <span class="rating">★★★★☆</span>: Unkompliziert für Abendessen in Saint-Rémy.</li>
+          <li><a href="https://www.google.com/search?q=Chapeau+de+Paille+Saint-Rémy-de-Provence" target="_blank">Chapeau
+              de Paille</a> <span class="rating">★★★★☆</span>: Schöne Provence-Adresse bei Saint-Rémy.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag08">
+        <h3>Tag 8 · Mo, 17.08.2026 · Verdon-Schlucht</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=La+Terrasse+de+Cassius+Moustiers+Sainte+Marie" target="_blank">La
+              Terrasse de Cassius</a> <span class="rating">★★★★☆</span>: Schöner Stopp in Moustiers-Sainte-Marie.</li>
+          <li><a href="https://www.google.com/search?q=Côté+Jardin+Moustiers+Sainte+Marie" target="_blank">Côté
+              Jardin</a> <span class="rating">★★★★☆</span>: Gute Option für Lunch/frühes Dinner.</li>
+          <li><a href="https://www.google.com/search?q=restaurant+Lac+de+Sainte-Croix" target="_blank">Lac de
+              Sainte-Croix Snack</a> <span class="rating">★★★☆☆</span>: Pragmatisch für kurze Pause am See.</li>
+          <li><a href="https://www.google.com/search?q=La+Treille+Muscate+Moustiers+Sainte+Marie" target="_blank">La
+              Treille Muscate</a> <span class="rating">★★★★☆</span>: Schöne Adresse in Moustiers.</li>
+          <li><a href="https://www.google.com/search?q=Le+Relais+Moustiers+Sainte+Marie" target="_blank">Le Relais</a>
+            <span class="rating">★★★★☆</span>: Praktische Option im Dorf.</li>
+          <li><a href="https://www.google.com/search?q=Les+Santons+Moustiers+Sainte+Marie" target="_blank">Les
+              Santons</a> <span class="rating">★★★★☆</span>: Gute regionale Küche in Moustiers.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Benoit+Moustiers+Sainte+Marie" target="_blank">Chez
+              Benoit</a> <span class="rating">★★★★☆</span>: Locker für Lunch im Verdon-Gebiet.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+Le+Styx+Gorges+du+Verdon" target="_blank">Restaurant
+              Le Styx</a> <span class="rating">★★★★☆</span>: Passend, wenn ihr nahe Schlucht essen wollt.</li>
+          <li><a href="https://www.google.com/search?q=Auberge+des+Salles" target="_blank">Auberge des Salles</a> <span
+              class="rating">★★★★☆</span>: Schöne Lage bei Les Salles-sur-Verdon.</li>
+          <li><a href="https://www.google.com/search?q=crêperie+Lac+de+Sainte-Croix" target="_blank">Crêperie am See</a>
+            <span class="rating">★★★☆☆</span>: Einfach, aber praktisch für kurze Pause am Lac.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag09">
+        <h3>Tag 9 · Di, 18.08.2026 · Cassis + Marseille</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Grand+Large+Cassis" target="_blank">Le Grand Large</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Cassis am Meer/Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Fonfon+Marseille" target="_blank">Chez Fonfon</a> <span
+              class="rating">★★★★★</span>: Marseille-Klassiker für Fisch/Bouillabaisse.</li>
+          <li><a href="https://www.google.com/search?q=La+Caravelle+Marseille" target="_blank">La Caravelle</a> <span
+              class="rating">★★★★☆</span>: Bar/Café mit Vieux-Port-Stimmung.</li>
+          <li><a href="https://www.google.com/search?q=Nino+Cassis" target="_blank">Nino Cassis</a> <span
+              class="rating">★★★★☆</span>: Gute Hafenoption in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=La+Vieille+Auberge+Cassis" target="_blank">La Vieille Auberge</a>
+            <span class="rating">★★★★☆</span>: Klassisch in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=Le+Bonaparte+Cassis" target="_blank">Le Bonaparte</a> <span
+              class="rating">★★★★☆</span>: Beliebte Option in Cassis.</li>
+          <li><a href="https://www.google.com/search?q=La+Boîte+à+Sardine+Marseille" target="_blank">La Boîte à
+              Sardine</a> <span class="rating">★★★★☆</span>: Marseille-Fischadresse, locker und charaktervoll.</li>
+          <li><a href="https://www.google.com/search?q=Les+Bords+de+Mer+Marseille" target="_blank">Les Bords de Mer</a>
+            <span class="rating">★★★★☆</span>: Schöne Meerblick-Option in Marseille.</li>
+          <li><a href="https://www.google.com/search?q=Le+Miramar+Marseille" target="_blank">Le Miramar</a> <span
+              class="rating">★★★★☆</span>: Bekannte Bouillabaisse-Adresse am Vieux-Port.</li>
+          <li><a href="https://www.google.com/search?q=Deep+Coffee+Roasters+Marseille" target="_blank">Deep Coffee
+              Roasters</a> <span class="rating">★★★★☆</span>: Guter Kaffee-Stopp in Marseille.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag10">
+        <h3>Tag 10 · Mi, 19.08.2026 · Provence → Antibes</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Le+Vauban+Antibes" target="_blank">Le Vauban</a> <span
+              class="rating">★★★★★</span>: Sehr gute Adresse in Antibes Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Milano+Antibes" target="_blank">Café Milano</a> <span
+              class="rating">★★★★☆</span>: Zentral und unkompliziert.</li>
+          <li><a href="https://www.google.com/search?q=Gelateria+Del+Porto+Antibes" target="_blank">Gelateria Del
+              Porto</a> <span class="rating">★★★★☆</span>: Guter Eis-/Dessert-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Jeanne+Antibes+restaurant" target="_blank">Jeanne</a> <span
+              class="rating">★★★★☆</span>: Moderne Küche in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Figuier+de+Saint-Esprit+Antibes" target="_blank">Le Figuier de
+              Saint-Esprit</a> <span class="rating">★★★★★</span>: Gehobene Küche in Antibes; besonderer Abend.</li>
+          <li><a href="https://www.google.com/search?q=Chez+Jules+Antibes" target="_blank">Chez Jules</a> <span
+              class="rating">★★★★☆</span>: Gute Bistro-Option in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Le+P'tit+Cageot+Antibes" target="_blank">Le P'tit Cageot</a>
+            <span class="rating">★★★★☆</span>: Beliebtes kleines Restaurant in Antibes.</li>
+          <li><a href="https://www.google.com/search?q=Café+Brun+Antibes" target="_blank">Café Brun</a> <span
+              class="rating">★★★★☆</span>: Netter Drink-/Aperitif-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Nomads+Coffee+Antibes" target="_blank">Nomads Coffee</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Merry+Mary+Antibes" target="_blank">Merry Mary</a> <span
+              class="rating">★★★★☆</span>: Brunch/Café-Option in Antibes.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag11">
+        <h3>Tag 11 · Do, 20.08.2026 · Nizza + Èze</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Chez+Acchiardo+Nice" target="_blank">Chez Acchiardo</a> <span
+              class="rating">★★★★★</span>: Klassiker in Nizza Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Le+Safari+Nice" target="_blank">Le Safari</a> <span
+              class="rating">★★★★☆</span>: Bekannt am Cours Saleya.</li>
+          <li><a href="https://www.google.com/search?q=Château+Eza+restaurant+Èze" target="_blank">Château Eza</a> <span
+              class="rating">★★★★☆</span>: Teurer, aber starker Aussichtsstopp in Èze.</li>
+          <li><a href="https://www.google.com/search?q=La+Merenda+Nice" target="_blank">La Merenda</a> <span
+              class="rating">★★★★★</span>: Sehr gute Niçoise-Küche; klein, reservieren.</li>
+          <li><a href="https://www.google.com/search?q=Peixes+Nice" target="_blank">Peixes</a> <span
+              class="rating">★★★★☆</span>: Moderne Fischküche in Nizza.</li>
+          <li><a href="https://www.google.com/search?q=Babel+Babel+Nice" target="_blank">Babel Babel</a> <span
+              class="rating">★★★★☆</span>: Gute Bar/Restaurant mit Riviera-Stimmung.</li>
+          <li><a href="https://www.google.com/search?q=Fenocchio+Nice" target="_blank">Fenocchio</a> <span
+              class="rating">★★★★☆</span>: Bekannter Eis-Stopp in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Café+Marché+Nice" target="_blank">Café Marché</a> <span
+              class="rating">★★★★☆</span>: Netter Brunch-/Lunch-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Deli+Bo+Nice" target="_blank">Deli Bo</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee/Kuchen in Nizza.</li>
+          <li><a href="https://www.google.com/search?q=Le+Nid+d'Aigle+Èze" target="_blank">Le Nid d'Aigle</a> <span
+              class="rating">★★★★☆</span>: Schöne Option in Èze mit Aussicht.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag12">
+        <h3>Tag 12 · Fr, 21.08.2026 · Cannes + Cap d’Antibes</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Astoux+et+Brun+Cannes" target="_blank">Astoux et Brun</a> <span
+              class="rating">★★★★★</span>: Cannes-Klassiker für Seafood.</li>
+          <li><a href="https://www.google.com/search?q=Marché+Forville+Cannes" target="_blank">Marché Forville</a> <span
+              class="rating">★★★★☆</span>: Sehr guter Markt-/Snackstopp.</li>
+          <li><a href="https://www.google.com/search?q=Plage+Keller+Antibes" target="_blank">Plage Keller</a> <span
+              class="rating">★★★★☆</span>: Schöne Lunchoption am Cap d’Antibes.</li>
+          <li><a href="https://www.google.com/search?q=La+Môme+Cannes" target="_blank">La Môme</a> <span
+              class="rating">★★★★☆</span>: Stylische Option in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Bobo+Bistro+Cannes" target="_blank">Bobo Bistro</a> <span
+              class="rating">★★★★☆</span>: Zentral und unkompliziert in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Le+Maschou+Cannes" target="_blank">Le Maschou</a> <span
+              class="rating">★★★★☆</span>: Bekannter Grill-Klassiker in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Da+Laura+Cannes" target="_blank">Da Laura</a> <span
+              class="rating">★★★★☆</span>: Beliebte italienische Option in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Noisette+Café+Cannes" target="_blank">Noisette Café</a> <span
+              class="rating">★★★★☆</span>: Guter Kaffee/Brunch in Cannes.</li>
+          <li><a href="https://www.google.com/search?q=Café+Hoche+Cannes" target="_blank">Café Hoche</a> <span
+              class="rating">★★★★☆</span>: Praktischer Café-Stopp im Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Le+César+Antibes" target="_blank">Le César</a> <span
+              class="rating">★★★★☆</span>: Option am Cap/Antibes für mediterrane Küche.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag13">
+        <h3>Tag 13 · Sa, 22.08.2026 · Antibes → Turin</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Porto+di+Savona+Torino" target="_blank">Porto di Savona</a> <span
+              class="rating">★★★★★</span>: Traditionelle piemontesische Küche.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Torino+Turin" target="_blank">Caffè Torino</a> <span
+              class="rating">★★★★☆</span>: Klassischer Aperitivo-/Café-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Farmacia+Del+Cambio+Torino" target="_blank">Farmacia Del
+              Cambio</a> <span class="rating">★★★★☆</span>: Schöner Café/Patisserie-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Del+Cambio+Torino" target="_blank">Del Cambio</a> <span
+              class="rating">★★★★★</span>: Historische Top-Adresse; gehoben.</li>
+          <li><a href="https://www.google.com/search?q=Tre+Galline+Torino" target="_blank">Tre Galline</a> <span
+              class="rating">★★★★☆</span>: Piemont-Klassiker in Turin.</li>
+          <li><a href="https://www.google.com/search?q=Scannabue+Torino" target="_blank">Scannabue</a> <span
+              class="rating">★★★★☆</span>: Sehr beliebtes modernes Piemont-Restaurant.</li>
+          <li><a href="https://www.google.com/search?q=Pastis+Torino" target="_blank">Pastis</a> <span
+              class="rating">★★★★☆</span>: Guter Aperitivo im Quadrilatero.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Al+Bicerin+Torino" target="_blank">Caffè Al Bicerin</a>
+            <span class="rating">★★★★☆</span>: Historischer Kaffee/Bicerin-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Mulassano+Torino" target="_blank">Caffè Mulassano</a> <span
+              class="rating">★★★★☆</span>: Klassisches Café im Zentrum.</li>
+          <li><a href="https://www.google.com/search?q=Eataly+Torino+Lingotto" target="_blank">Eataly Torino
+              Lingotto</a> <span class="rating">★★★★☆</span>: Praktisch für italienische Produkte/lockeres Essen.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag14">
+        <h3>Tag 14 · So, 23.08.2026 · Turin → Malcesine</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Al+Gondoliere+Malcesine" target="_blank">Al Gondoliere</a> <span
+              class="rating">★★★★☆</span>: Beliebtes Restaurant in Malcesine.</li>
+          <li><a href="https://www.google.com/search?q=La+Pace+Malcesine+restaurant" target="_blank">La Pace</a> <span
+              class="rating">★★★★☆</span>: Praktische Option am See.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Gelateria+Andreis+Malcesine" target="_blank">Caffè
+              Gelateria Andreis</a> <span class="rating">★★★★☆</span>: Kaffee/Eis beim Abendspaziergang.</li>
+          <li><a href="https://www.google.com/search?q=Vecchia+Malcesine+restaurant" target="_blank">Ristorante Vecchia
+              Malcesine</a> <span class="rating">★★★★★</span>: Gehobene Küche mit Aussicht; besonderer Abend.</li>
+          <li><a href="https://www.google.com/search?q=Osteria+Santo+Cielo+Malcesine" target="_blank">Osteria Santo
+              Cielo</a> <span class="rating">★★★★☆</span>: Gute, gemütliche Option in Malcesine.</li>
+          <li><a href="https://www.google.com/search?q=Ristorante+Al+Gondoliere+Malcesine" target="_blank">Ristorante Al
+              Gondoliere</a> <span class="rating">★★★★☆</span>: Klassiker in der Altstadt.</li>
+          <li><a href="https://www.google.com/search?q=Speck+Stube+Malcesine" target="_blank">Speck Stube</a> <span
+              class="rating">★★★★☆</span>: Unkompliziert, rustikal, gut erreichbar.</li>
+          <li><a href="https://www.google.com/search?q=Gelateria+Cento+Per+Cento+Malcesine" target="_blank">Gelateria
+              Cento Per Cento</a> <span class="rating">★★★★☆</span>: Guter Eis-Stopp.</li>
+          <li><a href="https://www.google.com/search?q=Bar+Al+Porto+Malcesine" target="_blank">Bar Al Porto</a> <span
+              class="rating">★★★★☆</span>: Schöner Drink/Kaffee am Hafen.</li>
+          <li><a href="https://www.google.com/search?q=Ristorante+Pizzeria+Capri+Malcesine" target="_blank">Ristorante
+              Pizzeria Capri</a> <span class="rating">★★★★☆</span>: Praktisch und familienfreundlich.</li>
+        </ul>
+      </section>
+      <section class="restaurant-day" id="restaurants-variante-3-tag15">
+        <h3>Tag 15 · Mo, 24.08.2026 · Gardasee → Graz</h3>
+        <ul class="restaurant-list">
+          <li><a href="https://www.google.com/search?q=Limone+sul+Garda+Café" target="_blank">Café in Limone sul
+              Garda</a> <span class="rating">★★★★☆</span>: Schöner Morgenstopp, wenn Zeit bleibt.</li>
+          <li><a href="https://www.google.com/search?q=Riva+del+Garda+Café+Altstadt" target="_blank">Riva del Garda
+              Café</a> <span class="rating">★★★★☆</span>: Guter kurzer Stopp am Nordufer.</li>
+          <li><a href="https://www.google.com/search?q=Restaurant+Villach+Raststation" target="_blank">Villach Pause</a>
+            <span class="rating">★★★☆☆</span>: Pragmatische Pause Richtung Graz.</li>
+          <li><a href="https://www.google.com/search?q=Panem+Riva+del+Garda" target="_blank">Panem Riva del Garda</a>
+            <span class="rating">★★★★☆</span>: Guter Frühstücks-/Snackstopp.</li>
+          <li><a href="https://www.google.com/search?q=Flora+Riva+del+Garda" target="_blank">Flora Riva del Garda</a>
+            <span class="rating">★★★★☆</span>: Café/Kuchen am Nordufer.</li>
+          <li><a href="https://www.google.com/search?q=Caffè+Trentino+Riva+del+Garda" target="_blank">Caffè Trentino</a>
+            <span class="rating">★★★★☆</span>: Zentraler Kaffee-Stopp in Riva.</li>
+          <li><a href="https://www.google.com/search?q=Raststation+Feistritz+Drau" target="_blank">Raststation
+              Feistritz/Drau</a> <span class="rating">★★★☆☆</span>: Pragmatisch für die Heimfahrt.</li>
+          <li><a href="https://www.google.com/search?q=Villacher+Brauhof" target="_blank">Villacher Brauhof</a> <span
+              class="rating">★★★★☆</span>: Wenn ihr eine längere Pause in Villach wollt.</li>
+          <li><a href="https://www.google.com/search?q=Pizzeria+Dobner+Villach" target="_blank">Pizzeria Dobner
+              Villach</a> <span class="rating">★★★★☆</span>: Unkomplizierter Essensstopp in Villach.</li>
+          <li><a href="https://www.google.com/search?q=Café+Wörthersee+Pörtschach" target="_blank">Wörthersee
+              Café-Stopp</a> <span class="rating">★★★★☆</span>: Schöner kurzer See-Stopp vor Graz.</li>
+        </ul>
       </section>
     </section>
   </main>
